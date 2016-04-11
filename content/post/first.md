@@ -50,8 +50,7 @@ series = [ "Go Web Dev" ]
 slug = "hugo-可以替代url"
 project_url = "https://github.com/spf13/hugo"
 +++
-{{< /highlight >}}
-
+{{< /highlight >}} 
 ### Markdown 语法说明
 
 [Markdown 语法说明 (简体中文版)] (http://wowubuntu.com/markdown/)
