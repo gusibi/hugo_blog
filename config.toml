@@ -4,7 +4,6 @@ author = "Goodspeed Cheng"
 pygmentsuseclasses = true
 copyright = "goodspeed All rights reserved."
 googleanalytics = "UA-76238744-1"
-disablePathToLower = true
 hasCJKLanguage = true
 
 [params]
