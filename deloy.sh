@@ -14,7 +14,7 @@ git push origin master
 
 
 # Build the project. 
-hugo -t hugo-zen 
+hugo -t base16
 
 # Go To Public folder
 cd public
