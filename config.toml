@@ -1,0 +1,12 @@
+baseurl = "http://zongxiao.github.io/"
+title = "这个人很懒"
+author = "Goodspeed Cheng"
+copyright = "goodspeed All rights reserved."
+
+[params]
+  logo      = "/images/logo.jpg"
+  twitter   = "https://twitter.com/amazing_gs"
+  facebook  = "https://www.facebook.com/ochiishikoichiro"
+  github    = "https://github.com/zongxiao/"
+  email     = "cacique1103@gmail.com"
+  analytics = "UA-12345678-9"
