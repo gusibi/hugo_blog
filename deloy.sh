@@ -1,15 +1,15 @@
 #!/bin/bash
-echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"]]"
+echo -e \033[0;32mDeploying updates to GitHub...\033[0m]]
 
-msg = "rebuilding site `date`"
+msg = rebuilding site `date`
 
 if [ $# -eq 1 ]
-    then msg="$1"
+    then msg=$1
 fi
 
 # Push Hugo content 
 git add -A
-git commit -m "$msg"
+git commit -m $msg
 git push origin master
 
 
@@ -22,10 +22,8 @@ cd public
 git add -A
 
 # Commit changes.
-git commit -m "$msg"
+git commit -m $msg
 
 # Push source and build repos.
 git push origin master
 
-# Come Back
-cd ..

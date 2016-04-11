@@ -4,9 +4,8 @@ author = "Goodspeed Cheng"
 copyright = "goodspeed All rights reserved."
 
 [params]
-  logo      = "/images/logo.jpg"
+  logo      = "https://pbs.twimg.com/profile_images/1850144125/pocoyo_bigger.gif"
   twitter   = "https://twitter.com/amazing_gs"
-  facebook  = "https://www.facebook.com/ochiishikoichiro"
   github    = "https://github.com/zongxiao/"
   email     = "cacique1103@gmail.com"
-  analytics = "UA-12345678-9"
+  analytics = "UA-76238744-1"
