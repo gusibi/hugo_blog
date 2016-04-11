@@ -15,7 +15,7 @@
 
 ### 参考链接
 
-[Hugo Quickstart Guide] (https://gohugo.io/overview/quickstart/)
-[Hugo静态网站生成器中文教程] (http://nanshu.wang/post/2015-01-31/)
-[使用hugo搭建个人博客站点] (http://blog.coderzh.com/2015/08/29/hugo/)
-[Hugo中文文档] (http://www.gohugo.org/)
+* [Hugo Quickstart Guide] (https://gohugo.io/overview/quickstart/)
+* [Hugo静态网站生成器中文教程] (http://nanshu.wang/post/2015-01-31/)
+* [使用hugo搭建个人博客站点] (http://blog.coderzh.com/2015/08/29/hugo/)
+* [Hugo中文文档] (http://www.gohugo.org/)

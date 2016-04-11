@@ -10,8 +10,8 @@ fi
 # Push Hugo content 
 git add -A
 git commit -m $msg
+echo $msg
 git push origin master
-
 
 # Build the project. 
 hugo -t base16
