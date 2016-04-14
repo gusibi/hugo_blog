@@ -1,13 +1,12 @@
 +++
-date = "2016-04-12T22:18:29+08:00"
-draft = true
+date = "2016-04-14T22:44:40+08:00"
+draft = false
 title = "golang description"
 tags = ["golang"]
 categories = ["Development"]
 slug = "golang-description"
 
 +++
-
 
 ## 1. Golang 是什么
 
@@ -97,7 +96,63 @@ Go 语言被设计成一门应用于搭载 Web 服务器，存储集群或类似
 
 ## 5. 安装
 
+Go 的源代码有以下三个分支：
+
+* Go release：最新稳定版，实际开发最佳选择
+* Go weekly：包含最近更新的版本，一般每周更新一次
+* Go tip：永远保持最新的版本，相当于内测版
+
+现在release 是1.6 可以按照自己的需求安装
+
+### ubuntu & debian
+
+{{< highlight shell >}}
+sudo apt-get update && apt-get install -y --no-install-recommends \
+    g++ gcc libc6-dev make 
+
+GOLANG_VERSION=1.6
+GOLANG_DOWNLOAD_URL=https://golang.org/dl/go$GOLANG_VERSION.linux-amd64.tar.gz
+GOLANG_DOWNLOAD_SHA256=5470eac05d273c74ff8bac7bef5bad0b5abbd1c4052efbdbc8db45332e836b0b
+
+sudo curl -fsSL "$GOLANG_DOWNLOAD_URL" -o golang.tar.gz \
+    && echo "$GOLANG_DOWNLOAD_SHA256  golang.tar.gz" | sha256sum -c - \
+    && tar -C /usr/local -xzf golang.tar.gz \
+    && rm golang.tar.gz
+
+## 也可以直接 sudo apt-get install go 版本可能不是1.6
+{{< /highlight >}}
+
+
+### Mac
+
+{{< highlight shell >}}
+brew install go
+{{< /highlight >}}
+
+
+### Windows
+
+点击下载页面直接下载安装吧 [下载链接] (http://golang.org/dl/)
+
 ## 6. 环境配置&编辑器
+
+GOROOT GO语言安装的路径
+GOPATH 表示代码包所在的地址，可以设置多个
+PATH 可执行程序的路径，在命令行执行命令时，系统默认会在PATH中指定路径里寻找
+
+{{< highlight shell >}}
+# 将以下环境变量加到 .bashrc 或者 .zshrc 文件
+# Mac 配置
+export GOROOT='/usr/local/Cellar/go/1.6/libexec'
+export GOPATH=$HOME/Golang
+export PATH=$PATH:$HOME/go/bin:$GOPATH/bin
+
+# ubuntu 配置
+export GOROOT='/usr/local/go'
+export GOPATH=/go
+export PATH=$PATH:$HOME/go/bin:$GOPATH/bin
+
+{{< /highlight >}}
 
 ### 编辑器
 
