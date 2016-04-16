@@ -1,12 +1,52 @@
 +++
 date = "2016-04-11T22:07:09+08:00"
 draft = true
-title = "golang learning by code 001"
+title = "跟着代码学go 001"
 tags = ["golang"]
 categories = ["Development"]
 slug = "golang-learning-by-code-001"
 
 +++
+
+{{< highlight go >}}
+
+package main // 0
+
+import "fmt" // 1实现格式化的 I/O 
+
+/* Print something */ // 2 
+func main() { // 3
+	fmt.Println("Hello, world; or καλημε ́ρα κóσμε; orこんにちは 世界") // 4
+}
+
+{{< /highlight >}}
+
+0. 首行这个是必须的。所有的 Go 文件以 package <something> 开头,对于独立运行的执行文件必须是 package main;
+1. 这是说需要将fmt加入到main。不是main 的包被称为库 末尾以 // 开头的内容是单行注释
+2. 这也是注释，表示多行注释。 
+3. package main 必须首先出现,紧跟着是 import。在 Go 中,package 总是首先出现, 然后是 import,然后是其他所有内容。当 Go 程序在执行的时候,首先调用的函数 是 main.main(),这是从 C 中继承而来。这里定义了这个函数
+4. 调用了来自于 fmt 包的函数打印字符串到屏幕。字符串由 " 包裹,并且可以包含非 ASCII 的字符。这里使用了希腊文和日文、中文"
+
+### 编译和运行代码
+
+构建 Go 程序的最佳途径是使用 go 工具。 构建 helloworld 只需要:
+{{< highlight go >}}
+1. go build helloworld.go
+
+// 结果是叫做 helloworld 的可执行文件。
+
+2. ./helloworld
+
+// Hello, world; or καλημε ́ρα κóσμε; or こんにちは世界
+{{< /highlight >}}
+
+因此符合规范的函数一般写成如下的形式：
+{{< highlight go >}}
+
+func functionName(parameter_list) (return_value_list) {
+   …
+}
+{{< /highlight >}}
 
 ## fibonacci 
 
@@ -91,13 +131,6 @@ func fibonacci(n int) (res uint64) {
 {{< /highlight >}}
 
 
-因此符合规范的函数一般写成如下的形式：
-{{< highlight go >}}
-
-func functionName(parameter_list) (return_value_list) {
-   …
-}
-{{< /highlight >}}
 
 其中：
 
