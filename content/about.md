@@ -5,4 +5,9 @@ title = "about"
 
 +++
 
-关于我
+## 关于我
+
+> 一个很懒的程序员
+
+[github] (https://www.github.com/zongxiao)
+[twitter] (https://twitter.com/amazing_gs)

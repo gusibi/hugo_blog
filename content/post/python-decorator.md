@@ -1,7 +1,7 @@
 +++
 date = "2016-04-11T15:23:11+08:00"
 draft = false
-title = "python decorator"
+title = "python 装饰器使用指南"
 tags = ["python"]
 categories = [ "Development" ]
 slug = "python-decorator"

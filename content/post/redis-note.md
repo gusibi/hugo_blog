@@ -1,7 +1,7 @@
 +++
 date = "2016-04-11T15:23:02+08:00"
 draft = false
-title = "redis 学习笔记"
+title = "redis 学习笔记及使用技巧"
 description = "redis 学习笔记"
 tags = ["redis"]
 categories = [ "Development" ]

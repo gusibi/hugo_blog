@@ -1,7 +1,7 @@
 +++
 date = "2016-04-14T22:44:40+08:00"
 draft = false
-title = "golang description"
+title = "golang 介绍"
 tags = ["golang"]
 categories = ["Development"]
 slug = "golang-description"
