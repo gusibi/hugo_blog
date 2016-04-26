@@ -339,4 +339,34 @@ if a {                  // Error: non-bool a (type int) used as if condition
 }
 {{< /highlight >}}
 
+### 参考链接
+
+[Go 指南](https://tour.go-zh.org/basics/4)
+[The way to go -- 变量](https://github.com/Unknwon/the-way-to-go_ZH_CN/blob/master/eBook/04.4.md)
+[Effective Go](https://golang.org/doc/effective_go.html)
+
 变量和函数部分暂时这些，有更新还会补充。下一篇将会是控制流
+将会用到的代码为:
+
+{{< highlight go >}}
+    package main
+    
+    import "fmt"
+    
+    func main() {
+        result := 0
+        for i := 0; i <= 10; i++ {
+          result = fibonacci(i)
+          fmt.Printf("fibonacci(%d) is: %d\n", i, result)
+       }
+    }
+    
+    func fibonacci(n int) (res int) {
+        if n <= 1 {
+            res = 1
+    	   } else {
+    	       res = fibonacci(n-1) + fibonacci(n-2)
+    	   }
+    	return
+    }
+{{< /highlight >}}
