@@ -15,6 +15,7 @@ description = "跟着代码学golang 变量 函数 基本数据结构"
 为了看起来不是那么枯燥，本学习笔记采用分析代码的形式。
 
 首先搬出我们最经典的第一段代码:
+
 ### hello world
 
 {{< highlight go >}}
@@ -32,7 +33,7 @@ description = "跟着代码学golang 变量 函数 基本数据结构"
 > 每个Go 程序都是由包组成，程序的运行入口是包main
 
 0. 首行这个是必须的。所有的 Go 文件以 package <something> 开头,对于独立运行的执行文件必须是 package main;
-1. 这是说需要将fmt加入到main。不是main 的包被称为库 末尾以 // 开头的内容是单行注释
+1. 这是说需要将fmt加入到main。不是main 的包被称为库 末尾以 // 开头的内容是单行注释 Package fmt包含有格式化I/O函数，类似于C语言的printf和scanf
 2. 这也是注释，表示多行注释。
 3. package main 必须首先出现,紧跟着是 import。在 Go 中,package 总是首先出现, 然后是 import,然后是其他所有内容。当 Go 程序在执行的时候,首先调用的函数 是 main.main(),这是从 C 中继承而来。这里定义了这个函数
 4. 调用了来自于 fmt 包的函数打印字符串到屏幕。字符串由 " 包裹,并且可以包含非 ASCII 的字符。这里使用了希腊文和日文、中文"
@@ -49,141 +50,7 @@ description = "跟着代码学golang 变量 函数 基本数据结构"
 {{< /highlight >}}
 
 
-### 函数
-
-首先看下面这段代码
-
-{{< highlight go >}}
-    package main
-    
-    import "fmt"
-    
-    func add(x int, y int) int {
-    	return x + y
-    }
-    
-    func main() {
-    	fmt.Println(add(42, 13))
-    }
-{{< /highlight >}}
-
-#### 函数定义
-
-> 使用关键字 func 定义函数,左大括号不能另起一行
-
-golang中符合规范的函数一般写成如下的形式：
-
-{{< highlight go >}}
-    func functionName(parameter_list) (return_value_list) {
-       …
-    }
-    
-    // parameter_list 是参数列表
-    // return_value_list 是返回值列表 下边有详细的讲解
-{{< /highlight >}}
-
-#### 函数的特性
-
-* 无需声明原型。
-* 支持不定长变参。
-* 支持多返回值。
-* 支持命名返回参数。
-* 支持匿名函数和闭包。
-* 不支持 嵌套 (nested)、重载 (overload) 和 默认参数 (default parameter)
-
-{{< highlight go >}}
-    func test(x int, y int, s string) (r int, s string) { // 类型相同的相邻参数可合并
-        n := x + y                                    // 多返回值必须用括号。
-        return n, fmt.Sprintf(s, n)
-    }
-    
-    /*
-    关键字 func 用于定义一个函数
-    test 是你函数的名字
-    int类型的变量x, y 和string类型的变量s作为输入参数 参数用pass-by-value方式传递,意味着它们会被复制
-    当两个或多个连续的函数命名参数是同一类型，则除了最后一个类型之外，其他都可以省略。
-    
-    在这个例子中：
-    
-        x int, y int
-    
-    被缩写为
-    
-        x, y int
-    
-    变量 r 和 s 是这个函数的 命名返回值。在 Go 的函数中可以返回多个值
-    如果不想对返回的参数命名,只需要提供类型:(int, string)。 如果只有一个返回值,可以省略圆括号。如果函数是一个子过程,并且没有任何返回值,也可以省略这些内容
-    函数体。注意 return 是一个语句,所以包裹参数的括号是可选的
-    */
-{{< /highlight >}}
-
-> 函数是第一类对象,可作为参数传递
-
-就像其他在 Go 中的其他东西一样,函数也是值而已。它们可以像下面这样赋值给变量:
-
-{{< highlight go >}}
-    func main() {
-        a := func() {                  // 定义一个匿名函数,并且赋值给 a
-    		println("Hello")
-    	}                              // 这里没有 ()
-        a()                            // 调用函数
-    }
-{{< /highlight >}}
-
-如果使用 fmt.Printf("\%T\n", a) 打印 a 的类型,输出结果是 func()
-
-#### 返回值
-
-函数可以返回任意数量返回值
-
-Go 函数的返回值或者结果参数可以指定一个名字,并且像原始的变量那样使用,就像 输入参数那样。如果对其命名,在函数开始时,它们会用其类型的零值初始化
-
-{{< highlight go >}}
-    package main
-    
-    import "fmt"
-    
-    func swap(x, y string) (string, string) {
-    	return y, x
-    }
-    
-    func main() {
-    	a, b := swap("hello", "world")
-    	fmt.Println(a, b)
-    }
-
-    /*
-       函数可以返回任意数量返回值
-       swap 函数返回了两个字符串
-    */
-
-{{< /highlight >}}
-
-Go 的返回值可以被命名，并且就像在函数体开头声明的变量那样使用。
-
-{{< highlight go >}}
-    package main
-    
-    import "fmt"
-    
-    func split(sum int) (x, y int) { // 初始化返回值为 x,y
-    	x = sum * 4 / 9              // x,y 已经初始化，可以直接赋值使用
-    	y = sum - x
-    	return                       // 隐式返回x,y(裸返回)
-    }
-    
-    func main() {
-    	fmt.Println(split(17))
-    }
-
-    /*
-       在长的函数中这样的裸返回会影响代码的可读性。
-    */
-{{< /highlight >}}
-
-> 有返回值的函数,必须有明确的return 语句,否则会引发编译错误
-
-#### 变量
+### 变量
 
 Go 是静态类型语言 ,不能在运行期改变变量类型。
 
@@ -193,7 +60,7 @@ Go 是静态类型语言 ,不能在运行期改变变量类型。
     var x int
     // 使用关键字 var 定义变量, 跟函数的参数列表一样，类型在后面。
     var c, python, java bool
-    // 多个相同类型的变量可以卸载一行。
+    // 多个相同类型的变量可以写在一行。
     var f float32 = 1.6
     var i, j int = 1, 2
     // 变量定义可以包含初始值，每个变量对应一个。
@@ -287,7 +154,7 @@ Go 的编译器会对声明却未使用的变量报错
 
 Go 有明确的数字类型命名, 支持 Unicode, 支持常用数据结构
 
-|类型 | 长度 | 默认值 | 说明|
+|类型          | 长度   | 默认值| 说明|
 |:-------      |:-----  | :---- | :----   |
 |bool          | 1      | false |
 |byte          | 1      | 0     | unit8
@@ -312,8 +179,7 @@ Go 有明确的数字类型命名, 支持 Unicode, 支持常用数据结构
 |function      |        | nil   | 函数
 
 > int，uint 和 uintptr 类型在32位的系统上一般是32位，而在64位系统上是64位。当你需要使用一个整数类型时，你应该首选 int，仅当有特别的理由才使用定长整数类型或者无符号整数类型。
-> 引用类型包括 slice、map 和 channel。它们有复杂的内部结构,除了申请内存外,还需
-要初始化相关属性
+> 引用类型包括 slice、map 和 channel。它们有复杂的内部结构,除了申请内存外,还需要初始化相关属性
 
 
 #### 类型转换
@@ -338,6 +204,165 @@ if a {                  // Error: non-bool a (type int) used as if condition
     println("true")
 }
 {{< /highlight >}}
+
+### 函数
+
+首先看下面这段代码
+
+{{< highlight go >}}
+    package main
+    
+    import "fmt"
+    
+    func add(x int, y int) int {
+    	return x + y
+    }
+    
+    func main() {
+    	fmt.Println(add(42, 13))
+    }
+{{< /highlight >}}
+
+#### 函数定义
+
+> 使用关键字 func 定义函数,左大括号不能另起一行
+
+golang中符合规范的函数一般写成如下的形式：
+
+{{< highlight go >}}
+    func functionName(parameter_list) (return_value_list) {
+       …
+    }
+    
+    // parameter_list 是参数列表
+    // return_value_list 是返回值列表 下边有详细的讲解
+{{< /highlight >}}
+
+#### 函数的特性
+
+* 无需声明原型。 (1)
+* 支持不定长变参。
+* 支持多返回值。
+* 支持命名返回参数。
+* 支持匿名函数和闭包。
+* 不支持 嵌套 (nested)、重载 (overload) 和 默认参数 (default parameter)
+
+{{< highlight go >}}
+    func test(x int, y int, s string) (r int, s string) { // 类型相同的相邻参数可合并
+        n := x + y                                    // 多返回值必须用括号。
+        return n, fmt.Sprintf(s, n)
+    }
+    
+    /*
+    关键字 func 用于定义一个函数
+    test 是你函数的名字
+    int类型的变量x, y 和string类型的变量s作为输入参数 参数用pass-by-value方式传递,意味着它们会被复制
+    当两个或多个连续的函数命名参数是同一类型，则除了最后一个类型之外，其他都可以省略。
+    
+    在这个例子中：
+    
+        x int, y int
+    
+    被缩写为
+    
+        x, y int
+    
+    变量 r 和 s 是这个函数的 命名返回值。在 Go 的函数中可以返回多个值
+    如果不想对返回的参数命名,只需要提供类型:(int, string)。 如果只有一个返回值,可以省略圆括号。如果函数是一个子过程,并且没有任何返回值,也可以省略这些内容
+    函数体。注意 return 是一个语句,所以包裹参数的括号是可选的
+    */
+{{< /highlight >}}
+
+不定长参数其实就是slice，只能有一个，且必须是最后一个
+
+{{< highlight go >}}
+    
+    func test(s string, n ...int) string {
+        var x int
+    		for _, i := range n {
+    			 x += i
+    		}
+    	return fmt.Sprintf(s, x)
+    }
+    // 使用slice 做变参时，必须展开
+    func main() {
+        s := []int{1, 2, 3}
+        println(test("sum: %d", s...))
+    }
+{{< /highlight >}}
+
+> 函数是第一类对象,可作为参数传递
+
+就像其他在 Go 中的其他东西一样,函数也是值而已。它们可以像下面这样赋值给变量:
+
+{{< highlight go >}}
+    func main() {
+        a := func() {                  // 定义一个匿名函数,并且赋值给 a
+    		println("Hello")
+    	}                              // 这里没有 ()
+        a()                            // 调用函数
+    }
+{{< /highlight >}}
+
+如果使用 fmt.Printf("\%T\n", a) 打印 a 的类型,输出结果是 func()
+
+#### 返回值
+
+函数可以返回任意数量返回值
+
+Go 函数的返回值或者结果参数可以指定一个名字,并且像原始的变量那样使用,就像 输入参数那样。如果对其命名,在函数开始时,它们会用其类型的零值初始化
+
+{{< highlight go >}}
+    package main
+    
+    import "fmt"
+    
+    func swap(x, y string) (string, string) {
+    	return y, x
+    }
+    
+    func main() {
+    	a, b := swap("hello", "world")
+    	fmt.Println(a, b)
+    }
+
+    /*
+       函数可以返回任意数量返回值
+       swap 函数返回了两个字符串
+    */
+
+{{< /highlight >}}
+
+Go 的返回值可以被命名，并且就像在函数体开头声明的变量那样使用。
+
+{{< highlight go >}}
+    package main
+    
+    import "fmt"
+    
+    func split(sum int) (x, y int) { // 初始化返回值为 x,y
+    	x = sum * 4 / 9              // x,y 已经初始化，可以直接赋值使用
+    	y = sum - x
+    	return                       // 隐式返回x,y(裸返回)
+    }
+    
+    func main() {
+    	fmt.Println(split(17))
+    }
+
+    /*
+       在长的函数中这样的裸返回会影响代码的可读性。
+    */
+{{< /highlight >}}
+
+> 有返回值的函数,必须有明确的return 语句,否则会引发编译错误
+
+### 名词解释
+
+函数原型
+
+> 函数声明由函数返回类型、函数名和形参列表组成。形参列表必须包括形参类型,但是不必对形参命名。这三个元素被称为函数原型,函数原型描述了函数的接口
+函数原型类似函数定义时的函数头，又称函数声明。为了能使函数在定义之前就能被调用，C++规定可以先说明函数原型，然后就可以调用函数。函数定义可放在程序后面。 由于函数原型是一条语句，因此函数原型必须以分号结束。函数原型由函数返回类型、函数名和参数表组成，它与函数定义的返回类型、函数名和参数表必须一致。函数原型必须包含参数的标识符（对函数声明而言是可选的）注意：函数原型与函数定义必须一致，否则会引起连接错误
 
 ### 参考链接
 
