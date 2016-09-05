@@ -1,5 +1,5 @@
 +++
-date = "2016-04-17T23:11:51+08:00"
+date = "2016-09-05T17:59:45+08:00"
 draft = false
 title = "网站微信登录－python 实现"
 tags = ["python"]
@@ -10,7 +10,7 @@ slug = "weixin-python-login"
 
 最近我们的网站要加微信登录功能，找了python sdk 感觉都不满意，然后就参考instagram python sdk 自己造了轮子。
 
-轮子 github 地址  [python-weixin](https://github.com/zongxiao/python-weixin)
+轮子 github 地址  [python-weixin](https://github.com/gusibi/python-weixin)
 
 ### 根据需求选择相应的登录方式
 
@@ -57,7 +57,7 @@ slug = "weixin-python-login"
 具体流程请参考官方文档，我们这里只说一下python的实现方法。官方文档地址 [点这里](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&lang=zh_CN&token=db685a316b7e3933cae42c5ca91d4e024125d1b8&appid=wx6d8c79fb64de6c08)
  
 
-参考python-instagram 我写了一个 [python-weixin] (https://github.com/zongxiao/python-weixin)一个微信python SDK
+参考python-instagram 我写了一个 [python-weixin] (https://github.com/gusibi/python-weixin)一个微信python SDK
 
 不过现在还只有微信接入、获取用户信息、 刷新refresh_token 等简单功能
 
@@ -72,7 +72,7 @@ slug = "weixin-python-login"
 
 {{< highlight shell >}}
 
-pip install git+https://github.com/zongxiao/python-weixin.git@master
+pip install git+https://github.com/gusibi/python-weixin.git@master
 
 {{</highlight>}}
 
@@ -217,4 +217,4 @@ if __name__ == "__main__":
 
 * [微信网站应用接入文档](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&lang=zh_CN&token=db685a316b7e3933cae42c5ca91d4e024125d1b8&appid=wx6d8c79fb64de6c08)
 * [网站应用创建地址](https://open.weixin.qq.com/cgi-bin/frame?t=home/web_tmpl&lang=zh_CN)
-* [python-weixin]  (https://github.com/zongxiao/python-weixin)
+* [python-weixin]  (https://github.com/gusibi/python-weixin)
