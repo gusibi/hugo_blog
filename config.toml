@@ -13,7 +13,7 @@
 #   email     = "cacique1103@gmail.com"
 # 
 # 
-BaseURL = "http://gusibi.github.io"
+BaseURL = "http://gusibi.github.io/"
 LanguageCode = "zh-CN"
 HasCJKLanguage = true
 Title = "了不起的顾斯比"
@@ -26,7 +26,7 @@ RSSUri = "feed.xml"
   Name = "coderzh"
 
 [Params]
-  AuthorHomepage = "http://gusibi.github.io"
+  AuthorHomepage = "http://gusibi.github.io/"
   BottomIntroduce = "这个人很懒-程序员的学习笔记"
   Description = "了不起的顾斯比的学习笔记"
   Subtitle = "这个人很懒-程序员的学习笔记"
