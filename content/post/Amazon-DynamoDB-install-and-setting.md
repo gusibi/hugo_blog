@@ -5,9 +5,11 @@ title = "Amazon DynamoDB 安装及配置"
 
 tags = ["Nosql", "DynamoDB"]
 categories = ["Development", "Nosql", "DynamoDB"]
-slug = "Amazon DynamoDB 安装配置及Python开发示例"
+slug = "AmazonDynamoDBInsetallAndSetting"
 
 +++
+
+### 本节主要介绍AmazonDynamoDB 安装配置及Python开发示例"
 
 ## 什么是 Amazon DynamoDB
 Amazon DynamoDB 是一种完全托管的 NoSQL 数据库服务，提供快速而可预测的性能，能够实现无缝扩展。使用 DynamoDB，您可以免除操作和扩展分布式数据库的管理工作负担，因而无需担心硬件预置、设置和配置、复制、软件修补或集群扩展等问题。
