@@ -1,6 +1,6 @@
 +++
 date = "2017-01-09T22:37:11+08:00"
-title = "Amazon DynamoDB how it works"
+title = "Amazon DynamoDB 工作原理、API和数据类型介绍"
 
 tags = ["Nosql", "DynamoDB"]
 categories = ["Development", "Nosql", "DynamoDB"]
