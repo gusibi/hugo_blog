@@ -1,10 +1,10 @@
 +++
 date = "2017-01-14T18:13:42+08:00"
-title = "Amazon DynamoDB 表的基本操作"
+title = "Amazon DynamoDB 入门3： 表的基本操作"
 draft = false
 
-tags = ["Nosql", "DynamoDB"]
-categories = ["Development", "Nosql", "DynamoDB"]
+tags = ["Nosql", "DynamoDB","python"]
+categories = ["Development", "Nosql", "DynamoDB","python"]
 slug = "AmazonDynamoDBTableOperator"
 +++
 

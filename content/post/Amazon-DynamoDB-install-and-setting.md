@@ -1,7 +1,7 @@
 +++
 date = "2017-01-07T22:57:39+08:00"
 draft = false
-title = "Amazon DynamoDB 安装及配置"
+title = "Amazon DynamoDB 入门1：配置（本地）及python示例"
 
 tags = ["Nosql", "DynamoDB"]
 categories = ["Development", "Nosql", "DynamoDB"]

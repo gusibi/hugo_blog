@@ -1,6 +1,6 @@
 +++
 date = "2017-01-09T22:37:11+08:00"
-title = "Amazon DynamoDB 工作原理、API和数据类型介绍"
+title = "Amazon DynamoDB 入门2： 工作原理、API和数据类型介绍"
 
 tags = ["Nosql", "DynamoDB"]
 categories = ["Development", "Nosql", "DynamoDB"]
@@ -306,3 +306,5 @@ DynamoDB 中的表、属性和其他对象必须具有名称。名称应该简�
 DynamoDB允许使用这些关键字和特殊符号用于命名，但我们不建议这么做
 
 有关更多信息，请参阅 [为属性名称和值使用占位符](http://docs.aws.amazon.com/zh_cn/amazondynamodb/latest/developerguide/ExpressionPlaceholders.html)。
+
+
