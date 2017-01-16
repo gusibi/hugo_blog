@@ -10,6 +10,8 @@ slug = "AmazonDynamoDBHowItWorks"
 
 ### 本节主要介绍DynamoDB 基本概念、核心组件、数据结构、Api
 
+DynamoDB工作原理
+
 ## DynamoDB 基本概念
 
 DynamoDB 是 AWS 独有的完全托管的 NoSQL Database。它的思想来源于 Amazon 2007 年发表的一篇论文：Dynamo: Amazon’s Highly Available Key-value Store。在这篇论文里，Amazon 介绍了如何使用 Commodity Hardware 来打造高可用、高弹性的数据存储。想要理解 DynamoDB，首先要理解 Consistent Hashing。Consistent Hashing 的原理如下图所示：
@@ -306,5 +308,58 @@ DynamoDB 中的表、属性和其他对象必须具有名称。名称应该简�
 DynamoDB允许使用这些关键字和特殊符号用于命名，但我们不建议这么做
 
 有关更多信息，请参阅 [为属性名称和值使用占位符](http://docs.aws.amazon.com/zh_cn/amazondynamodb/latest/developerguide/ExpressionPlaceholders.html)。
+
+
+## 读取一致性
+
+Amazon DynamoDB 在全世界多个 AWS 区域可用。每个区域均与其他 AWS 区域完全独立和隔离。
+
+例如，如果我们在 us-east-1 区域有一个名为 People 的表，并在 us-west-2 区域有另一个名为 People 的表，则这两个表将被视为完全独立的表。
+
+每个 AWS 区域包含多个不同的称为“可用区”的位置。每个可用区都被设计成不受其他可用区故障的影响，并提供低价、低延迟的网络连接，以连接到同一区域其他可用区。此设计可保证我们可以在某个区域的多个可用区中快速复制数据。
+
+当我们将某个数据写入 DynamoDB 表并收到 HTTP 200 响应 (OK) 时，该数据的所有副本都会更新。但是，要将数据传播到当前 AWS 区域内的所有存储位置需要耗费一定的时间。该数据最终将在上述所有存储位置中保持一致，通常只需一秒或更短时间。
+
+为了支持各种应用程序要求，DynamoDB 同时支持**最终一致性** **读取和强一致性** 读取。
+
+#### 最终一致性读取
+
+当我们从 DynamoDB 表中读取数据时，返回的可能不是刚刚完成的写入操作的结果。响应可能包含某些旧的数据。但是，如果我们在短时间后重复读取请求，响应将返回最新的数据。
+
+#### 强一致性读取
+
+当我们请求强一致性读取时，DynamoDB 会返回具有最新数据的响应，从而反映来自所有已成功的之前写入操作的更新。但是，**如果网络延迟或中断，可能会无法执行强一致性读取**。
+
+##### Note
+
+DynamoDB 默认使用最终一致性读取。读取操作（例如 GetItem、Query 和 Scan）提供了一个 ConsistentRead 参数：此参数设置为 true，DynamoDB 将在操作过程中使用强一致性读取。
+
+示例：
+
+```
+{
+    TableName: "Music",
+    Key: {
+        "Artist": "No One You Know",
+        "SongTitle": "Call Me Today"
+    },
+    ConsistentRead: true
+}
+```
+
+#### python 示例
+
+```
+table = db3.Table('Music')
+response = table.get_item(
+    Key={
+        "Artist": "The Acme Band",
+        "SongTitle": "Still In Love"
+    },
+    ConsistentRead=True
+)
+```
+
+
 
 
