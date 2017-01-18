@@ -8,6 +8,8 @@ categories = ["Development", "Nosql", "DynamoDB"]
 slug = "AmazonDynamoDBIndexes"
 +++
 
+> 上一节我们介绍了项目的添加、修改、获取、删除（CRUD）操作，这一节将介绍索引的创建及管理。
+
 ### 创建索引
 
 #### SQL

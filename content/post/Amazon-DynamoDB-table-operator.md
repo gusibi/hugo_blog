@@ -32,6 +32,7 @@ slug = "AmazonDynamoDBTableOperator"
 ### 新建表
 
 DynamoDB 使用 CreateTable 操作创建表，并指定参数，请求语法如下所示： 
+
 ```
 {
    "AttributeDefinitions": [ 
@@ -158,12 +159,15 @@ print(table.item_count)
 
 表建好后，我们可以使用 DescribeTable 命令查看表的信息。
 唯一的参数是表名称，如下所示：
+
 ```
 {
     TableName : "Music"
 }
 ```
+
 来自 DescribeTable 回复如下所示：
+
 ```
 {
   "Table": {
@@ -191,6 +195,7 @@ print(table.item_count)
 
     ...remaining output omitted...
 ```
+
 DescribeTable 还将返回有关表中的索引、预配置的吞吐量设置、大约项目数和其他元数据的信息。
 
 #### Python Example
