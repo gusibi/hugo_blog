@@ -74,7 +74,7 @@ Out[98]:
   'HTTPStatusCode': 200,
   'RequestId': 'c7c6be12-9752-403f-97b1-a9ac451a0a98',
   'RetryAttempts': 0}}
-  
+
 table.put_item(
       Item = {
         "Artist": "No One You Know",
@@ -211,7 +211,7 @@ DynamoDB 提供以下操作来读取数据：
 * GetItem - 从表中检索单个项目。这是读取单个项目的最高效方式，因为它将提供对项目的物理位置的直接访问。（DynamoDB 还提供 BatchGetItem 操作，在单个操作中执行最多 100 个 GetItem 调用。）
 * Query - 检索具有特定分区键的所有项目。在这些项目中，您可以将条件应用于排序键并仅检索一部分数据。Query提供对存储数据的分区的快速高效的访问。
 * Scan - 检索指定表中的所有项目。
-	
+
 Note
 
 利用关系数据库，您可以使用 SELECT 语句联接多个表中的数据并返回结果。联接是关系模型的基础。要确保联接高效执行，应持续优化数据库及其应用程序的性能。
@@ -286,7 +286,7 @@ print(item)
             "Rotation": "Heavy"
         }
     }
-    
+
 response = table.get_item(
     Key={
         "Artist": "The Acme Band",
@@ -299,7 +299,7 @@ print(item)
 {
     'AlbumTitle': u'The Buck Starts Here',
     'Price': Decimal('2.47')
-} 
+}
 ```
 ## 更新
 
@@ -316,7 +316,7 @@ SQL 语言提供用于修改数据的 UPDATE 语句。DynamoDB 使用 UpdateItem
         "SongTitle":"Call Me Today"
     },
     UpdateExpression: "SET RecordLabel = :label",
-    ExpressionAttributeValues: { 
+    ExpressionAttributeValues: {
         ":label": "Global Records"
     }
 }
@@ -336,7 +336,7 @@ SQL 语言提供用于修改数据的 UPDATE 语句。DynamoDB 使用 UpdateItem
     },
     UpdateExpression: "SET RecordLabel = :label",
     ConditionExpression: "Price >= :p",
-    ExpressionAttributeValues: { 
+    ExpressionAttributeValues: {
         ":label": "Global Records",
         ":p": 2.00
     }
@@ -355,7 +355,7 @@ SQL 语言提供用于修改数据的 UPDATE 语句。DynamoDB 使用 UpdateItem
         "SongTitle":"Call Me Today"
     },
     UpdateExpression: "SET Plays = :val",
-    ExpressionAttributeValues: { 
+    ExpressionAttributeValues: {
         ":val": 0
     },
     ReturnValues: "UPDATED_NEW"
@@ -375,7 +375,7 @@ ReturnValues 参数设置为 UPDATED_NEW，这将返回已更新的任何属性�
         "SongTitle":"Call Me Today"
     },
     UpdateExpression: "SET Plays = Plays + :incr",
-    ExpressionAttributeValues: { 
+    ExpressionAttributeValues: {
         ":incr": 1
     },
     ReturnValues: "UPDATED_NEW"
@@ -450,7 +450,7 @@ response = table.update_item(
         "SongTitle":"Call Me Today"
     },
     UpdateExpression="SET Plays = :val",
-    ExpressionAttributeValues={ 
+    ExpressionAttributeValues={
         ":val": 0
     },
     ReturnValues="UPDATED_NEW"
@@ -468,7 +468,7 @@ response = table.update_item(
         "SongTitle":"Call Me Today"
     },
     UpdateExpression="SET Plays = Plays + :incr",
-    ExpressionAttributeValues={ 
+    ExpressionAttributeValues={
         ":incr": 1
     },
     ReturnValues="UPDATED_NEW"
@@ -486,7 +486,7 @@ response = table.update_item(
 {
     TableName: "Music",
     Key: {
-        Artist: "The Acme Band", 
+        Artist: "The Acme Band",
         SongTitle: "Look Out, World"
     }
 }
@@ -502,7 +502,7 @@ DeleteItem 支持条件写入，在此情况下，操作仅在特定 ConditionEx
 {
     TableName: "Music",
     Key: {
-        Artist: "The Acme Band", 
+        Artist: "The Acme Band",
         SongTitle: "Look Out, World"
     },
    ConditionExpression: "attribute_exists(RecordLabel)"
@@ -524,4 +524,6 @@ table.delete_item(
 
 ```
 
-这一节我们介绍了项目的基本操作（CRUD），下一节将介绍索引的创建和管理。
+> 这一节我们介绍了项目的基本操作（CRUD），下一节将介绍索引的创建和管理。
+
+[原文地址](http://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655751948&idx=1&sn=22046f0c62fa0e3a740306b5f106488a&chksm=80b0b826b7c73130e0f65057f83aebea9b41c5edcdccd3230a07fe24f5864c5ed11e89f0ae05#rd)

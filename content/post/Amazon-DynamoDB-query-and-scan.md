@@ -5,7 +5,7 @@ title = "Amazon DynamoDB 入门6：query 和 scan"
 
 tags = ["Nosql", "DynamoDB"]
 categories = ["Development", "Nosql", "DynamoDB"]
-slug = "AmazonDynamoDBQueryAndScan" 
+slug = "Amazon-DynamoDB-Query-And-Scan"
 +++
 
 > 上一节我们介绍了DynamoDB索引的创建及管理，这一节我们将介绍query（查询）和scan（扫描）的使用。

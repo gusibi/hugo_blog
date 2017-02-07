@@ -31,61 +31,61 @@ slug = "AmazonDynamoDBTableOperator"
 
 ### 新建表
 
-DynamoDB 使用 CreateTable 操作创建表，并指定参数，请求语法如下所示： 
+DynamoDB 使用 CreateTable 操作创建表，并指定参数，请求语法如下所示：
 
 ```
 {
-   "AttributeDefinitions": [ 
-      { 
+   "AttributeDefinitions": [
+      {
          "AttributeName": "string",
          "AttributeType": "string"
       }
    ],
-   "GlobalSecondaryIndexes": [ 
-      { 
+   "GlobalSecondaryIndexes": [
+      {
          "IndexName": "string",
-         "KeySchema": [ 
-            { 
+         "KeySchema": [
+            {
                "AttributeName": "string",
                "KeyType": "string"
             }
          ],
-         "Projection": { 
+         "Projection": {
             "NonKeyAttributes": [ "string" ],
             "ProjectionType": "string"
          },
-         "ProvisionedThroughput": { 
+         "ProvisionedThroughput": {
             "ReadCapacityUnits": number,
             "WriteCapacityUnits": number
          }
       }
    ],
-   "KeySchema": [ 
-      { 
+   "KeySchema": [
+      {
          "AttributeName": "string",
          "KeyType": "string"
       }
    ],
-   "LocalSecondaryIndexes": [ 
-      { 
+   "LocalSecondaryIndexes": [
+      {
          "IndexName": "string",
-         "KeySchema": [ 
-            { 
+         "KeySchema": [
+            {
                "AttributeName": "string",
                "KeyType": "string"
             }
          ],
-         "Projection": { 
+         "Projection": {
             "NonKeyAttributes": [ "string" ],
             "ProjectionType": "string"
          }
       }
    ],
-   "ProvisionedThroughput": { 
+   "ProvisionedThroughput": {
       "ReadCapacityUnits": number,
       "WriteCapacityUnits": number
    },
-   "StreamSpecification": { 
+   "StreamSpecification": {
       "StreamEnabled": boolean,
       "StreamViewType": "string"
    },
@@ -120,27 +120,27 @@ db3 = boto3.resource('dynamodb', endpoint_url='http://localhost:8000',  region_n
 table = db3.create_table(
     TableName='Music',
     KeySchema=[
-        { 
-            'AttributeName': "Artist", 
+        {
+            'AttributeName': "Artist",
             'KeyType': "HASH"
         },
-        { 
-            'AttributeName': "SongTitle", 
+        {
+            'AttributeName': "SongTitle",
             'KeyType': "RANGE"
         }
     ],
     AttributeDefinitions=[
-        { 
-            'AttributeName': "Artist", 
-            'AttributeType': "S" 
+        {
+            'AttributeName': "Artist",
+            'AttributeType': "S"
         },
-        { 
-            'AttributeName': "SongTitle", 
-            'AttributeType': "S" 
+        {
+            'AttributeName': "SongTitle",
+            'AttributeType': "S"
         }
     ],
     ProvisionedThroughput={       
-        'ReadCapacityUnits': 1, 
+        'ReadCapacityUnits': 1,
         'WriteCapacityUnits': 1
     }
 )
@@ -291,55 +291,55 @@ table.delete()
 	* 开启或者停止使用Streams。
 	* 删除一个全局耳机索引。
 	* 创建一个全局的二级索引。当索引开始后台执行时，可以使用UpdateTable进行下一个操作。
-	
+
 > UpdateTable 是一个异步操作; 当它开始执行时，表的状态将由 ACTIVE 变为 UPDATING。
 
 请求语法为：
 
 ```
 {
-   "AttributeDefinitions": [ 
-      { 
+   "AttributeDefinitions": [
+      {
          "AttributeName": "string",
          "AttributeType": "string"
       }
    ],
-   "GlobalSecondaryIndexUpdates": [ 
-      { 
-         "Create": { 
+   "GlobalSecondaryIndexUpdates": [
+      {
+         "Create": {
             "IndexName": "string",
-            "KeySchema": [ 
-               { 
+            "KeySchema": [
+               {
                   "AttributeName": "string",
                   "KeyType": "string"
                }
             ],
-            "Projection": { 
+            "Projection": {
                "NonKeyAttributes": [ "string" ],
                "ProjectionType": "string"
             },
-            "ProvisionedThroughput": { 
+            "ProvisionedThroughput": {
                "ReadCapacityUnits": number,
                "WriteCapacityUnits": number
             }
          },
-         "Delete": { 
+         "Delete": {
             "IndexName": "string"
          },
-         "Update": { 
+         "Update": {
             "IndexName": "string",
-            "ProvisionedThroughput": { 
+            "ProvisionedThroughput": {
                "ReadCapacityUnits": number,
                "WriteCapacityUnits": number
             }
          }
       }
    ],
-   "ProvisionedThroughput": { 
+   "ProvisionedThroughput": {
       "ReadCapacityUnits": number,
       "WriteCapacityUnits": number
    },
-   "StreamSpecification": { 
+   "StreamSpecification": {
       "StreamEnabled": boolean,
       "StreamViewType": "string"
    },
@@ -360,13 +360,13 @@ db3 = boto3.resource('dynamodb', endpoint_url='http://localhost:8000',  region_n
 table = db3.meta.client.update_table(
     TableName='Music',
     AttributeDefinitions=[
-        { 
-            'AttributeName': "Artist", 
-            'AttributeType': "S" 
+        {
+            'AttributeName': "Artist",
+            'AttributeType': "S"
         },
-        { 
-            'AttributeName': "SongTitle", 
-            'AttributeType': "S" 
+        {
+            'AttributeName': "SongTitle",
+            'AttributeType': "S"
         }
     ],
     ProvisionedThroughput={       
@@ -383,6 +383,6 @@ db3.meta.client.describe_table(TableName='Music')
 
 [DynamoDB UpdateTable 操作](http://docs.aws.amazon.com/zh_cn/amazondynamodb/latest/APIReference/API_UpdateTable.html)
 
-下一篇我们将要结束DynamoDB 最常用的部分，**项目的基本操作（CRUD）**。
+> 下一篇我们将要结束DynamoDB 最常用的部分，**项目的基本操作（CRUD）**。
 
-
+[原文链接](http://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655751935&idx=3&sn=7dac29e441ebaabfbf70600fee042bd3&chksm=80b0b9d5b7c730c390dd96fc1c4853219fd8d39a634506081631b41e147faaee38f0e8d35730#rd)

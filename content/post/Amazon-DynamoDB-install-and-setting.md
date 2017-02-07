@@ -122,7 +122,7 @@ $ ls  ~/.aws
 
 
 3. 使用以下代码测试 DynamoDB 是否可用
- 
+
 ```
 import boto3
 db3 = boto3.resource('dynamodb', endpoint_url='http://localhost:8000', aws_secret_access_key='ticTacToeSampleApp', aws_access_key_id='ticTacToeSampleApp', region_name='us-west-2')
@@ -151,3 +151,4 @@ db3.meta.client.list_tables()
 
 如果输出以上内容，则说明DynamoDB 正常。
 
+原文链接](http://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655751935&idx=1&sn=21e6b4ebe22a18b65c6f5e7b457782f9&chksm=80b0b9d5b7c730c308ef87f324b814d9bdfd573bfdfc68c4c3b9e9f014f68b2bb19d87cdc06b#rd)

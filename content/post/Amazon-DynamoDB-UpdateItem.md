@@ -419,3 +419,5 @@ ReturnValues 参数设置为 UPDATED_NEW，这将返回已更新的任何属性�
 * UpdateItem 支持条件写入
 
 > 这一节我们介绍了DynamoDB 项目的更新操作，下一节我们将介绍项目的删除操作（索引的查询又要延后了。。
+
+[原文链接](http://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655751962&idx=1&sn=9d3e387c3fa946305598bc269b40fd3e&chksm=80b0b830b7c73126364b48cb33915d9a51552327afb4cc73388984f5449f99871fd44465baa6#rd)

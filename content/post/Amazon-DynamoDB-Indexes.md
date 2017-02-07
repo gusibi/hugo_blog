@@ -21,7 +21,7 @@ slug = "AmazonDynamoDBIndexes"
 在 MySQL 中，您可以创建如下所示的索引：
 
 ```
-CREATE INDEX GenreAndPriceIndex 
+CREATE INDEX GenreAndPriceIndex
 ON Music (genre, price);
 ```
 #### DynamoDB
@@ -93,13 +93,13 @@ db3 = boto3.resource('dynamodb', endpoint_url='http://localhost:8000',  region_n
 table = db3.meta.client.update_table(
     TableName='Music',
     AttributeDefinitions=[
-        { 
-            'AttributeName': "Genre", 
-            'AttributeType': "S" 
+        {
+            'AttributeName': "Genre",
+            'AttributeType': "S"
         },
-        { 
-            'AttributeName': "Price", 
-            'AttributeType': "N" 
+        {
+            'AttributeName': "Price",
+            'AttributeType': "N"
         }
     ],
     GlobalSecondaryIndexUpdates=[
@@ -225,3 +225,5 @@ DynamoDB 支持两种secondary index：
 > 为获得最大查询灵活性，您可以为每个表创建最多 5 个 global secondary index和最多 5 个local secondary index。
 
 可以使用 DescribeTable 操作获取表上secondary index的详细列表。DescribeTable 返回表上每个secondary index的名称、存储大小和项目数。**系统并不会实时更新这些值，但会大约每隔六个小时刷新一次**。
+
+[原文地址](http://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655751953&idx=1&sn=13195866ffc6106d90bb60df86347101&chksm=80b0b83bb7c7312d00c186d2603835ff7f49a6c0fb77c1c94c3ee7cd30b45f7661c7b8c03e42#rd)
