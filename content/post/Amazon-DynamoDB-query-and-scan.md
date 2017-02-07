@@ -396,3 +396,5 @@ Note
 
 tips:
 从这几篇的介绍可以发现DynamoDB的查询语法比较繁琐，写起来非常麻烦，所以我模仿sqlalchemy 写了一个orm，欢迎使用[!https://github.com/gusibi/dynamodb-py](https://github.com/gusibi/dynamodb-py)
+
+[原文地址](http://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655751959&idx=1&sn=ba71eac3e0113239031c326e421015ea&chksm=80b0b83db7c7312b0eaf427dee3abdf6a94a7694d9c58974912db368d88128900da77ab25aba#rd)
