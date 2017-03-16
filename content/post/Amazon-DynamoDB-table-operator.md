@@ -3,8 +3,8 @@ date = "2017-01-14T18:13:42+08:00"
 title = "Amazon DynamoDB 入门3： 表的基本操作"
 draft = false
 
-tags = ["Nosql", "DynamoDB","python"]
-categories = ["Development", "Nosql", "DynamoDB","python"]
+tags = ["nosql", "DynamoDB", "python"]
+categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "AmazonDynamoDBTableOperator"
 +++
 
@@ -13,6 +13,8 @@ slug = "AmazonDynamoDBTableOperator"
 基本的DynamoDB 操作包括表操作、项目操作和索引管理。
 
 首先是链接数据库。和关系型数据库不同，**DynamoDB 是一项 Web 服务，与其进行的交互是无状态的。应用程序不需要维护持久性网络连接。相反，与 DynamoDB 的交互是通过 HTTP(S) 请求和响应进行的。**
+
+HUGOMORE42
 
 执行某项操作的步骤为：
 
@@ -370,7 +372,7 @@ table = db3.meta.client.update_table(
         }
     ],
     ProvisionedThroughput={       
-        'ReadCapacityUnits': 10, 
+        'ReadCapacityUnits': 10,
         'WriteCapacityUnits': 10
     }
 )

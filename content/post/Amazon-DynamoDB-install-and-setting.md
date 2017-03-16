@@ -3,8 +3,8 @@ date = "2017-01-07T22:57:39+08:00"
 draft = false
 title = "Amazon DynamoDB 入门1：配置（本地）及python示例"
 
-tags = ["Nosql", "DynamoDB"]
-categories = ["Development", "Nosql", "DynamoDB"]
+tags = ["nosql", "DynamoDB", "python"]
+categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "AmazonDynamoDBInsetallAndSetting"
 
 +++
@@ -15,6 +15,8 @@ slug = "AmazonDynamoDBInsetallAndSetting"
 Amazon DynamoDB 是一种完全托管的 NoSQL 数据库服务，提供快速而可预测的性能，能够实现无缝扩展。使用 DynamoDB，您可以免除操作和扩展分布式数据库的管理工作负担，因而无需担心硬件预置、设置和配置、复制、软件修补或集群扩展等问题。
 
 使用 DynamoDB，您可以创建数据库表来存储和检索任意量级的数据，并提供任意级别的请求流量。您可以扩展或缩减您的表的吞吐容量，而不会导致停机或性能下降，还可以使用 AWS 管理控制台来监控资源使用情况和各种性能指标。
+
+HUGOMORE42
 
 ## Amazon DynamoDB 特点
 

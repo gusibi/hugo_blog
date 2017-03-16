@@ -3,8 +3,8 @@ date = "2017-02-07T22:23:33+08:00"
 draft = false
 title = "Amazon DynamoDB 入门7：项目更新"
 
-tags = ["Nosql", "DynamoDB"]
-categories = ["Development", "Nosql", "DynamoDB"]
+tags = ["nosql", "DynamoDB", "python"]
+categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "Amazon-DynamoDB-UpdateItem"
 +++
 
@@ -23,6 +23,8 @@ UPDATE Music
 SET RecordLabel = 'Global Records'
 WHERE Artist = 'No One You Know' AND SongTitle = 'Call Me Today';
 ```
+
+HUGOMORE42
 
 如果任何行均不匹配 WHERE 子句，则 UPDATE 语句不起作用。
 
@@ -181,7 +183,7 @@ SET set-action , ...
 
 以下示例显示了带有多个部分的单个更新表达式：
 
-```
+```json
 SET list[0] = :val1 REMOVE #m.nestedField1, #m.nestedField2 ADD aNumber :val2, anotherNumber :val3 DELETE aSet :val4
 ```
 

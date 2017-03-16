@@ -4,8 +4,8 @@ title = "Amazon DynamoDB 入门8：删除项目"
 
 draft = false
 
-tags = ["Nosql", "DynamoDB"]
-categories = ["Development", "Nosql", "DynamoDB"]
+tags = ["nosql", "DynamoDB", "python"]
+categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "Amazon-DynamoDB-Delete-Item"
 +++
 
@@ -18,6 +18,8 @@ slug = "Amazon-DynamoDB-Delete-Item"
 ### SQL
 
 在 SQL 中，可使用 DELETE 语句删除一个或多个行。WHERE 子句确定要修改的行。示例如下：
+
+HUGOMORE42
 
 DELETE FROM Music
 WHERE Artist = 'The Acme Band' AND SongTitle = 'Look Out, World';

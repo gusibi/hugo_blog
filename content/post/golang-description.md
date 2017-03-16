@@ -2,8 +2,8 @@
 date = "2016-04-14T22:44:40+08:00"
 draft = false
 title = "golang 介绍"
-tags = ["golang"]
-categories = ["Development"]
+tags = ["golang", "读书笔记"]
+categories = ["development", "读书笔记", "golang"]
 slug = "golang-description"
 
 +++
@@ -12,6 +12,8 @@ slug = "golang-description"
 
 Go 官方说明：
 > Go 编程语言是一个使得程序员更加有效率的开源项目。Go 是有表达力、简 洁、清晰和有效率的。它的并行机制使其很容易编写多核和网络应用,而新的类型系统允许构建有 性的模块化程序。Go 编译到机器码非常快 速,同时具有便利的垃圾回收和强大的运行时反射。它是快速的、静态类 型编译语言,但是感觉上是动态类型的,解释型语言
+
+HUGOMORE42
 
 ## 2. 为什么要开发这个语言
 
@@ -108,7 +110,7 @@ Go 的源代码有以下三个分支：
 
 {{< highlight shell >}}
 sudo apt-get update && apt-get install -y --no-install-recommends \
-    g++ gcc libc6-dev make 
+    g++ gcc libc6-dev make
 
 GOLANG_VERSION=1.6
 GOLANG_DOWNLOAD_URL=https://golang.org/dl/go$GOLANG_VERSION.linux-amd64.tar.gz

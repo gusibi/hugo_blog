@@ -3,8 +3,8 @@ date = "2017-01-31T17:46:28+08:00"
 draft = false
 title = "Amazon DynamoDB 入门6：query 和 scan"
 
-tags = ["Nosql", "DynamoDB"]
-categories = ["Development", "Nosql", "DynamoDB"]
+tags = ["nosql", "DynamoDB", "python"]
+categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "Amazon-DynamoDB-Query-And-Scan"
 +++
 
@@ -15,6 +15,8 @@ slug = "Amazon-DynamoDB-Query-And-Scan"
 SQL 可使用 SELECT 语句查询关键列、非关键列或任意组合。WHERE 子句确定返回的行。
 
 DynamoDB Query 操作提供对存储数据的物理位置的快速高效访问。 可以将 Query 用于任何具有复合主键（分区键和排序键）的表。这里的表必须指定分区键的相等条件，并且可以选择性为排序键提供另一个条件。 KeyConditionExpression 参数指定要查询的键值。
+
+HUGOMORE42
 
 > 可使用可选 FilterExpression 在结果中的找出某些符号条件的项目。
 

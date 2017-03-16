@@ -3,8 +3,8 @@ date = "2017-01-18T21:53:38+08:00"
 draft = false
 title = "Amazon DynamoDB 入门4：项目的基本操作（CRUD）"
 
-tags = ["Nosql", "DynamoDB"]
-categories = ["Development", "Nosql", "DynamoDB"]
+tags = ["nosql", "DynamoDB", "python"]
+categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "AmazonDynamoDBThemsCRUD"
 +++
 
@@ -17,6 +17,8 @@ Amazon DynamoDB 提供了 PutItem 和 BatchWriteItem 两种方式写入数据
 ### 添加单个项目
 
 在 Amazon DynamoDB 中，使用 PutItem 操作向表添加项目：
+
+HUGOMORE42
 
 ```
 {

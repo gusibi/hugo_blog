@@ -3,8 +3,8 @@ date = "2017-01-18T21:55:39+08:00"
 draft = false
 title = "Amazon DynamoDB 入门5：索引创建及管理"
 
-tags = ["Nosql", "DynamoDB"]
-categories = ["Development", "Nosql", "DynamoDB"]
+tags = ["nosql", "DynamoDB", "python"]
+categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "AmazonDynamoDBIndexes"
 +++
 
@@ -17,6 +17,8 @@ slug = "AmazonDynamoDBIndexes"
 在关系数据库中，索引是一个数据结构，可对表中的不同的列执行快速查询。可以使用 CREATE INDEX SQL 语句将索引添加到现有表，并指定要建立索引的列。在创建索引后，可以照常查询表中的数据，但现在数据库可使用索引快速查找表中的指定行，而不是扫描整个表。
 
 在创建一个索引后，数据库将自动维护此索引。只要修改表中的数据，就会自动更改索引以反映表中的更改。
+
+HUGOMORE42
 
 在 MySQL 中，您可以创建如下所示的索引：
 

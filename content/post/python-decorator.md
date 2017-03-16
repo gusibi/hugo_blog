@@ -3,7 +3,7 @@ date = "2016-04-11T15:23:11+08:00"
 draft = false
 title = "python 装饰器使用指南"
 tags = ["python"]
-categories = [ "Development" ]
+categories = ["development", "python"]
 slug = "python-decorator"
 +++
 
@@ -13,9 +13,11 @@ slug = "python-decorator"
 name = 'world'
 x = 3
 {{< /highlight >}}
-	
+
 
 变量是代表某个值的名字
+
+HUGOMORE42
 
 ## 函数
 
@@ -27,7 +29,7 @@ def hello(name):
 >> hello('word)
 hello word
 {{< /highlight >}}
-	
+
 
 函数通过def关键字、函数名和可选的参数列表定义。
 
@@ -69,7 +71,7 @@ NameError: name 'x' is not defined
 
 {{< highlight python >}}
 g = 'global variable'
-	
+
 >> print globals()
 {'g': 'global variable',
  '__builtins__': <module '__builtin__' (built-in)>,
@@ -87,7 +89,7 @@ def foo():
 
 >> foo()
 g is test
-{'g': 'test'}	
+{'g': 'test'}
 {'g': 'global variable',
  '__builtins__': <module '__builtin__' (built-in)>,
  '__file__': 'test.py',
@@ -147,47 +149,47 @@ In [10]: def foo():
 
 In [11]: type(foo)
 Out[11]: function
-	
+
 In [12]: A.__class__
 Out[12]: type
-	
+
 In [13]: foo.__class__
 Out[13]: function
-	
+
 In [14]: a = 1
 In [15]: a.__class__
 Out[15]: int
 
-# 类 是对象	
+# 类 是对象
 In [16]: issubclass(A.__class__, object)
 Out[16]: True
 
-# 变量 是对象	
+# 变量 是对象
 In [17]: issubclass(a.__class__, object)
 Out[17]: True
 
-# 函数 是对象	
+# 函数 是对象
 In [18]: issubclass(foo.__class__, object)
 Out[18]: True
 {{< /highlight >}}
-	
+
 所以函数也可以作为参数传递给其它函数，也可以被当做返回值返回
 
 {{< highlight python >}}
 def add(x, y):
 	return x + y
-		
+
 def apply(func):
 	return func
 
 >> a = apply(add)
 >> type(a)
 <type 'function'>
-	
+
 >> a(1, 2)
 >> 3
 {{< /highlight >}}
-	
+
 
 ## 闭包
 
@@ -196,7 +198,7 @@ def make_adder(a):
     def adder(b):
         return b + a
     return adder
-    
+
 add = make_adder(5)
 
 >> add
@@ -208,12 +210,12 @@ add = make_adder(5)
 8
 {{< /highlight >}}
 
-* adder 就是一个闭包 
-* 也可以说 make_adder 指向一个闭包 
+* adder 就是一个闭包
+* 也可以说 make_adder 指向一个闭包
 * 或者说 make_add 是闭包的工厂函数
 
 > 闭包可以认为是一个内层函数(adder)，由一个变量指代，而这个变量相对于外层包含它的函数而言，是本地变量
-> 
+>
 > 嵌套定义在非全局作用域里面的函数能够记住它在被定义的时候它所处的封闭命名空间
 
 *闭包只是在形式和表现上像函数，但实际上不是函数。函数是一些可执行的代码，这些代码在函数被定义后就确定了，不会在执行时发生变化，所以一个函数只有一个实例。闭包在运行时可以有多个实例，不同的引用环境和相同的函数组合可以产生不同的实例。*
@@ -230,10 +232,10 @@ def my_decorator(func):
         func()
         print "After the function runs"
     return wrapper
-    
+
 def my_func():
     print "I am a stand alone function"
-    
+
 
 >> my_func()
 
@@ -255,7 +257,7 @@ After the function runs
 @ my_decorator
 def my_func():
     print "I am a stand alone function"
- 
+
 >> my_func()
 #output
 Before the function runs
@@ -344,11 +346,11 @@ def sandwich(food="--ham--"):
 {{< highlight python >}}
 def deco(fn):
     print "I am %s!" % fn.__name__
- 
+
 @deco
 def func():
     pass
-    
+
 # output
 I am func!
 
@@ -380,10 +382,10 @@ def my_decorator(func):
         func()
         print "After the function runs"
     return wrapper
-    
+
 def my_func():
     print "I am a stand alone function"
-    
+
 >> my_func = my_decorator(my_func)
 >> my_func()
 #output
@@ -402,7 +404,7 @@ my_decorator(my_func)返回了wrapper()函数，所以，my_func其实变成了w
 @decorator_two
 def func():
     pass
-    
+
 相当于：
 
 func = decorator_one(decorator_two(func))
@@ -459,11 +461,11 @@ def a_decorator(method_to_decorate):
         print kwargs
         method_to_decorate(*args, **kwargs)
     return wrapper
-  
+
 @a_decorator
 def func():
     pass
-   
+
 func()
 #output
 ****** args ******
@@ -497,11 +499,11 @@ func_with_args(1, b=2)
 {{< highlight python >}}
 def deco(fn):
     print "I am %s!" % fn.__name__
- 
+
 @deco
 def func():
     pass
-    
+
 # output
 I am func!
 
@@ -555,7 +557,7 @@ I make decorators!
 As a decorator maker, I return a decorator
 I am a decorator!
 As the decorator, I return the wrapped function.
-I am the wrapper around the decorated function. 
+I am the wrapper around the decorated function.
 I am the decorated  function
 
 {{< /highlight >}}
@@ -598,12 +600,12 @@ def decorator_maker_with_arguments(darg1, darg2):
 
     print "As a decorator maker, I return a decorator"
     return my_decorator
-    
+
 @decorator_maker_with_arguments("deco_arg1", "deco_arg2")
 def decorated_function_with_arguments(function_arg1, function_arg2):
     print ("I am the decorated function and only knows about my arguments: {0}"
            " {1}".format(function_arg1, function_arg2))
-           
+
 
 decorated_function_with_arguments('farg1', 'farg2')
 
@@ -679,23 +681,23 @@ print foo.__name__
 ## 类装饰器
 {{< highlight python >}}
 class myDecorator(object):
- 
+
     def __init__(self, func):
         print "inside myDecorator.__init__()"
         self.func = func
- 
+
     def __call__(self):
         self.func()
         print "inside myDecorator.__call__()"
- 
+
 @myDecorator
 def aFunction():
     print "inside aFunction()"
- 
+
 print "Finished decorating aFunction()"
- 
+
 aFunction()
- 
+
 # output：
 # inside myDecorator.__init__()
 # Finished decorating aFunction()
@@ -712,14 +714,14 @@ aFunction()
 
 {{< highlight python >}}
 class myDecorator(object):
- 
+
     def __init__(self, arg1, arg2):
         self.arg1 = arg2
- 
+
     def __call__(self, func):
         def wrapped(*args, **kwargs):
             return self.func(*args, **kwargs)
-        return wrapped 
+        return wrapped
 {{< /highlight >}}
 
 ##装饰器示例
@@ -746,7 +748,7 @@ from functools import wraps
 def memo(fn):
     cache = {}
     miss = object()
- 
+
     @wraps(fn)
     def wrapper(*args):
         result = cache.get(args, miss)
@@ -755,9 +757,9 @@ def memo(fn):
             print "{0} has been used: {1}x".format(fn.__name__, wrapper.count)
             cache[args] = result
         return result
- 
+
     return wrapper
- 
+
 @memo
 def fib(n):
     if n < 2:
@@ -783,7 +785,7 @@ def cache_for(duration):
         return fn
     return deco
 {{< /highlight >}}
-    
+
 [更多缓存示例](http://git.iguokr.com/stable/gkapp-sex/blob/master/src/sex/core/helpers.py)
 
 * 统计代码运行时间

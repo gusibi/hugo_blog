@@ -2,8 +2,8 @@
 date = "2017-01-09T22:37:11+08:00"
 title = "Amazon DynamoDB 入门2： 工作原理、API和数据类型介绍"
 
-tags = ["Nosql", "DynamoDB"]
-categories = ["Development", "Nosql", "DynamoDB"]
+tags = ["nosql", "DynamoDB", "python"]
+categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "AmazonDynamoDBHowItWorks"
 
 +++
@@ -16,6 +16,8 @@ DynamoDB工作原理
 
 DynamoDB 是 AWS 独有的完全托管的 NoSQL Database。它的思想来源于 Amazon 2007 年发表的一篇论文：Dynamo: Amazon’s Highly Available Key-value Store。在这篇论文里，Amazon 介绍了如何使用 Commodity Hardware 来打造高可用、高弹性的数据存储。想要理解 DynamoDB，首先要理解 Consistent Hashing。Consistent Hashing 的原理如下图所示：
 ![](http://note.youdao.com/yws/public/resource/b99dcbe9b4a2069a3337badbeafe4b29/xmlnote/WEBRESOURCEb477b81f1e511ee919b14f3393326749/470)
+
+HUGOMORE42
 
 它的概念是：
 

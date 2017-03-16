@@ -1,9 +1,11 @@
 +++
 date = "2016-04-25T14:53:47+08:00"
 draft = false
+
 title = "跟着代码学go 001 -- 变量&函数"
-tags = ["golang"]
-categories = ["Development"]
+tags = ["golang", "读书笔记"]
+categories = ["development", "读书笔记", "golang"]
+
 slug = "golang-learning-by-code-001"
 description = "跟着代码学golang 变量 函数 基本数据结构"
 
@@ -16,13 +18,15 @@ description = "跟着代码学golang 变量 函数 基本数据结构"
 
 首先搬出我们最经典的第一段代码:
 
+HUGOMORE42
+
 ### hello world
 
 {{< highlight go >}}
     package main // 0
-    
+
     import "fmt" // 1实现格式化的 I/O
-    
+
     /* Print something */ // 2
     func main() { // 3
     	fmt.Println("Hello, world; or καλημε ́ρα κóσμε; orこんにちは 世界") // 4
@@ -96,7 +100,7 @@ Go 是静态类型语言 ,不能在运行期改变变量类型。
     	a int
     	b float32
     )
-    
+
     func main() {
         n, s := 0x1234, "Hello, World!"
         println(x, s, n)
@@ -112,7 +116,7 @@ Go 的编译器会对声明却未使用的变量报错
 
 {{< highlight go >}}
     var s string // 全局变量没问题。
-    
+
     func main() {
         i := 0 // Error: i declared and not used。(可使  "_ = i" 规避)
     }
@@ -135,7 +139,7 @@ Go 的编译器会对声明却未使用的变量报错
     	a, b = 10, 100
     	c bool = false
     )
-    
+
     func main() _{
     	const x = 'xxx'      // 未使用局部常量不会引发编译错误
     }
@@ -163,7 +167,7 @@ Go 有明确的数字类型命名, 支持 Unicode, 支持常用数据结构
 |int8, unit8   | 1      | 0     | -128 ~ 127, 0~255
 |int16, unit16 | 2      | 0     | -32768 ~ 32767, 0 ~ 65535
 |int32, unit32 | 4      | 0     | -21亿~ 21亿, 0 ~ 42亿
-|int64, unit64 | 8      | 0     | 
+|int64, unit64 | 8      | 0     |
 |float32       | 4      | 0.0   |
 |float64       | 8      | 0.0   |
 |complex64     | 8      |       |
@@ -211,13 +215,13 @@ if a {                  // Error: non-bool a (type int) used as if condition
 
 {{< highlight go >}}
     package main
-    
+
     import "fmt"
-    
+
     func add(x int, y int) int {
     	return x + y
     }
-    
+
     func main() {
     	fmt.Println(add(42, 13))
     }
@@ -233,7 +237,7 @@ golang中符合规范的函数一般写成如下的形式：
     func functionName(parameter_list) (return_value_list) {
        …
     }
-    
+
     // parameter_list 是参数列表
     // return_value_list 是返回值列表 下边有详细的讲解
 {{< /highlight >}}
@@ -252,21 +256,21 @@ golang中符合规范的函数一般写成如下的形式：
         n := x + y                                    // 多返回值必须用括号。
         return n, fmt.Sprintf(s, n)
     }
-    
+
     /*
     关键字 func 用于定义一个函数
     test 是你函数的名字
     int类型的变量x, y 和string类型的变量s作为输入参数 参数用pass-by-value方式传递,意味着它们会被复制
     当两个或多个连续的函数命名参数是同一类型，则除了最后一个类型之外，其他都可以省略。
-    
+
     在这个例子中：
-    
+
         x int, y int
-    
+
     被缩写为
-    
+
         x, y int
-    
+
     变量 r 和 s 是这个函数的 命名返回值。在 Go 的函数中可以返回多个值
     如果不想对返回的参数命名,只需要提供类型:(int, string)。 如果只有一个返回值,可以省略圆括号。如果函数是一个子过程,并且没有任何返回值,也可以省略这些内容
     函数体。注意 return 是一个语句,所以包裹参数的括号是可选的
@@ -276,7 +280,7 @@ golang中符合规范的函数一般写成如下的形式：
 不定长参数其实就是slice，只能有一个，且必须是最后一个
 
 {{< highlight go >}}
-    
+
     func test(s string, n ...int) string {
         var x int
     		for _, i := range n {
@@ -314,13 +318,13 @@ Go 函数的返回值或者结果参数可以指定一个名字,并且像原始�
 
 {{< highlight go >}}
     package main
-    
+
     import "fmt"
-    
+
     func swap(x, y string) (string, string) {
     	return y, x
     }
-    
+
     func main() {
     	a, b := swap("hello", "world")
     	fmt.Println(a, b)
@@ -337,15 +341,15 @@ Go 的返回值可以被命名，并且就像在函数体开头声明的变量�
 
 {{< highlight go >}}
     package main
-    
+
     import "fmt"
-    
+
     func split(sum int) (x, y int) { // 初始化返回值为 x,y
     	x = sum * 4 / 9              // x,y 已经初始化，可以直接赋值使用
     	y = sum - x
     	return                       // 隐式返回x,y(裸返回)
     }
-    
+
     func main() {
     	fmt.Println(split(17))
     }
@@ -375,9 +379,9 @@ Go 的返回值可以被命名，并且就像在函数体开头声明的变量�
 
 {{< highlight go >}}
     package main
-    
+
     import "fmt"
-    
+
     func main() {
         result := 0
         for i := 0; i <= 10; i++ {
@@ -385,7 +389,7 @@ Go 的返回值可以被命名，并且就像在函数体开头声明的变量�
           fmt.Printf("fibonacci(%d) is: %d\n", i, result)
        }
     }
-    
+
     func fibonacci(n int) (res int) {
         if n <= 1 {
             res = 1

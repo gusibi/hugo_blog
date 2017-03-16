@@ -2,8 +2,8 @@
 date = "2016-04-26T15:49:35+08:00"
 draft = false
 title = "跟着代码学go 002 -- 控制流"
-tags = ["golang"]
-categories = ["Development"]
+tags = ["golang", "读书笔记"]
+categories = ["development", "读书笔记", "golang"]
 slug = "golang-learning-by-code-002"
 description = "跟着代码学golang 控制流"
 
@@ -14,6 +14,8 @@ description = "跟着代码学golang 控制流"
 上一篇我们了解了golang 的变量、函数和基本类型，这一篇将介绍一下控制流
 
 现在我们看一个复杂点的例子:
+
+HUGOMORE42
 
 ### fibonacci(递归版)
 
@@ -183,9 +185,9 @@ func main() {
 
 {{< highlight go >}}
     package main
-    
+
     import "fmt"
-    
+
     func switch1(n int) {
     	switch { // 这里用的是没有条件的switch 语句会直接执行
     	case n == 0:
@@ -199,7 +201,7 @@ func main() {
     		fmt.Println("default")
     	}
     }
-    
+
     func main() {
     	switch1(0)
     }
@@ -289,7 +291,7 @@ func main() {
 	for i := 0; i < 10; i++ {
 			defer fmt.Println(i)
 		}
-	
+
 		fmt.Println("done")
 }
 // 可以想一下会输出什么

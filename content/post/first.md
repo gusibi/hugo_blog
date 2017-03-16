@@ -2,7 +2,7 @@
 date = "2016-04-11T10:47:47+08:00"
 draft = false
 title = "hugo 使用"
-tags = ["test"]
+tags = ["hugo"]
 slug = "hugo-simple-use"
 +++
 
@@ -25,7 +25,7 @@ hugo server --theme=hugo_zen # 以zen 主题启动server
 hugo --theme=hugo_zen 以zen # 主题生成草稿
 {{< /highlight >}}
 
-*语法高亮* 
+*语法高亮*
 
 [Syntax Highlighting](https://gohugo.io/extras/highlighting/)
 
@@ -50,7 +50,7 @@ series = [ "Go Web Dev" ]
 slug = "hugo-可以替代url"
 project_url = "https://github.com/spf13/hugo"
 +++
-{{< /highlight >}} 
+{{< /highlight >}}
 ### Markdown 语法说明
 
 [Markdown 语法说明 (简体中文版)] (http://wowubuntu.com/markdown/)

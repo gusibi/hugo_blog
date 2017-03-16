@@ -2,8 +2,8 @@
 date = "2016-09-05T17:59:45+08:00"
 draft = false
 title = "网站微信登录－python 实现"
-tags = ["python"]
-categories = ["Development"]
+tags = ["python", "weixin"]
+categories = ["development", "python"]
 slug = "weixin-python-login"
 
 +++
@@ -18,6 +18,8 @@ slug = "weixin-python-login"
 
 * 移动应用微信登录
 * 网站应用微信登录
+
+HUGOMORE42
 
 *这里我们使用的是网站应用微信登录*
 
@@ -34,10 +36,10 @@ slug = "weixin-python-login"
 3. 接入微信登录
 
 在资源中心查阅网站应用开发文档,开发接入微信登陆功能，让用户可使用微信登录你的网站应用
- 
+
 
 如果已经完成上面的操作，请继续往下看
- 
+
 
 微信网站应用微信登录是基于OAuth2.0协议标准构建的微信OAuth2.0授权登录系统。
 
@@ -52,17 +54,17 @@ slug = "weixin-python-login"
 #### 获取access_token 时序图
 
 ![获取access_token 时序图](https://res.wx.qq.com/open/zh_CN/htmledition/res/img/pic/web-wxlogin/12168b9.png)
- 
+
 
 具体流程请参考官方文档，我们这里只说一下python的实现方法。官方文档地址 [点这里](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&lang=zh_CN&token=db685a316b7e3933cae42c5ca91d4e024125d1b8&appid=wx6d8c79fb64de6c08)
- 
+
 
 参考python-instagram 我写了一个 [python-weixin] (https://github.com/gusibi/python-weixin)一个微信python SDK
 
 不过现在还只有微信接入、获取用户信息、 刷新refresh_token 等简单功能
 
 -------
-### 安装 
+### 安装
 
 #### 方法一 手动安装
 1. 首先 需要把代码clone到本地
@@ -109,12 +111,12 @@ access_token = api.exchange_code_for_access_token(code=code)
 access_token 信息为
 
 {{< highlight python >}}
-{ 
-"access_token":"ACCESS_TOKEN", 
-"expires_in":7200, 
+{
+"access_token":"ACCESS_TOKEN",
+"expires_in":7200,
 "refresh_token":"REFRESH_TOKEN",
-"openid":"OPENID", 
-"scope":"SCOPE" 
+"openid":"OPENID",
+"scope":"SCOPE"
 }
 {{< /highlight >}}
 
@@ -125,7 +127,7 @@ access_token 信息为
 |refresh_token	|用户刷新access_token（有效期目前为30天）|
 |openid	|授权用户唯一标识|
 |scope	|用户授权的作用域，使用逗号（,）分隔|
- 
+
 
 获取access_token后，就可以进行接口调用，有以下前提：
 
@@ -140,7 +142,7 @@ access_token 信息为
 | snsapi_base| /sns/oauth2/refresh_token	|刷新或续期access_token使用|
 | snsapi_base| /sns/auth	|检查access_token有效性|
 | snsapi_userinfo|/sns/userinfo	|获取用户个人信息|
- 
+
 
 {{< highlight python >}}
 api = WeixinAPI(appid=APP_ID,
@@ -158,7 +160,7 @@ user = api.user(openid=auth_info['openid'])
 # 检查access_token有效性
 v = api.validate_token(openid=auth_info['openid'])
 {{< /highlight >}}
- 
+
 
 现在就微信登录就完成了
 
@@ -210,7 +212,7 @@ def hello():
 
 if __name__ == "__main__":
     app.run(debug=True)
- 
+
 {{< /highlight >}}
 
 #### 参考链接：

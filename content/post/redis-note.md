@@ -3,8 +3,8 @@ date = "2016-04-11T15:23:02+08:00"
 draft = false
 title = "redis 学习笔记及使用技巧"
 description = "redis 学习笔记"
-tags = ["redis"]
-categories = [ "Development" ]
+tags = ["redis", "nosql"]
+categories = ["development", "nosql"]
 slug = "redis-note"
 +++
 
@@ -22,6 +22,8 @@ slug = "redis-note"
 * 跳跃表    (SKIPLIST)
 * 整数集合  (INTSET)
 * 压缩列表  (ZIPLIST)
+
+HUGOMORE42
 
 #### [动态字符串](http://origin.redisbook.com/internal-datastruct/sds.html)
 
@@ -94,17 +96,17 @@ redisObject 的定义位于 redis.h :
 */
 typedef struct redisObject {
     // 类型
-    unsigned type:4; 
+    unsigned type:4;
     // 对齐位
-    unsigned notused:2; 
+    unsigned notused:2;
     // 编码方式
     unsigned encoding:4;
     // LRU 时间(相对于 server.lruclock)
-    unsigned lru:22; 
+    unsigned lru:22;
     // 引用计数
-    int refcount; 
+    int refcount;
     // 指向对象的值
-    void *ptr; 
+    void *ptr;
 } robj;
 {{< /highlight >}}
 
@@ -114,7 +116,7 @@ type 记录了对象所保存的值的类型,它的值可能是以下常量的�
 
 {{< highlight c >}}
 /*
-* 对象类型 
+* 对象类型
 */
 #define REDIS_STRING 0 // 字符串
 #define REDIS_LIST 1   // 列表
@@ -122,7 +124,7 @@ type 记录了对象所保存的值的类型,它的值可能是以下常量的�
 #define REDIS_ZSET 3   // 有序集
 #define REDIS_HASH 4   // 哈希表
 {{< /highlight >}}
-	
+
 encoding 记录了对象所保存的值的编码,它的值可能是以下常量的其中一个
 
 {{< highlight c >}}
@@ -136,7 +138,7 @@ encoding 记录了对象所保存的值的编码,它的值可能是以下常量�
 #define REDIS_ENCODING_LINKEDLIST 4 // 编码为双端链表
 #define REDIS_ENCODING_ZIPLIST 5    // 编码为压缩列表
 #define REDIS_ENCODING_INTSET 6     // 编码为整数集合
-#define REDIS_ENCODING_SKIPLIST 7    // 编码为跳跃表	
+#define REDIS_ENCODING_SKIPLIST 7    // 编码为跳跃表
 {{< /highlight >}}
 
 ptr 是一个指针,指向实际保存值的数据结构,这个数据结构由 type 属性和 encoding 属性决定。

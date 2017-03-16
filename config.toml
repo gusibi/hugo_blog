@@ -1,74 +1,83 @@
-# baseurl = "http://gusibi.github.io/"
-# title = "这个人很懒-程序员的学习笔记"
-# author = "Goodspeed Cheng"
-# pygmentsuseclasses = true
-# copyright = "goodspeed All rights reserved."
-# googleanalytics = "UA-76238744-1"
-# hasCJKLanguage = true
-# 
-# [params]
-#   logo      = "https://pbs.twimg.com/profile_images/1850144125/pocoyo_bigger.gif"
-#   twitter   = "https://twitter.com/amazing_gs"
-#   github    = "https://github.com/gusibi/"
-#   email     = "cacique1103@gmail.com"
-# 
-# 
-BaseURL = "http://gusibi.github.io/"
+Title =  "这个人很懒"
 LanguageCode = "zh-CN"
+BaseUrl = "http://gusibi.github.io"
+Theme =  "next"
+MetaDataFormat =  "yaml"
+CanonifyUrls =  true
+BuildDrafts =  false
+PaginatePath =  "p"
+Paginate = 10
+DisablePathToLower =  false
 HasCJKLanguage = true
-Title = "了不起的顾斯比"
-Theme = "hugo-pacman-theme"
-pygmentsStyle = "default"
-pygmentsUseClasses = true
-RSSUri = "feed.xml"
-
-[Author]
-  Name = "goodspeed"
+PreserveTaxonomyNames = false
+UglyUrls = false
+PygmentsStyle = "native"
+PygmentsUseClasses = true
+DefaultContentLanguage = "zh"
+GoogleAnalytics = "UA-76238744-1"
 
 [Params]
-  AuthorHomepage = "http://gusibi.github.io/"
-  BottomIntroduce = "这个人很懒-程序员的学习笔记"
-  Description = "了不起的顾斯比的学习笔记"
-  Subtitle = "这个人很懒-程序员的学习笔记"
-  Weibo = "了不起的顾斯比"
-  WeiboID = "mytribe"
-  # Twitter = "coderzh"
-  GitHub = "gusibi"
-  # Facebook = "coderzh"
-  # LinkIn = "coderzh"
-  Imglogo = "img/mp_author.jpg"
-  AuthorImg = "img/mp_author.jpg"
-  DateFormat = "2006年01月02日"
-  MonthFormat = "2006年01月"
-  FancyBox = true
+  Introduce = "专业bug生产销毁"
+  Description = "这个人很懒 | 博客 | 软件  | Python | Golang"
+  Keywords =  "这个人很懒,python,博客,程序员,个人,思考,读书,笔记,技术,分享,Golang"
+  Subtitle = "我说的都是错的"
+  Imglogo = "/img/mp_author.jpg"
+  AuthorImg = "/img/mp_author.jpg"
+  DateFormat = "2006-01-02"
+  YearFormat = "2006年"
+  MonthFormat = "01-02"
+  Fancybox = true
+  HighlightTheme = "tomorrow"
 
-  #[Params.DuoShuo]
-  #  ShortName = "coderzh"
+[Author]
+  Name = "顾斯比"
 
-  [Params.Disqus]
-    ShortName = "gusibi"
+# [Params.Share]
+  # DuoShuo = "lanlingzi"
+  # Baidu = true
 
-  [Params.GoogleAnalytics]
-    ID = "UA-76238744-1"
+[[Menu.Main]]
+  Name = "首页"
+  Pre = "home"
+  URL = "/"
+  Weight = 1
+[[Menu.Main]]
+  Name = "python"
+  Pre = "code"
+  URL = "/categories/python/"
+  Weight = 2
+[[Menu.Main]]
+  Name = "nosql"
+  Pre = "tint"
+  URL = "/categories/nosql/"
+  Weight = 3
+[[Menu.Main]]
+  Name = "读书笔记"
+  Pre = "book"
+  URL = "/categories/读书笔记/"
+  Weight = 4
+[[Menu.Main]]
+  Name = "golang"
+  Pre = "leaf"
+  URL = "/categories/golang/"
+  Weight = 5
+[[Menu.Main]]
+  Name = "归档"
+  Pre = "archive"
+  URL = "/post/"
+  Weight = 6
+[[Menu.Main]]
+  Name = "关于"
+  Pre = "user"
+  URL = "/about/"
+  Weight = 7
 
-  [Params.Strings]
-    Search = "搜索"
-    PageNotFound = "你访问的页面不存在"
-    ShowSideBar = "显示侧边栏"
-    HideSideBar = "隐藏侧边栏"
-    Categories = "分类"
-    Archive = "归档"
-    Tags = "标签"
-    TagCloud = "标签云"
-    Rss = "RSS 订阅"
-    TableOfContents = "文章目录"
+[[Params.Socials]]
+  Name = "GitHub"
+  Icon = "github"
+  URL = "https://github.com/gusibi/"
 
-[Menu]
-  [[Menu.Main]]
-    Name = "首页"
-    URL = "/"
-    Weight = 1
-  [[Menu.Main]]
-    Name = "关于"
-    URL = "/about"
-    Weight = 2
+[[Params.Socials]]
+  Name = "分答"
+  Icon = "globe"
+  URL = "http://fd.zaih.com/tutor/587467196"  

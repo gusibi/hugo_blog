@@ -3,7 +3,7 @@ date = "2016-10-16T22:03:53+08:00"
 draft = true
 title = "Python Data Structures"
 tags = ["python", "算法"]
-categories = ["Development", "读书笔记"]
+categories = ["development", "读书笔记", "python"]
 slug = "python-data-structures"
 
 +++
@@ -15,6 +15,7 @@ slug = "python-data-structures"
 * Python 的 dict 是怎么回事，为什么可以用字符串数字等等东西来索引？是怎么搜索的？在 dict 中找一个元素，和在 list 里面找一个元素有什么区别？
 * Python 内置的 list, dict, set, ...数据结构，你应该在什么样的场景下使用？
 
+HUGOMORE42
 
 Python中常见的数据结构可以统称为容器（container）。序列（如列表和元组）、映射（如字典）以及集合（set）是三类主要的容器。
 
@@ -57,4 +58,4 @@ class Node:
 * 邻接矩阵
 * 树的实现
 
-### 
+###

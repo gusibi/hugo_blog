@@ -18,4 +18,3 @@ slug = "python-decorator"
 ### 互斥和内存模型
 
 ### 使用python 讲解多线程的互斥和内存模型
-
