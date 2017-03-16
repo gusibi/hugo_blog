@@ -14,7 +14,7 @@ echo $msg
 git push origin master
 
 # Build the project. 
-hugo -t hugo-pacman-theme
+hugo -t next
 
 # Go To Public folder
 cd public
