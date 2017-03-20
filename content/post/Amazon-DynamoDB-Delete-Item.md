@@ -7,6 +7,7 @@ draft = false
 tags = ["nosql", "DynamoDB", "python"]
 categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "Amazon-DynamoDB-Delete-Item"
+
 +++
 
 > 上一篇介绍了DynamoDB 的更新，这一篇将会介绍项目删除操作和dynamoab-py
