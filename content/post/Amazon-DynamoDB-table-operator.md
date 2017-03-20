@@ -5,7 +5,7 @@ draft = false
 
 tags = ["nosql", "DynamoDB", "python"]
 categories = ["development", "nosql", "DynamoDB", "python"]
-slug = "AmazonDynamoDBTableOperator"
+slug = "Amazon-DynamoDB-Table-Operator"
 +++
 
 > 之前两篇文章介绍了DynamoDB如何在本地安装以及基本的工作原理和API，这一节主要介绍如何使用DynamoDB。

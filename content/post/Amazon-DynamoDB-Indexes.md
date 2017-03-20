@@ -5,7 +5,7 @@ title = "Amazon DynamoDB 入门5：索引创建及管理"
 
 tags = ["nosql", "DynamoDB", "python"]
 categories = ["development", "nosql", "DynamoDB", "python"]
-slug = "AmazonDynamoDBIndexes"
+slug = "Amazon-DynamoDB-Indexes"
 +++
 
 > 上一节我们介绍了项目的添加、修改、获取、删除（CRUD）操作，这一节将介绍索引的创建及管理。

@@ -5,7 +5,7 @@ title = "Amazon DynamoDB 入门1：配置（本地）及python示例"
 
 tags = ["nosql", "DynamoDB", "python"]
 categories = ["development", "nosql", "DynamoDB", "python"]
-slug = "AmazonDynamoDBInsetallAndSetting"
+slug = "Amazon-DynamoDB-Insetall-And-Setting"
 
 +++
 

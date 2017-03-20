@@ -5,7 +5,7 @@ title = "Amazon DynamoDB 入门4：项目的基本操作（CRUD）"
 
 tags = ["nosql", "DynamoDB", "python"]
 categories = ["development", "nosql", "DynamoDB", "python"]
-slug = "AmazonDynamoDBThemsCRUD"
+slug = "Amazon-DynamoDB-Items-CRUD"
 +++
 
 > 上一节我们介绍了DynamoDB 表的操作，这一节将介绍项目的添加 修改 获取 删除操作。

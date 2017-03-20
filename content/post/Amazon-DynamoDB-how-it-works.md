@@ -4,7 +4,7 @@ title = "Amazon DynamoDB 入门2： 工作原理、API和数据类型介绍"
 
 tags = ["nosql", "DynamoDB", "python"]
 categories = ["development", "nosql", "DynamoDB", "python"]
-slug = "AmazonDynamoDBHowItWorks"
+slug = "Amazon-DynamoDB0How-It-Works"
 
 +++
 
