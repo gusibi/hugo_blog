@@ -1,6 +1,6 @@
 Title =  "这个人很懒"
 LanguageCode = "zh-CN"
-BaseUrl = "http://gusibi.github.io"
+BaseUrl = "https://gusibi.github.io"
 Theme =  "next"
 MetaDataFormat =  "yaml"
 CanonifyUrls =  true
