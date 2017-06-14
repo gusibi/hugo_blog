@@ -374,3 +374,9 @@ except that, as currently, the exception cannot be caught by except clauses with
 * 流畅的python 第16章（这是读书笔记，这是读书笔记）
 * [PEP 380-- Syntax for Delegating to a Subgenerator](https://www.python.org/dev/peps/pep-0380/#proposal)
 * [How Python 3.3 "yield from" construct works](http://flupy.org/resources/yield-from.pdf)
+
+最后，感谢女朋友支持。
+
+恩，也欢迎打赏。
+
+![喜欢也可以微信打赏一下](http://omuo4kh1k.bkt.clouddn.com/qn-FaCXmUz7zHtZgN4Je1CEE94ibt5cZRr3_iavTVsMioCR83oNa8d4pq1fgo84y)
