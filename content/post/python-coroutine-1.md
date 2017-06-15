@@ -4,7 +4,7 @@ date: 2017-06-12T17:22:49+08:00
 draft: false
 slug: "python-coroutine-1-yield"
 tags: ["python", "读书笔记"]
-title: "python协程1：yield的使用"
+title: "python协程1：协程 10分钟入门"
 ---
 
 > 最近找到一本python好书《流畅的python》，是到现在为止看到的对python高级特性讲述最详细的一本。

@@ -4,7 +4,7 @@ date: 2017-06-14T17:22:49+08:00
 draft: false
 slug: "python-coroutine-yield-from"
 tags: ["python", "读书笔记"]
-title: "python协程2：yield from 分析"
+title: "python协程2：yield from 从入门到精通"
 ---
 
 上一篇[python协程1：yield的使用](https://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655751983&idx=1&sn=e4c093c6e5d6e4e8281d76db7c67eb23)介绍了：
