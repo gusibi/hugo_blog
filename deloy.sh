@@ -16,6 +16,8 @@ git push origin master
 # Build the project. 
 hugo -t next
 
+cp ./CNAME ./public/
+
 # Go To Public folder
 cd public
 # Add changes to git.
