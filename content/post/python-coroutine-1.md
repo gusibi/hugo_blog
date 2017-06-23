@@ -47,7 +47,6 @@ def simple_coroutine():
     x = yield
     print('-> coroutine received:', x)
 
-
 my_coro = simple_coroutine()
 my_coro # 和创建生成器的方式一样，调用函数得到生成器对象。
 # 协程处于 GEN_CREATED (等待开始状态)

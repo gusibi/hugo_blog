@@ -17,6 +17,11 @@ _test
 _cgo_defun.c
 _cgo_gotypes.go
 _cgo_export.*
+content/.Archive/
+content/post/.Archive/
+content/post/.md_configs.data
+content/post/.me_configs.data
+content/post/_book/
 
 _testmain.go
 

@@ -9,5 +9,5 @@ title = "about"
 
 > 一个很懒的程序员
 
-[github] (https://www.github.com/zongxiao)
+[github] (https://www.github.com/gusibi)
 [twitter] (https://twitter.com/amazing_gs)
