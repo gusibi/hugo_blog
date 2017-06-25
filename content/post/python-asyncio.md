@@ -1,6 +1,6 @@
 ---
 date: 2017-06-23T16:29:39+08:00
-description: description
+description: python asyncio 介绍
 draft: false
 slug: "python-asyncio"
 categories: ["development", "python", "读书笔记"]
