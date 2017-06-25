@@ -10,7 +10,11 @@ title: python web 框架 Sanci 快速入门
 
 ## 简介
 Sanic 是一个和类Flask 的基于Python3.5+的web框架，它编写的代码速度特别快。
+
 除了像Flask 以外，Sanic 还支持以异步请求的方式处理请求。这意味着你可以使用新的 async/await 语法，编写非阻塞的快速的代码。
+
+> 关于 asyncio 包的介绍，请参考之前的一篇文章 [python并发2：使用asyncio处理并发](http://blog.gusibi.com/post/python-asyncio/)
+
 Github 地址 是 [https://github.com/channelcat/sanic](https://github.com/channelcat/sanic)，感兴趣的可以去贡献代码。
 
 既然它说速度特别快，我们先看下官方提供的 基准测试结果。
@@ -199,7 +203,9 @@ url = app.url_for('post_handler', post_id=5, arg_one=['one', 'two'])
 ## 使用蓝图（Blueprint）
 
 Sanic也提供了和Flask 类似的 Blueprint。
+
 Blueprint有以下用途：
+
 * 把一个应用分解为一套蓝图。这是针对大型应用的理想方案：一个项目可以实例化一个 应用，初始化多个扩展，并注册许多蓝图。
 * 在一个应用的 URL 前缀和（或）子域上注册一个蓝图。 URL 前缀和（或）子域的参数 成为蓝图中所有视图的通用视图参数（缺省情况下）。
 * 使用不同的 URL 规则在应用中多次注册蓝图。
@@ -259,6 +265,7 @@ bp.static('/folder/to/serve', '/web/path')
 ```
 
 ### 使用url_for
+
 如果要创建页面链接，可以和通常一样使用 url_for() 函数，只是要把蓝图名称作为端点的前缀，并且用一个点（ . ）来 分隔:
 
 ```python
