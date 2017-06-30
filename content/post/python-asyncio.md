@@ -6,7 +6,6 @@ slug: "python-asyncio"
 categories: ["development", "python", "读书笔记"]
 tags: ["python", "读书笔记"]
 title: "python并发2：使用asyncio处理并发"
-lines: true
 ---
 
 ## asyncio 
