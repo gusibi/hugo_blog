@@ -1,13 +1,14 @@
-+++
-date = "2017-03-15T18:17:32+08:00"
-draft = false
-title = "python线程笔记"
+---
+date: 2017-07-02T16:29:39+08:00
+description: python asyncio 介绍
+draft: false
+slug: "python-thread-note"
+categories: ["development", "python", "读书笔记"]
+tags: ["python", "读书笔记", "并发"]
+title: "python并发4：使用thread处理并发"
+---
 
-tags = ["python", "读书笔记", "并发"]
-categories = ["development", "python", "读书笔记"]
-slug = "python-thread-note"
-
-+++
+> 这一篇是Python并发的第四篇，主要介绍进程和线程的定义，Python线程和全局解释器锁以及Python如何使用thread模块处理并发，这篇文章之前发过，但是前几篇介绍到了并发，就顺便再发一下组成一个系列
 
 ## 引言&动机
 
@@ -203,7 +204,7 @@ if __name__ == '__main__':
 
 ## threading 模块
 
-threading 模块不仅提供了 Thread 类，还 供了各 种非常好用的同步机制。
+threading 模块不仅提供了 Thread 类，还提供了各种非常好用的同步机制。
 
 下面是threading 模块里所有的对象：
 
@@ -216,7 +217,7 @@ threading 模块不仅提供了 Thread 类，还 供了各 种非常好用的同
 7. BoundedSemaphore： 与 Semaphore 类似，只是它不允许超过初始值
 8. Timer： 与 Thread 相似，只是，它要等待一段时间后才开始运行。
 
-##### 守护线程
+#### 守护线程
 
 另一个避免使用 thread 模块的原因是，它不支持守护线程。当主线程退出时，所有的子线程不 论它们是否还在工作，都会被强行退出。有时，我们并不期望这种行为，这时，就引入了守护线程 的概念
 threading 模块支持守护线程，它们是这样工作的:守护线程一般是一个等待客户请求的服务器， 如果没有客户 出请求，它就在那等着。如果你设定一个线程为守护线程，就表示你在说这个线程 是不重要的，在进程退出的时候，不用等待这个线程退出。
@@ -342,7 +343,7 @@ if __name__ == '__main__':
 
 ```
 
-最后一个例子介绍如何子类化 Thread 类，这与上一个例子中的创建一个可调用的类非常像。使 用子类化创建线程(第 29-30 行)使代码看上去更清晰明了。
+最后一个例子介绍如何子类化 Thread 类，这与上一个例子中的创建一个可调用的类非常像。使用子类化创建线程(第 29-30 行)使代码看上去更清晰明了。
 
 ```python
 #! -*- coding: utf-8 -*-
@@ -407,6 +408,67 @@ if __name__ == '__main__':
     main()
 
 ```
+
+#### 下载国旗的例子
+
+下面，我们接我们之前按之前并发的套路，用实现一下使用 threading 并发下载国旗
+
+```python
+# python3
+
+import threading
+from threading import Thread
+
+from flags import save_flag, show, main, get_flag
+
+
+class MyThread(Thread):
+
+    def __init__(self, func, args, name=""):
+        super(MyThread, self).__init__()
+        self.name = name
+        self.func = func
+        self.args = args
+
+    def getResult(self):
+        return self.res
+
+    def run(self):
+        # 创建新线程的时候，Thread 对象会调用我们的 ThreadFunc 对象，这时会用到一个特殊函数 __call__()。
+        self.res = self.func(*self.args)
+
+
+def download_one(cc):  # <3>
+    image = get_flag(cc)
+    show(cc)
+    save_flag(image, cc.lower() + '.gif')
+    return cc
+
+
+def download_many(cc_list):
+    threads = []
+    for cc in cc_list:
+        thread = MyThread(download_one, (cc, ), download_one.__name__)
+        threads.append(thread)
+
+    for thread in threads:
+        # 启动线程
+        thread.start()
+
+    for thread in threads:
+        # wait for all
+        # join()会等到线程结束，或者在给了 timeout 参数的时候，等到超时为止。
+        # 使用 join()看上去 会比使用一个等待锁释放的无限循环清楚一些(这种锁也被称为"spinlock")
+        thread.join()
+
+    return len(list(threads))  # <7>
+
+
+if __name__ == '__main__':
+    main(download_many)
+```
+
+执行代码发现和使用协程相比速度基本一致。
 
 除了各种同步对象和线程对象外，threading 模块还 供了一些函数。
 
@@ -544,6 +606,7 @@ Queue 模块可以用来进行线程间通讯，让各个线程之间共享数�
 现在，我们创建一个队列，让 生产者(线程)把新生产的货物放进去供消费者(线程)使用。
 
 ```python
+# python2
 #! -*- coding: utf-8 -*-
 
 from Queue import Queue
@@ -622,7 +685,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-
 ```
 
 
@@ -657,10 +719,10 @@ while True:
 
 ## 参考文章
 
-* [进程与线程的一个简单解释](http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html)
-* [Python的GIL是什么鬼，多线程性能究竟如何](http://cenalulu.github.io/python/gil-in-python/)
-* [Python的全局锁问题](http://python3-cookbook.readthedocs.io/zh_CN/latest/c12/p09_dealing_with_gil_stop_worring_about_it.html)
-* [Python线程指南](http://www.cnblogs.com/huxi/archive/2010/06/26/1765808.html)
+* [进程与线程的一个简单解释 http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html](http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html)
+* [Python的GIL是什么鬼，多线程性能究竟如何 http://cenalulu.github.io/python/gil-in-python/](http://cenalulu.github.io/python/gil-in-python/)
+* [Python的全局锁问题 http://python3-cookbook.readthedocs.io/zh_CN/latest/c12/p09_dealing_with_gil_stop_worring_about_it.html](http://python3-cookbook.readthedocs.io/zh_CN/latest/c12/p09_dealing_with_gil_stop_worring_about_it.html)
+* [Python线程指南 http://www.cnblogs.com/huxi/archive/2010/06/26/1765808.html](http://www.cnblogs.com/huxi/archive/2010/06/26/1765808.html)
 
 
 |>欢迎关注 | >请我喝芬达|

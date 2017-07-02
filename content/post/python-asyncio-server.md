@@ -227,9 +227,11 @@ if __name__ == '__main__':
         print('Usage: {} word1 [word2]...'.format(sys.argv[0]))
 
 ```
+
 这个模块读取Python内建的Unicode数据库，为每个字符名称中的每个单词建立索引，然后倒排索引，存入一个字典。
 例如，在倒排索引中，'SUN' 键对应的条目是一个集合，里面是名称中包含'SUN' 这个词的10个Unicode字符。倒排索引保存在本地一个名为charfinder_index.pickle 的文件中。如果查询多个单词，会计算从索引中所得集合的交集。
 运行示例如下：
+
 ```python
     >>> main('rook')  # doctest: +NORMALIZE_WHITESPACE
     U+2656  ♖  WHITE CHESS ROOK
@@ -247,6 +249,7 @@ if __name__ == '__main__':
 
 这个模块没有使用并发，主要作用是为使用 asyncio 包编写的服务器提供支持。
 下面我们来看下 tcp_charfinder.py 脚本：
+
 ```python
 # tcp_charfinder.py
 import sys
@@ -260,7 +263,6 @@ PROMPT = b'?> '
 
 # 实例化UnicodeNameIndex 类，它会使用charfinder_index.pickle 文件
 index = UnicodeNameIndex()
-
 
 async def handle_queries(reader, writer):
     # 这个协程要传给asyncio.start_server 函数，接收的两个参数是asyncio.StreamReader 对象和 asyncio.StreamWriter 对象
@@ -345,7 +347,7 @@ asyncio包提供了高层的流API，提供了现成的服务器，我们只需�
 虽然，asyncio包提供了服务器，但是功能相对来说还是比较简陋的，现在我们使用一下 基于asyncio包的 web 框架 sanci，用它来实现一个http版的简易服务器
 
 > <section class="caption">sanic</section> 的简单入门在上一篇文章有介绍，[python web 框架 Sanci 快速入门](https://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655752001&idx=1&sn=2c2e84f5f493514fdbff482a28dd7551&chksm=80b0b86bb7c7317df9d1c7b13411a231b91bb107de5e99c5379a3d9d072d5d3fb8117f364188#rd)
-> 
+
 ## 使用 sanic 包编写web 服务器
  
 Sanic 是一个和类Flask 的基于Python3.5+的web框架，提供了比较高阶的API，比如路由、request参数，response等，我们只需要实现处理逻辑即可。
@@ -383,7 +385,19 @@ if __name__ == '__main__':
 
 对比两段代码可以发现，使用 sanic 非常简单。
 
+运行服务：
+
+```sh
+python http_charsfinder.py
+```
+我们在浏览器输入地址 http://0.0.0.0:8000/charfinder?char=sun 结果示例如下
+
+![http://media.gusibi.mobi/BruF3mWEA0c2KEh5wqP92DajeNuZ_2LI6LeamF-kpYcDqmy8xlVw3V98tbIdHEeI](http://media.gusibi.mobi/BruF3mWEA0c2KEh5wqP92DajeNuZ_2LI6LeamF-kpYcDqmy8xlVw3V98tbIdHEeI)
+
+### 现在对比下两段代码 
+
 在TCP 的示例中，服务器通过main函数下的这两行代码创建并排定运行时间：
+
 ```python
 server_coro = asyncio.start_server(handle_queries, address, port,
                                 loop=loop)
@@ -391,6 +405,7 @@ server = loop.run_until_complete(server_coro)
 ```
 
 而在sanic的HTTP示例中，使用，创建服务器：
+
 ```python
 app.run(host="0.0.0.0", port=8000)
 ```
@@ -414,9 +429,9 @@ server_coroutine 是通过 `loop.run_until_complete()`驱动的。
 * [python web 框架 Sanci 快速入门](https://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655752001&idx=1&sn=2c2e84f5f493514fdbff482a28dd7551&chksm=80b0b86bb7c7317df9d1c7b13411a231b91bb107de5e99c5379a3d9d072d5d3fb8117f364188#rd)
 * [python并发2：使用asyncio处理并发](https://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655751998&idx=1&sn=37833d3d7582d38f85a526de7eeda814)
 
-
+------
 最后，感谢女朋友支持。
 
-|>欢迎关注 | >请我喝芬达
+>欢迎关注 | >请我喝芬达
 ------- | -------
 ![欢迎关注](http://media.gusibi.mobi/Hy8XHexmzppNKuekLuGxWy8LjdGrQAzZA3mH_e9xltoiYgTFWdvlpZwGWxZESrbK)| ![请我喝芬达](http://media.gusibi.mobi/CO9DwU6ZHnXHD5xuG3GqTsY_IYPl-JdpQrDaOo6tl6PiAGEBDeYFHO7sGQi_VVFc)
