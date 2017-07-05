@@ -54,7 +54,7 @@ sudo mongod --fork --logpath=/usr/local/var/log/mongodb/mongo.log
         '_id': '账单ID',
         'uid': '用户ID',
         'money': '金额 精确到分',
-        'tag_id': '标签ID',
+        'tag': '标签',
         'remark': '备注',
         'created_time': '创建时间',
     },
@@ -74,14 +74,23 @@ sudo mongod --fork --logpath=/usr/local/var/log/mongodb/mongo.log
             },
         'action': '关键字返回的动作',
         'created_time': '创建时间',
+    },
+    'workflow': {  # 工作流
+        '_id': 'id', 
+        'key': '工作流key',
+        'name': '工作流名称',
+        'flow': '工作流 list',
+        'actions': {
+            'action': ['a1', 'a2'], # 动作对应的下一步
+        }
+        'created_time': '开始时间'
     }
 }
 ```
 
-
 -------
 最后，感谢女朋友支持。
 
-| >欢迎关注 | >请我喝芬达
+| >欢迎关注() | >请我喝芬达
 |------- | -------
 |![欢迎关注](http://media.gusibi.mobi/Hy8XHexmzppNKuekLuGxWy8LjdGrQAzZA3mH_e9xltoiYgTFWdvlpZwGWxZESrbK)| ![请我喝芬达](http://media.gusibi.mobi/CO9DwU6ZHnXHD5xuG3GqTsY_IYPl-JdpQrDaOo6tl6PiAGEBDeYFHO7sGQi_VVFc)
