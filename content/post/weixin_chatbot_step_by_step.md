@@ -5,7 +5,7 @@ description: 1小时搭建微信聊天机器人
 draft: true
 slug: wechat-chatbot-step-by-step
 tags: ["python", "tutorial", "weixin", "公众号"]
-title: 微信公号DIY：15分钟搭建微信聊天机器人
+title: 微信公号DIY：一小时搭建微信聊天机器人
 ---
 
 > 最近借用了女朋友的公号，感觉如果只是用来发文章，太浪费微信给提供的这些功能了。想了想，先从最简单的开始，做一个聊天机器人吧。
