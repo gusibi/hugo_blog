@@ -2,7 +2,7 @@
 categories: ["development", "python", "微信"]
 date: 2017-07-05T23:47:13+08:00
 description: 1小时搭建微信聊天机器人
-draft: true
+draft: false
 slug: wechat-chatbot-step-by-step
 tags: ["python", "tutorial", "weixin", "公众号"]
 title: 微信公号DIY：一小时搭建微信聊天机器人
