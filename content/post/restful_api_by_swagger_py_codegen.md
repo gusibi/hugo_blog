@@ -9,7 +9,7 @@ title: 使用swagger 生成 Flask RESTful API
 ---
 
 ## 什么是 RESTful
-
+ 
 ### 什么是REST
 
 REST（英文：Representational State Transfer，又称具象状态传输）是Roy Thomas Fielding博士于2000年在他的博士论文[1] 中提出来的一种万维网软件架构风格，目的是便于不同软件/程序在网络（例如互联网）中互相传递信息。

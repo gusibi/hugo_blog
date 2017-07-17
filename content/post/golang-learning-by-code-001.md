@@ -22,7 +22,7 @@ HUGOMORE42
 
 ### hello world
 
-{{< highlight go >}}
+```go
     package main // 0
 
     import "fmt" // 1实现格式化的 I/O
@@ -31,7 +31,7 @@ HUGOMORE42
     func main() { // 3
     	fmt.Println("Hello, world; or καλημε ́ρα κóσμε; orこんにちは 世界") // 4
     }
-{{< /highlight >}}
+```
 
 首先我们要认识到
 > 每个Go 程序都是由包组成，程序的运行入口是包main
@@ -46,12 +46,12 @@ HUGOMORE42
 
 构建 Go 程序的最佳途径是使用 go 工具。 构建 helloworld 只需要:
 
-{{< highlight shell >}}
+```
     1. go build helloworld.go
     # 结果是叫做 helloworld 的可执行文件。
     2. ./helloworld
     # Hello, world; or καλημε ́ρα κóσμε; or こんにちは世界
-{{< /highlight >}}
+```
 
 
 ### 变量
@@ -60,7 +60,7 @@ Go 是静态类型语言 ,不能在运行期改变变量类型。
 
 自动初始化为零值。如果提供初始化值,可省略变量类型,由编译器自动推断。
 
-{{< highlight go >}}
+```go
     var x int
     // 使用关键字 var 定义变量, 跟函数的参数列表一样，类型在后面。
     var c, python, java bool
@@ -70,7 +70,7 @@ Go 是静态类型语言 ,不能在运行期改变变量类型。
     // 变量定义可以包含初始值，每个变量对应一个。
     var s = "abc"
     // 如果初始化是使用表达式，则可以省略类型；变量从初始值中获得类型。
-{{< /highlight >}}
+```go
 
 变量在定义时没有明确的初始化时会赋值为*零值* 。
 
@@ -82,18 +82,18 @@ Go 是静态类型语言 ,不能在运行期改变变量类型。
 
 在函数内部,可用更简略的 ":="  式定义变量。
 
-{{< highlight go >}}
+```go
     func main() {
         n, s := 12, "Hello, World!"
         println(s, n)
     }
-{{< /highlight >}}
+```
 
 > 函数外的每个语句都必须以关键字开始（ var 、 func 、等等）， := 结构不能使用在函数外。
 
 可一次定义多个变量。
 
-{{< highlight go >}}
+```go
     var x, y, z int
     var s, n = "abc", 123
     var (
@@ -105,22 +105,23 @@ Go 是静态类型语言 ,不能在运行期改变变量类型。
         n, s := 0x1234, "Hello, World!"
         println(x, s, n)
     }
-{{< /highlight >}}
+```go
 
 一个特殊的变量名是 \_(下划线)。任何赋给它的值都被丢弃。在这个例子中,将 35 赋值给 b,同时丢弃 34。
-{{< highlight go >}}
+
+```go
     _, b := 34, 35
-{{< /highlight >}}
+```go
 
 Go 的编译器会对声明却未使用的变量报错
 
-{{< highlight go >}}
+```go
     var s string // 全局变量没问题。
 
     func main() {
         i := 0 // Error: i declared and not used。(可使  "_ = i" 规避)
     }
-{{< /highlight >}}
+```go
 
 定义完之后的变量可以被重新赋值 比如第8行，将计算结果赋值给result
 
@@ -130,7 +131,7 @@ Go 的编译器会对声明却未使用的变量报错
 
 常量的定义与变量类似，只不过使用 const 关键字
 
-{{< highlight go >}}
+```go
     const x, y int = 1, 2
     const s = "Hello, World!"
     // 多常量初始化 // 类型推断
@@ -143,16 +144,16 @@ Go 的编译器会对声明却未使用的变量报错
     func main() _{
     	const x = 'xxx'      // 未使用局部常量不会引发编译错误
     }
-{{< /highlight >}}
+```go
 
 在常量中，如果不提供类型和初始化值，那么被看作和上一常量相同
 
-{{< highlight go >}}
+```go
     const (
 		s = "abc"
 		x           // x = "abc"
 	)
-{{< /highlight >}}
+```go
 
 #### 基本类型
 
@@ -192,28 +193,28 @@ Go 有明确的数字类型命名, 支持 Unicode, 支持常用数据结构
 
 表达式 T(v) 将值 v 转换为类型 T 。
 
-{{< highlight go >}}
+```go
 
 var b byte = 100
 // var n int = b // Error: cannot use b (type byte) as type int in assignment
 var n int = int(b) // 显式转换
 
-{{< /highlight >}}
+```go
 
 不能将其他类型当 bool 值使用
 
-{{< highlight go >}}
+```go
 a := 100
 if a {                  // Error: non-bool a (type int) used as if condition
     println("true")
 }
-{{< /highlight >}}
+```
 
 ### 函数
 
 首先看下面这段代码
 
-{{< highlight go >}}
+```go
     package main
 
     import "fmt"
@@ -225,7 +226,7 @@ if a {                  // Error: non-bool a (type int) used as if condition
     func main() {
     	fmt.Println(add(42, 13))
     }
-{{< /highlight >}}
+```
 
 #### 函数定义
 
@@ -233,14 +234,14 @@ if a {                  // Error: non-bool a (type int) used as if condition
 
 golang中符合规范的函数一般写成如下的形式：
 
-{{< highlight go >}}
+```go
     func functionName(parameter_list) (return_value_list) {
        …
     }
 
     // parameter_list 是参数列表
     // return_value_list 是返回值列表 下边有详细的讲解
-{{< /highlight >}}
+```
 
 #### 函数的特性
 
@@ -251,7 +252,7 @@ golang中符合规范的函数一般写成如下的形式：
 * 支持匿名函数和闭包。
 * 不支持 嵌套 (nested)、重载 (overload) 和 默认参数 (default parameter)
 
-{{< highlight go >}}
+```go
     func test(x int, y int, s string) (r int, s string) { // 类型相同的相邻参数可合并
         n := x + y                                    // 多返回值必须用括号。
         return n, fmt.Sprintf(s, n)
@@ -275,12 +276,11 @@ golang中符合规范的函数一般写成如下的形式：
     如果不想对返回的参数命名,只需要提供类型:(int, string)。 如果只有一个返回值,可以省略圆括号。如果函数是一个子过程,并且没有任何返回值,也可以省略这些内容
     函数体。注意 return 是一个语句,所以包裹参数的括号是可选的
     */
-{{< /highlight >}}
+```
 
 不定长参数其实就是slice，只能有一个，且必须是最后一个
 
-{{< highlight go >}}
-
+```go
     func test(s string, n ...int) string {
         var x int
     		for _, i := range n {
@@ -293,20 +293,20 @@ golang中符合规范的函数一般写成如下的形式：
         s := []int{1, 2, 3}
         println(test("sum: %d", s...))
     }
-{{< /highlight >}}
+```
 
 > 函数是第一类对象,可作为参数传递
 
 就像其他在 Go 中的其他东西一样,函数也是值而已。它们可以像下面这样赋值给变量:
 
-{{< highlight go >}}
+```go
     func main() {
         a := func() {                  // 定义一个匿名函数,并且赋值给 a
     		println("Hello")
     	}                              // 这里没有 ()
         a()                            // 调用函数
     }
-{{< /highlight >}}
+```
 
 如果使用 fmt.Printf("\%T\n", a) 打印 a 的类型,输出结果是 func()
 
@@ -316,7 +316,7 @@ golang中符合规范的函数一般写成如下的形式：
 
 Go 函数的返回值或者结果参数可以指定一个名字,并且像原始的变量那样使用,就像 输入参数那样。如果对其命名,在函数开始时,它们会用其类型的零值初始化
 
-{{< highlight go >}}
+```go
     package main
 
     import "fmt"
@@ -335,11 +335,11 @@ Go 函数的返回值或者结果参数可以指定一个名字,并且像原始�
        swap 函数返回了两个字符串
     */
 
-{{< /highlight >}}
+```
 
 Go 的返回值可以被命名，并且就像在函数体开头声明的变量那样使用。
 
-{{< highlight go >}}
+```go
     package main
 
     import "fmt"
@@ -357,7 +357,7 @@ Go 的返回值可以被命名，并且就像在函数体开头声明的变量�
     /*
        在长的函数中这样的裸返回会影响代码的可读性。
     */
-{{< /highlight >}}
+```
 
 > 有返回值的函数,必须有明确的return 语句,否则会引发编译错误
 
@@ -377,7 +377,7 @@ Go 的返回值可以被命名，并且就像在函数体开头声明的变量�
 变量和函数部分暂时这些，有更新还会补充。下一篇将会是控制流
 将会用到的代码为:
 
-{{< highlight go >}}
+```go
     package main
 
     import "fmt"
@@ -398,4 +398,4 @@ Go 的返回值可以被命名，并且就像在函数体开头声明的变量�
     	   }
     	return
     }
-{{< /highlight >}}
+```

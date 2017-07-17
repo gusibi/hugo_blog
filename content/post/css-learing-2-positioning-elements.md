@@ -39,45 +39,53 @@ CSS为边框、内边距和外边距分别规定了简写属性，每个简写�
 
 比如：
 
-```
+```css
 {
-  margin-top: 5px; margin-right: 10px;
-  margin-bottom: 12px; margin-left: 8px;
+  margin-top: 5px; 
+  margin-right: 10px;
+  margin-bottom: 12px; 
+  margin-left: 8px;
 }
 ```
 
 使用简写则为这样：
 
-```
-{margin: 12px 10px 12px 8px;}
+```css
+{
+    margin: 12px 10px 12px 8px;
+}
 ```
 如果有一个值没写，那么则使用对边的值。
 
 比如：
 
-```
-{margin: 12px 10px 12px 10px;}
-```
-等同于
-```
+```css
 {margin: 12px 10px 12px;}
+/*等同于*/
+{
+    margin: 12px 10px 12px 10px;
+}
 ```
+
 如果只写一个值，则4个边都取这个值。
 
-```
+```css
 {margin: 12px;}
 /*等同于*/
 {margin: 12px 12px 12px 12px;}
 ```
+
 另外每个盒子的属性也分三个粒度，这三个粒度从一般到特殊分别举例如下：
 
-```
-{border: 2px dashed red;}
+```css
+{
+    border: 2px dashed red;
+}
 ```
 
 混合使用三种粒度的简写属性达成设计目标是很常见的。比如，想为盒子的上边和下边添加4像素的红色边框，为左边添加1像素宽的红色边框，而右边没有。可以这么写：
 
-```
+```css
 {border: 4px solid red;} /* 先给4条边设置相同的样式*/
 {border-left-width: 1px;} /* 修改左边框宽度*/
 {border-fight: none;} /*移出右边框*/
@@ -98,14 +106,27 @@ border 有三个相关属性。
 ![](http://omuo4kh1k.bkt.clouddn.com/sKiD0I3LeE7lTK8rARqH8TFpzVK9vh4QoAWCg_7Ll7m9V8VMkBNKY_YfvVUueia8)
 
 上图的样式为：
-```
-p {font:16px helvetica, sans-serif; width:220px; border:2px solid red; background-color:#caebff;}
+
+```css
+p {
+    font: 16px helvetica, sans-serif; 
+    width: 220px; 
+    border: 2px solid red; 
+    background-color: #caebff;
+}
 ```
 可以看到在没有设定内边距的情况下，内容紧挨着边框。
 
 设定边框后：
-```
-p {font:16px helvetica, arial, sans-serif; width:220px; border:2px solid red; background-color:#caebff; padding:10px;}
+
+```css
+p {
+    font: 16px helvetica, arial, sans-serif; 
+    width: 220px; 
+    border: 2px solid red; 
+    background-color: #caebff; 
+    padding: 10px;
+}
 ```
 效果如下，可以看到样式舒服了很多：
 
@@ -115,5 +136,6 @@ p {font:16px helvetica, arial, sans-serif; width:220px; border:2px solid red; ba
 
 #### 盒子外边距
 
+![外边距的例子](http://media.gusibi.mobi/nU6FAYz7aFdQrfj7ByrBHbcvJx5F86G_jlpttdfaGt24vpb4KsYUln3JuVW7ZZ14)
 
 
