@@ -3,7 +3,7 @@ categories: ["development", "web", "读书笔记", "前端"]
 date: 2017-05-27T17:22:49+08:00
 draft: false
 slug: "css-learing-1-css-how-it-works"
-tags: ["css", "读书笔记", "前端", "html"]
+tags: ["css", "读书笔记", "前端", "html", "tutorial"]
 title: "CSS入门指南-1：工作原理"
 ---
 

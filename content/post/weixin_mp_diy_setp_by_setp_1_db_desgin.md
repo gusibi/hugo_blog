@@ -16,6 +16,8 @@ title: 微信公号DIY：MongoDB 简易ORM & 公号记账数据库设计
 
 > `代码：` 项目代码已上传至github，地址为[gusibi/momo：https://github.com/gusibi/momo](https://github.com/gusibi/momo)
 
+HUGOMORE42
+
 ## 账本功能
 
 账本是一个功能比较简单应用，公号内只需要支持：

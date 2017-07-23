@@ -16,6 +16,8 @@ title: 微信公号DIY：一小时搭建微信聊天机器人
 
 chatterbot是一款python接口的，基于一系列规则和机器学习算法完成的聊天机器人。具有结构清晰，可扩展性好，简单实用的特点。
 
+HUGOMORE42
+
 chatterBot 的工作流程如图：
 
 ![chatterBot 工作流程](http://media.gusibi.mobi/l-OywTEmN9B6u_RevUWyUpAD9yeHyChmh55q7fIObhC82Wf9X-DTxCF6oGI4tqG7)

@@ -13,6 +13,8 @@ title: 微信公号DIY：训练聊天机器人&公号变身图片上传工具
 
 感谢 candlewill 已经收集好了大量的训练数据，[dialog_corpus https://github.com/candlewill/Dialog_Corpus](https://github.com/candlewill/Dialog_Corpus) 。
 
+HUGOMORE42
+
 这个库中包含电影台词、中英文短信息、自然语言处理相关的数据集、小黄鸡语料等。这里我选择电影台词语料。
 
 > 语料地址为：[dgk_lost_conv：https://github.com/rustch3n/dgk_lost_conv](https://github.com/rustch3n/dgk_lost_conv)

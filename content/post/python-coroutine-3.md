@@ -1,7 +1,7 @@
 ---
 date: 2017-06-15T19:22:49+08:00
 categories: ["development", "python", "读书笔记"]
-tags: ["python", "读书笔记"]
+tags: ["python", "tutorial","读书笔记", "并发"]
 draft: false
 slug: "python-coroutine-discrete-event-simulation"
 title: "python协程3：用仿真实验学习协程"

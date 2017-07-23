@@ -1,9 +1,9 @@
 ---
 categories: ["development", "web", "读书笔记", "前端"]
 date: 2017-07-19T22:22:49+08:00
-draft: true
+draft: false
 slug: "css-learing-2-positioning-elements"
-tags: ["css", "读书笔记", "html", "前端"]
+tags: ["css", "读书笔记", "html", "tutorial", "前端"]
 title: "CSS入门指南-2：盒子模型、浮动和清除"
 ---
 > 这是CSS设计指南的读书笔记，用于加深学习效果。
@@ -13,6 +13,8 @@ title: "CSS入门指南-2：盒子模型、浮动和清除"
 ## 盒子模型
 
 > 所谓盒子模型，就是浏览器为页面中的每个HTML元素生成的矩形盒子。这些盒子们都要按照可见版式模型在页面上排布。
+
+HUGOMORE42
 
 可见的页面版式主要由三个属性控制：position、display和float。
 

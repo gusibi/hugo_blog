@@ -3,7 +3,7 @@ categories: ["development", "python", "读书笔记"]
 date: 2017-06-14T17:22:49+08:00
 draft: false
 slug: "python-coroutine-yield-from"
-tags: ["python", "读书笔记"]
+tags: ["python", "tutorial","读书笔记"]
 title: "python协程2：yield from 从入门到精通"
 ---
 

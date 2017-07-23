@@ -3,7 +3,7 @@ categories: ["development", "python", "读书笔记"]
 date: 2017-06-17T22:01:51+08:00
 draft: false
 slug: "python-concurrency-with-futures"
-tags: ["python", "读书笔记"]
+tags: ["python", "tutorial","读书笔记"]
 title: python并发 1：使用 futures 处理并发
 ---
 

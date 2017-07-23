@@ -3,7 +3,7 @@ categories: ["development", "python", "读书笔记"]
 date: 2017-06-12T17:22:49+08:00
 draft: false
 slug: "python-coroutine-1-yield"
-tags: ["python", "读书笔记"]
+tags: ["python", "tutorial","读书笔记"]
 title: "python协程1：协程 10分钟入门"
 ---
 
