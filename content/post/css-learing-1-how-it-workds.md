@@ -1,14 +1,15 @@
 ---
-categories: ["development", "web", "读书笔记"]
+categories: ["development", "web", "读书笔记", "前端"]
 date: 2017-05-27T17:22:49+08:00
 draft: false
 slug: "css-learing-1-css-how-it-works"
-tags: ["css", "读书笔记"]
-title: "CSS入门指南： （1）工作原理"
+tags: ["css", "读书笔记", "前端", "html"]
+title: "CSS入门指南-1：工作原理"
 ---
 
+> 这是CSS设计指南的读书笔记，用于加深学习效果。
+
 最近想做一个小程序，前端是必修课，那就从css开始吧。
-这是CSS设计指南的读书笔记，用于加深学习效果，不定期更新，欢迎支持。
 
 ## css 工作原理
 每个html元素都有一组样式属性，可以通过css来设定。当html元素的同一个样式属性有多种样式值的时候，css就要靠层叠机智来决定最终应用哪种样式。
@@ -35,12 +36,13 @@ HUGOMORE42
 对这个基本的结构有三种方法可以进行扩展
 
 **第一种方法：**多个声明包含在一条规则里。
-```
+
+```css
 p {color: red; font-size: 12px; font-weight: bold;}
 ```
 **第二种方法：**多个选择器组合在一起。例如：如果想让\<h1>、\<h2>和\<h3>的文本都变成蓝色粗体可以这么写：
 
-```
+```css
 h1 {color: blue; font-weight: bold;}
 h2 {color: blue; font-weight: bold;}
 h3 {color: blue; font-weight: bold;}
@@ -48,15 +50,16 @@ h3 {color: blue; font-weight: bold;}
 
 也可以这么写：
 
-```
+```css
 h1, h2, h3 {color: blue; font-weight: bold;}
 ```
+
 **分组选择符以逗号作为分隔符**
 
 **第三种方法：** 多条规则应用给一个选择符。
 例如，写完上边的规则，还想把h3变成斜体，那么可以再为h3单独写一条规则：
 
-```
+```css
 h1, h2, h3 {color: blue; font-weight: bold;}
 h3 {font-style: italic;}
 ```
@@ -81,7 +84,7 @@ h3 {font-style: italic;}
 
 上下文选择符，叫后代组合式选择符，就是一组以空格分隔的标签名。用于选择作为特定祖先元素后代的标签。
 
-```
+```css
 article p {font-weight: bold;}
 ```
 
@@ -99,7 +102,7 @@ article p {font-weight: bold;}
 
 **标签1** 必须是 **标签2** 的**父元素**，不能是其它的祖先元素。
 
-```
+```css
 section > h2 {font-style: italic;}
 ```
 
@@ -111,7 +114,7 @@ section > h2 {font-style: italic;}
 
 标签2 必须紧跟在期同胞标签1后面。
 
-```
+```css
 h2 + p {font-variant: small-caps;}
 ```
 
@@ -125,7 +128,7 @@ h2 + p {font-variant: small-caps;}
 
 **标签2** 必须跟在其 **同胞标签1** 后面（可以不相邻）。
 
-```
+```css
 h2 ~ a {color: red;}
 ```
 
@@ -135,18 +138,18 @@ h2 ~ a {color: red;}
 
 通用选择符 * 是一个通配符，它匹配任何元素。
 
-```
+```css
 * {color: green;}
 ```
 
 这条规则会将所有元素（文本和边框）都变成绿色。
 
-```
+```css
 p * {color: red;}
 ```
 这条规则会把p包含的所有元素的文本都变成红色。
 
-```
+```css
 section * a {font-size: 1.3em;}
 ```
 
@@ -161,7 +164,8 @@ section * a {font-size: 1.3em;}
 ##### 类属性
 
 给标签h1添加 specialtext 类。
-```
+
+```css
 <h1 class="specialtext">This is text</h1>
 ```
 
@@ -180,7 +184,7 @@ section * a {font-size: 1.3em;}
 
 比如：
 
-```
+```css
 p.specialtext {color: red;}
 ```
 只对有 specialtext 类的p标签有效。
@@ -189,14 +193,14 @@ p.specialtext {color: red;}
 
 可以给元素添加多个类：
 
-```
+```html
 <p class="specialtext featured">Here the span tag <span> may or may not</span> be styled.</p>
 ```
 多个类名放在同一对引号吃，用空格分隔。
 
 要选择同时存在这两个类名的元素可以这样写：
 
-```
+```css
 .specialtext.featured {font-size: 120%;}
 ```
 CSS 选择符的两个类名直接没有空格。如果加了，就变成祖先/后代关系的上下文选择符了。
@@ -205,14 +209,14 @@ CSS 选择符的两个类名直接没有空格。如果加了，就变成祖先/
 
 ID属性与类写法类似，用#表示。
 
-```
+```html
 <p id="specialtext">This is text</p>
 ```
 上边p标签就设置了ID属性specialtext。
 
 相应的ID选择符就这样写：
 
-```
+```css
 #specialtext {css样式}
 ```
 
@@ -222,7 +226,8 @@ ID属性与类写法类似，用#表示。
 
 * ID可以用于页面导航链接中。
 例如：
-```
+
+```html
 <a href="#bio">Biggraphy</a>
 ``` 
 用户点击这个链接会滚到ID值为bio的位置。如果href属性里只有一个#，那么点击链接会跳到顶部。
@@ -241,7 +246,8 @@ ID属性与类写法类似，用#表示。
 选择任何带有属性名的标签名。
 
 比如：
-```
+
+```css
 img[title] {border: 2px solid blue;}
 ```
 
@@ -255,7 +261,7 @@ img[title] {border: 2px solid blue;}
 
 例如：
 
-```
+```css
 img[title="red flower"] {border: 2px solid blue;}
 ```
 这个规则会选择带有title属性的HTML img元素，且title值为"red flower"。
@@ -283,7 +289,8 @@ UI伪类会基于特定的HTML元素的状态应用样式。
 * Active。链接正在被点击
 
 使用方式举例：
-```
+
+```css
 a:link {color: black;}
 a:visited {color: blue;}
 a:hover {text-decoration: none;}
@@ -292,7 +299,7 @@ a:active {color: red;}
 
 hover伪类可以应用在任何元素。
 
-```
+```css
 p:hover {background-color: gray;}
 ```
 ##### :focus 伪类
@@ -308,14 +315,14 @@ p:hover {background-color: gray;}
 
 比如：
 
-```
+```html
 <a href="#more_info">More Infomation</a>
 ```
 应用上伪类后，ID为more_info的元素就是目标。点击a标签时，会应用css样式。
 
 css规则如下：
 
-```
+```css
 #more_info:target {background: #eee;}
 ```
 
@@ -330,7 +337,7 @@ css规则如下：
 
 规则如下：
 
-```
+```css
 e:nth-child(n)
 ```
 
@@ -338,7 +345,7 @@ e表示元素名，n表示一个数值。
 
 比如：
 
-```
+```css
 li:nth-child(3)
 ```
 会选中一组列表的每个第三项。
@@ -352,12 +359,12 @@ li:nth-child(3)
 
 选择首字母，使用规则：
 
-```
+```css
 e::first-letter
 ```
 
 比如
-```
+```css
 p::first-letter {font-size:300%;}
 ```
 会让首字母变大。
@@ -365,14 +372,15 @@ p::first-letter {font-size:300%;}
 ##### ::first-line 
 
 选择段落的第一行。
-```
+
+```css
 e::first-line
 ```
 ##### ::before和::after
 
 使用规则如下：
 
-```
+```css
 e::before
 e::after
 ```
@@ -391,7 +399,7 @@ CSS提供了三种机制来决定那条规则会胜出：
 CSS属性的值会向下传递。
 比如我们添加一条这样的规则：
 
-```
+```css
 body: {font-family: arial;}
 ```
 
@@ -423,7 +431,7 @@ body: {font-family: arial;}
 
 声明也可以加权重。比如：
 
-```
+```css
 p {color: green !important; font-size: 12pt;}
 ```
 空格!important分号(;) 用于加重声明的权重。
@@ -434,7 +442,7 @@ p {color: green !important; font-size: 12pt;}
 
 比如某个样式表中包含如下规则：
 
-```
+```css
 p {font-size: 12px;}
 p.largetext {font-size: 16px;}
 
@@ -444,7 +452,8 @@ p.largetext {font-size: 16px;}
 那么上边的p标签将显示16px 文本，因为第二条规则的选择符既包含标签名，又包含类名（特指度高）。
 
 如果是下边的样式：
-```
+
+```css
 p {font-size: 12px;}
 .largetext {font-size: 16px;}
 
@@ -491,12 +500,11 @@ body p#largetext ul.mylist li | 1-1-4
 
 
 这一篇我们主要介绍了CSS规则，以及如何用它来为HTML应用样式。
-期待下一篇吧，不知道在什么时候。
 
+-------
 最后，感谢女朋友支持。
 
-恩，也欢迎打赏。
-
-![喜欢也可以微信打赏一下](http://omuo4kh1k.bkt.clouddn.com/qn-FaCXmUz7zHtZgN4Je1CEE94ibt5cZRr3_iavTVsMioCR83oNa8d4pq1fgo84y)
-
+| >欢迎关注(April_Louisa) | >请我喝芬达
+|------- | -------
+|![欢迎关注](http://media.gusibi.mobi/Hy8XHexmzppNKuekLuGxWy8LjdGrQAzZA3mH_e9xltoiYgTFWdvlpZwGWxZESrbK)| ![请我喝芬达](http://media.gusibi.mobi/CO9DwU6ZHnXHD5xuG3GqTsY_IYPl-JdpQrDaOo6tl6PiAGEBDeYFHO7sGQi_VVFc)
 
