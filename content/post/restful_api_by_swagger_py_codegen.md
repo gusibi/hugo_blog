@@ -284,6 +284,7 @@ paths:
 上述文档包括元数据（Metadata）、Base URL、API路径（paths）三部分：
 
 #### Metadata
+
 这部分信息包括swagger 使用的版本：
 
 ```yml
