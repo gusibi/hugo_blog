@@ -22,6 +22,8 @@ content/post/.Archive/
 content/post/.md_configs.data
 content/post/.me_configs.data
 content/post/_book/
+content/.md_configs.data
+content/.me_configs.data
 
 _testmain.go
 
