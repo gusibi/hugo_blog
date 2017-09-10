@@ -16,7 +16,7 @@ Python 标准库用 C 实现了丰富的序列类型：
 
 #### 容器序列：
 
-list、tuple和 collections.deque 这些序列能存放不同类型的数据。
+list、tuple 和 collections.deque 这些序列能存放不同类型的数据。
 
 #### 扁平序列：
 
