@@ -1,14 +1,14 @@
-+++
-date = "2016-04-11T15:23:02+08:00"
-draft = false
-title = "redis 学习笔记及使用技巧"
-description = "redis 学习笔记"
-tags = ["redis", "nosql"]
-categories = ["development", "nosql"]
-slug = "redis-note"
-+++
+---
+categories: ["development", "nosql"]
+date: 2017-09-17T22:41:51+08:00
+draft: false
+slug: "redis-note"
+tags: ["redis", "nosql"]
+title: redis 学习笔记
+description: redis 学习笔记
+---
 
-## redis 学习笔记
+> 这篇 redis 学习笔记主要介绍 redis 的数据结构和数据类型，并讨论数据结构的选择以及应用场景的优化。
 
 ### redis 是什么?
 
@@ -90,7 +90,7 @@ redisObject 是 Redis 类型系统的核心,数据库中的每个键、值,以�
 
 redisObject 的定义位于 redis.h :
 
-{{< highlight c >}}
+```c
 /*
 * Redis 对象
 */
@@ -108,13 +108,13 @@ typedef struct redisObject {
     // 指向对象的值
     void *ptr;
 } robj;
-{{< /highlight >}}
+```
 
 type 、encoding 和 ptr 是最重要的三个属性。
 
 type 记录了对象所保存的值的类型,它的值可能是以下常量的其中一个
 
-{{< highlight c >}}
+```c
 /*
 * 对象类型
 */
@@ -123,11 +123,11 @@ type 记录了对象所保存的值的类型,它的值可能是以下常量的�
 #define REDIS_SET 2    // 集合
 #define REDIS_ZSET 3   // 有序集
 #define REDIS_HASH 4   // 哈希表
-{{< /highlight >}}
+```
 
 encoding 记录了对象所保存的值的编码,它的值可能是以下常量的其中一个
 
-{{< highlight c >}}
+```c
 /*
 * 对象编码
 */
@@ -139,7 +139,7 @@ encoding 记录了对象所保存的值的编码,它的值可能是以下常量�
 #define REDIS_ENCODING_ZIPLIST 5    // 编码为压缩列表
 #define REDIS_ENCODING_INTSET 6     // 编码为整数集合
 #define REDIS_ENCODING_SKIPLIST 7    // 编码为跳跃表
-{{< /highlight >}}
+```
 
 ptr 是一个指针,指向实际保存值的数据结构,这个数据结构由 type 属性和 encoding 属性决定。
 
@@ -151,7 +151,7 @@ ptr 是一个指针,指向实际保存值的数据结构,这个数据结构由 t
 4. 返回数据结构的操作结果作为命令的返回值。
 
 
-#### [字符串](http://www.runoob.com/redis/redis-strings.html)
+#### [字符串](http://redisdoc.com/string/index.html)
 
 REDIS_STRING (字符串)是 Redis 使用得最为广泛的数据类型,它除了是 SET 、GET 等命令 的操作对象之外,数据库中的所有键,以及执行命令时提供给 Redis 的参数,都是用这种类型 保存的。
 
@@ -159,7 +159,7 @@ REDIS_STRING (字符串)是 Redis 使用得最为广泛的数据类型,它除了
 
 > 只有能表示为 long 类型的值,才会以整数的形式保存,其他类型 的整数、小数和字符串,都是用 sdshdr 结构来保存
 
-#### [哈希表](http://www.runoob.com/redis/redis-hashes.html)
+#### [哈希表](http://redisdoc.com/hash/index.html)
 
 REDIS_HASH (哈希表)是HSET 、HLEN 等命令的操作对象
 
@@ -167,7 +167,7 @@ REDIS_HASH (哈希表)是HSET 、HLEN 等命令的操作对象
 
 Redis 中每个hash可以存储232-1键值对（40多亿）
 
-#### [列表](http://www.runoob.com/redis/redis-lists.html)
+#### [列表](http://redisdoc.com/list/index.html)
 
 REDIS_LIST(列表)是LPUSH 、LRANGE等命令的操作对象
 
@@ -175,7 +175,7 @@ REDIS_LIST(列表)是LPUSH 、LRANGE等命令的操作对象
 
 一个列表最多可以包含232-1 个元素(4294967295, 每个列表超过40亿个元素)。
 
-#### [集合](http://www.runoob.com/redis/redis-sets.html)
+#### [集合](http://redisdoc.com/set/index.html)
 
 REDIS_SET (集合) 是 SADD 、 SRANDMEMBER 等命令的操作对象
 
@@ -185,7 +185,7 @@ Redis 中集合是通过哈希表实现的，所以添加，删除，查找的�
 
 集合中最大的成员数为 232 - 1 (4294967295, 每个集合可存储40多亿个成员)
 
-#### [有序集](http://www.runoob.com/redis/redis-sorted-sets.html)
+#### [有序集](http://redisdoc.com/sorted_set/index.html)
 
 REDIS_ZSET (有序集)是ZADD 、ZCOUNT 等命令的操作对象
 
@@ -205,16 +205,17 @@ REDIS_ZSET (有序集)是ZADD 、ZCOUNT 等命令的操作对象
 
 在数据库中,所有键的过期时间都被保存在 redisDb 结构的 expires 字典里:
 
-{{< highlight c >}}
+```c
 typedef struct redisDb {
 	// ...
 	dict *expires;
 	// ...
 } redisDb;
-{{</highlight>}}
+```
+
 expires 字典的键是一个指向 dict 字典(键空间)里某个键的指针,而字典的值则是键所指 向的数据库键的到期时间,这个值以 long long 类型表示
 
-##### 过期时间设置
+#### 过期时间设置
 
 Redis 有四个命令可以设置键的生存时间(可以存活多久)和过期时间(什么时候到期):
 
@@ -227,7 +228,7 @@ Redis 有四个命令可以设置键的生存时间(可以存活多久)和过期
 
 **如果一个键是过期的,那它什么时候会被删除?**
 
-下边是参考答案！！！！
+下边是参考答案
 
 1. 定时删除:在设置键的过期时间时,创建一个定时事件,当过期时间到达时,由事件处理 器自动执行键的删除操作。
 2. 惰性删除:放任键过期不管,但是在每次从 dict 字典中取出键值时,要检查键是否过 期,如果过期的话,就删除它,并返回空;如果没过期,就返回键值。
@@ -254,7 +255,7 @@ Redis 使用的过期键删除策略是惰性删除加上定期删除
 
 例如假设我们的话题D 1000被加了三个标签tag 1,2,5和77，就可以设置下面两个集合：
 
-{{< highlight shell >}}
+```shell
 $ redis-cli sadd topics:1000:tags 1
 (integer) 1
 $ redis-cli sadd topics:1000:tags 2
@@ -271,17 +272,17 @@ $ redis-cli sadd tag:5:objects 1000
 (integer) 1
 $ redis-cli sadd tag:77:objects 1000
 (integer) 1
-{{< /highlight >}}
+```
 
 要获取一个对象的所有标签：
 
-{{< highlight shell >}}
+```bash
 $ redis-cli smembers topics:1000:tags
 1. 5
 2. 1
 3. 77
 4. 2
-{{< /highlight >}}
+```
 
 获得一份同时拥有标签1, 2,10和27的对象列表。
 这可以用SINTER命令来做，他可以在不同集合之间取出交集
@@ -289,32 +290,22 @@ $ redis-cli smembers topics:1000:tags
 
 ### 内存优化
 
-问题1:Instagram的照片数量已经达到3亿，而在Instagram里，我们需要知道每一张照片的作者是谁
+`问题`:  Instagram的照片数量已经达到3亿，而在Instagram里，我们需要知道每一张照片的作者是谁，下面就是Instagram团队如何使用Redis来解决这个问题并进行内存优化的。
 
-    10001037_285379
-    100013481_285379
-    10002355_75
-    100026569_2003724
-    100027657_3289494
-
-##### 初始内存占用 1.03
-
-![初始内存占用](http://hangjia.qiniudn.com/FjHT8MMSsg1j0g-RLfaSooukivbQ)
-
-##### 使用字符串存储时内存占用 34.19 - 1.03 = 33.16
-
-![使用字符串存储时内存占用](http://hangjia.qiniudn.com/Fml3crKxgs_kwCnHAZQ8UInpjTPh)
-
-##### 使用hash时内存占用 23.96 - 1.03 = 22.93
-
-![使用hash时内存占用](http://hangjia.qiniudn.com/FnZpNgbXbqZbi4tjC0q3FIW-baQv)
+具体方法，参考下边这篇文章：[节约内存：Instagram的Redis实践](http://blog.nosqlfan.com/html/3379.html)。
 
 
 #### 参考链接
 
-* [Redis 文档](http://www.redis.cn/commands.html)
-* [Redis 设计与实践](http://origin.redisbook.com/)
-* [Redis 数据结构使用场景](http://get.jobdeer.com/523.get)
-* [Redis作者谈Redis应用场景](http://blog.nosqlfan.com/html/2235.html)
-* [一次使用 Redis 优化查询性能的实践](http://www.restran.net/2015/02/17/redis-practice/)
-* [节约内存：Instagram的Redis实践](http://blog.nosqlfan.com/html/3379.html)
+* [Redis 文档：http://redisdoc.com/index.html](http://redisdoc.com/index.html)
+* [Redis 设计与实践：http://origin.redisbook.com/](http://origin.redisbook.com/)
+* [Redis 数据结构使用场景：http://get.jobdeer.com/523.get](http://get.jobdeer.com/523.get)
+* [Redis作者谈Redis应用场景：http://blog.nosqlfan.com/html/2235.html](http://blog.nosqlfan.com/html/2235.html)
+* [一次使用 Redis 优化查询性能的实践：http://www.restran.net/2015/02/17/redis-practice/](http://www.restran.net/2015/02/17/redis-practice/)
+* [节约内存：Instagram的Redis实践：http://blog.nosqlfan.com/html/3379.html](http://blog.nosqlfan.com/html/3379.html)
+
+最后，感谢女朋友支持。
+
+欢迎关注(April_Louisa) | 请我喝芬达
+------- | -------
+![欢迎关注](http://media.gusibi.mobi/Hy8XHexmzppNKuekLuGxWy8LjdGrQAzZA3mH_e9xltoiYgTFWdvlpZwGWxZESrbK)| ![请我喝芬达](http://media.gusibi.mobi/CO9DwU6ZHnXHD5xuG3GqTsY_IYPl-JdpQrDaOo6tl6PiAGEBDeYFHO7sGQi_VVFc)
