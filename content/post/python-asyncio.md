@@ -19,7 +19,6 @@ asyncio 包在引入标准库之前代号 `“Tulip”（郁金香）`，所以�
 
 对 Python 来说，用来提供事件循环的 asyncio 被加入标准库中。asyncio 重点解决网络服务中的问题，事件循环在这里将来自套接字（socket）的 I/O 已经准备好读和/或写作为“当A发生时”（通过selectors模块）。除了 GUI 和 I/O，事件循环也经常用于在别的线程或子进程中执行代码，并将事件循环作为调节机制（例如，合作式多任务）。如果你恰好理解 Python 的 GIL，事件循环对于需要释放 GIL 的地方很有用。
 
-
 ## 线程与协程
 
 我们先看两断代码，分别用 threading 模块和asyncio 包实现的一段代码。
@@ -444,8 +443,8 @@ if __name__ == '__main__':
 
 由于协程发起的请求速度较快，为了防止向服务器发起太多的并发请求，使服务器过载，我们在download_coro 函数中创建一个asyncio.Semaphore 实例，然后把它传给download_one 函数。
 
-> <secion class="caption">Semaphore</section> 对象维护着一个内部计数器，若在对象上调用 .acquire() 协程方法，计数器则递减；若在对象上调用 .release() 协程方法，计数器则递增。计数器的值是在初始化的时候设定。
-> 如果计数器大于0，那么调用 .acquire() 方法不会阻塞，如果计数器为0， .acquire() 方法会阻塞调用这个方法的协程，直到其他协程在同一个 Semaphore 对象上调用 .release() 方法，让计数器递增。
+> `Semaphore` 对象维护着一个内部计数器，若在对象上调用 `.acquire()` 协程方法，计数器则递减；若在对象上调用 `.release()` 协程方法，计数器则递增。计数器的值是在初始化的时候设定。
+如果计数器大于0，那么调用 `.acquire()` 方法不会阻塞，如果计数器为0， `.acquire()` 方法会阻塞调用这个方法的协程，直到其他协程在同一个 Semaphore 对象上调用 `.release()` 方法，让计数器递增。
 
 在上边的代码中，我们并没有手动调用 .acquire() 或 .release() 方法，而是在 download_one 函数中 把 semaphore 当做上下文管理器使用:
 
