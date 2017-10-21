@@ -5,7 +5,7 @@ description: 使用腾讯云配置小程序服务端开发环境
 draft:  false
 slug: wxapp-server-config
 tags: ["development", "小程序", "后端"， "tutorial"]
-title: 使用腾讯云配置小程序服务端开发环境
+title: 使用腾讯云配置小程序Python开发环境
 ---
 
 最近做小程序服务器的配置，这一篇是服务器配置的记录，方便以后安装配置。
