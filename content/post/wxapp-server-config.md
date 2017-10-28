@@ -331,7 +331,6 @@ sudo systemctl stop caddy     # 关闭 caddy
 * [how-to-host-a-website-with-caddy-on-ubuntu-16-04](https://www.digitalocean.com/community/tutorials/how-to-host-a-website-with-caddy-on-ubuntu-16-04)
 ------
 
-
 最后，感谢女朋友支持。
 
 欢迎关注(April_Louisa) | 请我喝芬达
