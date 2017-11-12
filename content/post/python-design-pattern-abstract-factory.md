@@ -282,6 +282,7 @@ def main():
 
 ## 参考链接
 
+* [python设计模式：工厂方法模式](https://mp.weixin.qq.com/s/3HtKVCzPOmuk5uFpfoBsqA)
 * [python-design-patter-abstract-factory.py https://gist.github.com/gusibi/5e0797f5458678322486f999ca87a180](https://gist.github.com/gusibi/5e0797f5458678322486f999ca87a180)
 
 ------
