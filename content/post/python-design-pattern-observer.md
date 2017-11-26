@@ -181,13 +181,13 @@ class DefaultFormatter(Publisher):
 ```python
 class HexFormatter:
 
-    def notify(self, publisher):
+    def update(self, publisher):
         print("{}: '{}' has now hex data= {}".format(type(self).__name__,
                                                      publisher.name, hex(publisher.data)))
 
 class BinaryFormatter:
 
-    def notify(self, publisher):
+    def update(self, publisher):
         print("{}: '{}' has now bin data= {}".format(type(self).__name__,
                                                      publisher.name, bin(publisher.data)))
 ```
