@@ -563,8 +563,7 @@ SELECT sum(operate_fee) FROM trade
 
 ## 分组数据
 
-使用SQL聚集函数可以汇总数据。这样，我们就能够对行进行计数，计算和与平均数，不检索所有数据就获得最大值和最小
-值。
+使用SQL聚集函数可以汇总数据。这样，我们就能够对行进行计数，计算和与平均数，不检索所有数据就获得最大值和最小值。
 目前为止的所有计算都是在表的所有数据或匹配特定的WHERE子句的数据上进行的。比如下面的例子返回供应商DLL01提供的产品数目:
 
 ```sql
@@ -619,7 +618,7 @@ SELECT account_id, count(*) AS 充值次数 FROM trade
     WHERE operate_type='recharge' 
     GROUP BY account_id
     HAVING count(*) > 10
-    ORDER BY count(*) desc;;
+    ORDER BY count(*) desc;
 ```
 
 ## 参考链接
