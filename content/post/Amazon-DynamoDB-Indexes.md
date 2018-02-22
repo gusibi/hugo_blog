@@ -3,7 +3,7 @@ date = "2017-01-18T21:55:39+08:00"
 draft = false
 title = "Amazon DynamoDB 入门5：索引创建及管理"
 
-tags = ["nosql", "DynamoDB", "python"]
+tags = ["AWS","nosql", "DynamoDB", "python"]
 categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "Amazon-DynamoDB-Indexes"
 +++

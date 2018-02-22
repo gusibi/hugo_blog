@@ -3,7 +3,7 @@ date = "2017-02-07T22:23:33+08:00"
 draft = false
 title = "Amazon DynamoDB 入门7：项目更新"
 
-tags = ["nosql", "DynamoDB", "python"]
+tags = ["AWS", "nosql", "DynamoDB", "python"]
 categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "Amazon-DynamoDB-UpdateItem"
 +++

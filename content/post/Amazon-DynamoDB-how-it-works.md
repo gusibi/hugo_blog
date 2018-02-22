@@ -2,7 +2,7 @@
 date = "2017-01-09T22:37:11+08:00"
 title = "Amazon DynamoDB 入门2： 工作原理、API和数据类型介绍"
 
-tags = ["nosql", "DynamoDB", "python"]
+tags = ["AWS","nosql", "DynamoDB", "python"]
 categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "Amazon-DynamoDB0How-It-Works"
 

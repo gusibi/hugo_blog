@@ -3,7 +3,7 @@ date = "2017-01-18T21:53:38+08:00"
 draft = false
 title = "Amazon DynamoDB 入门4：项目的基本操作（CRUD）"
 
-tags = ["nosql", "DynamoDB", "python"]
+tags = ["AWS","nosql", "DynamoDB", "python"]
 categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "Amazon-DynamoDB-Items-CRUD"
 +++
@@ -45,9 +45,12 @@ HUGOMORE42
 此表的主键包含 Artist 和 SongTitle。您必须为这些属性指定值。
 以下是要了解的有关此 PutItem 示例的几个关键事项：
 
-* DynamoDB 使用 JSON 提供对文档的本机支持。这使得 DynamoDB 非常适合存储半结构化数据，例如 Tags。您也可以从 JSON 文档中检索和操作数据。 
-* 除了主键（Artist 和 SongTitle），Music 表没有预定义的属性。 
-* 大多数 SQL 数据库是面向事务的。当您发出 INSERT 语句时，数据修改不是永久性的，直至您发出 COMMIT 语句。利用 Amazon DynamoDB，当 DynamoDB 通过 HTTP 200 状态代码 (OK) 进行回复时，PutItem 操作的效果是永久性的。 
+* DynamoDB 使用 JSON 提供对文档的本机支持。这使得 DynamoDB 非常适合存储半结构化数据，例如 Tags。您也可以从 JSON 文档中检索和操作数据。
+
+* 除了主键（Artist 和 SongTitle），Music 表没有预定义的属性。
+
+* 大多数 SQL 数据库是面向事务的。当您发出 INSERT 语句时，数据修改不是永久性的，直至您发出 COMMIT 语句。利用 Amazon DynamoDB，当 DynamoDB 通过 HTTP 200 状态代码 (OK) 进行回复时，PutItem 操作的效果是永久性的。
+
 
 #### Python Example
 

@@ -3,7 +3,7 @@ date = "2017-01-14T18:13:42+08:00"
 title = "Amazon DynamoDB 入门3： 表的基本操作"
 draft = false
 
-tags = ["nosql", "DynamoDB", "python"]
+tags = ["AWS", "nosql", "DynamoDB", "python"]
 categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "Amazon-DynamoDB-Table-Operator"
 +++
@@ -108,7 +108,8 @@ AttributeType 的定义中：
 
 * S - 字符串类型
 * N - 数字类型
-* B - 二进制类型 
+* B - 二进制类型
+
 
 #### Python Example
 

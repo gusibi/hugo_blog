@@ -4,7 +4,7 @@ title = "Amazon DynamoDB 入门8：删除项目"
 
 draft = false
 
-tags = ["nosql", "DynamoDB", "python"]
+tags = ["AWS","nosql", "DynamoDB", "python"]
 categories = ["development", "nosql", "DynamoDB", "python"]
 slug = "Amazon-DynamoDB-Delete-Item"
 
