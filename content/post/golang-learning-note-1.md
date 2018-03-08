@@ -448,9 +448,9 @@ Go 的返回值可以被命名，并且就像在函数体开头声明的变量�
 
 ## 参考链接
 
-[Go 指南](https://tour.go-zh.org/basics/4)
-[The way to go -- 变量](https://github.com/Unknwon/the-way-to-go_ZH_CN/blob/master/eBook/04.4.md)
-[Effective Go](https://golang.org/doc/effective_go.html)
+* [Go 指南](https://tour.go-zh.org/basics/4)
+* [The way to go -- 变量](https://github.com/Unknwon/the-way-to-go_ZH_CN/blob/master/eBook/04.4.md)
+* [Effective Go](https://golang.org/doc/effective_go.html)
 
 ------
 
