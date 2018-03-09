@@ -1,6 +1,6 @@
 ---
 categories: ["development", "python", "微信小程序"]
-date: 2017-07-30T212:17:13+08:00
+date: 2017-07-30T12:17:13+08:00
 description:  python sanic 实现微信小程序登录注册
 draft: false
 slug: wxapp-dev-how-to-login-and-register-by-python-sanic
