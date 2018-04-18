@@ -50,7 +50,7 @@ unix 中的进程创建是通过内核系统调用 fork() 实现的。当一个�
 
 系统中运行的每一个进程都有对应的父进程。每个进程都知道它父进程的标识符（ppid）。
 
-在 python 中查看当前进程 pid 可以使用 `getpid()` 方法。
+在 python 中查看当前进程 pid 可以使用 `getppid()` 方法。
 
 ```python
 >>> import os
@@ -222,7 +222,6 @@ OSError: [Errno 24] Too many open files: 'test.txt'
 python 使用 os.exit() 来退出进程
 
 
-
 ```python
 #! -*- coding: utf-8 -*-
 
@@ -308,11 +307,9 @@ I am child process (9317) and my parent is 9316.
 > 所以这段代码中，if 语句由子进程执行，而 else 语句由父进程执行。
 
 
-
 考虑一个问题：
 
 由于 fork 的时候创建了一个和父进程一模一样的子进程，它包含了父进程在内存中的一切内容。如果，父进程占用内存特别大怎么办呢？
-
 
 
 > Unix 采用的是写时复制（copy-on-write，CoW）的方法，所以 fork 的时候父进程和子进程是共享内存中数据的，直到它们中的一个需要对数据进程修改，才会进行内存复制，使得两个进程保持适当的隔离。
