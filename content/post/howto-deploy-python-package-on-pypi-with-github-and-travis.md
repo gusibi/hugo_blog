@@ -13,8 +13,7 @@ tags:
 title: 使用github+travis将Python包部署到Pypi
 ---
 
-最近在更新 [python-weixin](https://github.com/gusibi/python-weixin)，但更新完每次将代码提交到 github 后都还需要手动将包更新到 pypi，比较繁琐，就使用github+travis-ci 构建了一个自动部署环境。
-
+我在 github 托管 Python 代码，然后将包发布到 Pypi，通常的操作步骤是，更新完代码将提交到 github ，然后手动将包更新到 pypi，这样比较繁琐，就想到了使用github+travis-ci 构建一个自动部署环境。
 
 
 ### 注册 pypi
@@ -150,8 +149,8 @@ pip install travis-encrypt
 
 ```bash
 travis-encrypt --deploy gusibi python-weixin .travis.yml
+Password: # 在这里输入pypi 密码
 ```
-
 
 
 >这里 `gusibi` `python-weixin` 需要替换成相对应的 github username 和 repository。
@@ -203,6 +202,7 @@ deploy:
 
 ## 参考链接
 
+* [https://github.com/romgar/5minutes/blob/master/content/articles/howto-deploy-python-package-on-pypi-with-github-and-travis.md][https://github.com/romgar/5minutes/blob/master/content/articles/howto-deploy-python-package-on-pypi-with-github-and-travis.md]
 * [https://pypi.org](https://pypi.org) 
 * [https://github.com/gusibi/python-weixinn](https://github.com/gusibi/python-weixin)
 * [https://pypi.org/project/travis-encrypt/](https://pypi.org/project/travis-encrypt/)
