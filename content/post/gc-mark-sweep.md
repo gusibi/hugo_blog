@@ -4,7 +4,7 @@ categories:
 - 后端
 - development
 date: 2018-07-21T11:15:05+08:00
-description: 垃圾回收算法 标记-清除算法
+description: 垃圾回收算法|标记-清除算法
 draft: false
 slug: gc-mark-sweep
 tags:
