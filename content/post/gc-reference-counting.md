@@ -3,7 +3,7 @@ categories:
 - 读书笔记
 - 后端
 - development
-date: 2018-08-2T19:15:05+08:00
+date: 2018-08-12T19:15:05+08:00
 description: 垃圾回收算法|引用计数法
 draft: false
 slug: gc-reference-counting
