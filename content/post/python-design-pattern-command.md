@@ -17,7 +17,6 @@ title: "python设计模式-命令模式"
 ![智能家居遥控器](<http://media.gusibi.mobi/UPqlqNDZ-vRoQN65O3JhR8egeJyz2zIVfbPRV7V47ZhMsWp0aT6awTJoplv_XQbw>)
 
 
-
 > 下图是家电厂商提供的类，接口各有差异，并且以后这种类可能会越来越多。
 
 ![家电厂商类](<http://media.gusibi.mobi/vcUsidbuki8NvnE6GIQ4V-UtyVMw5I3B1C3GkIceIETTGiMuYdTYnD2NSFaJOzTn>)
