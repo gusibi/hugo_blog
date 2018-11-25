@@ -2,7 +2,7 @@
 date: 2017-10-28T21:23:56+08:00
 description: python 设计模式，工厂方法模式，抽象工厂模式
 draft: false
-slug: "python-design-patter-abstract-factory"
+slug: "python-design-pattern-abstract-factory"
 categories: ["development", "python",  "设计模式"]
 tags: ["python", "读书笔记", "设计模式"]
 title: "python设计模式-抽象工厂模式"

@@ -2,7 +2,7 @@
 date: 2017-11-26T12:59:39+08:00
 description: python 单例模式
 draft: false
-slug: "python-design-patter-singleton"
+slug: "python-design-pattern-singleton"
 categories: ["development", "python",  "设计模式"]
 tags: ["python", "读书笔记", "设计模式"]
 title: "python设计模式-单例模式"

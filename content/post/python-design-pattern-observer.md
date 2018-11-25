@@ -2,7 +2,7 @@
 date: 2017-09-24T22:29:39+08:00
 description: python 观察者模式
 draft: false
-slug: "python-design-patter-observer"
+slug: "python-design-pattern-observer"
 categories: ["development", "python",  "设计模式"]
 tags: ["python", "读书笔记", "设计模式"]
 title: "python设计模式-观察者模式"

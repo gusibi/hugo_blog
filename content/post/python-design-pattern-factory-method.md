@@ -2,7 +2,7 @@
 date: 2017-10-15T13:23:56+08:00
 description: python 设计模式，工厂方法模式，简单工厂模式
 draft: false
-slug: "python-design-patter-factory-method"
+slug: "python-design-pattern-factory-method"
 categories: ["development", "python",  "设计模式"]
 tags: ["python", "读书笔记", "设计模式"]
 title: "python设计模式-工厂方法模式"

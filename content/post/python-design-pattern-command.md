@@ -2,7 +2,7 @@
 date: 2018-01-09T23:16:56+08:00
 description: python 设计模式，命令模式
 draft: false
-slug: "python-design-patter-command"
+slug: "python-design-pattern-command"
 categories: ["development", "python",  "设计模式"]
 tags: ["python", "读书笔记", "设计模式"]
 title: "python设计模式-命令模式"

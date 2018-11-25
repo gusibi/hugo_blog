@@ -2,7 +2,7 @@
 date: 2018-11-03T21:23:56+08:00
 description: python 设计模式，适配器模式
 draft: false
-slug: "python-design-patter-adapter"
+slug: "python-design-pattern-adapter"
 categories: ["development", "python",  "设计模式"]
 tags: ["python", "读书笔记", "设计模式"]
 title: "python设计模式-适配器模式"
