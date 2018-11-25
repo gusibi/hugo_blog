@@ -1,7 +1,7 @@
 #!/bin/bash
 echo -e '\033[0;32m'Deploying updates to GitHub...'\033[0m'
 
-msg = rebuilding site `date`
+msg = rebuilding site `$date`
 
 if [ $# -eq 1 ]
     then msg=$1
