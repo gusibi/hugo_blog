@@ -12,6 +12,12 @@
 * hugo server --theme=hugo_zen  以zen 主题启动server
 * hugo --theme=hugo_zen  以zen 主题生成草稿
 
+### 配置说明
+
+public 为 https://github.com/gusibi/gusibi.github.io repo
+
+需要 git clone https://github.com/gusibi/gusibi.github.io
+
 
 ### 参考链接
 
