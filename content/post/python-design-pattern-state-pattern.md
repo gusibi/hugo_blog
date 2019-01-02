@@ -276,6 +276,7 @@ class GumballMachine:
         # 转动曲柄
         # print("state", self.state, type(self.state))
         self.state.turn_crank()
+	    self.state.dispense()
     
     def release_ball(self):
         # 发放糖果
