@@ -166,7 +166,7 @@ if __name__ == '__main__':
 
 asynci.Future 类与 concurrent.futures.Future 类的接口基本一致，不过实现方式不同，不可互换。
 
-上一篇[python并发 1：使用 futures 处理并发](http://blog.gusibi.com/post/python-concurrency-with-futures/)我们介绍过 concurrent.futures.Future 的 future，在 concurrent.futures.Future 中，future只是调度执行某物的结果。在 asyncio 包中，BaseEventLoop.create_task(...) 方法接收一个协程，排定它的运行时间，然后返回一个asyncio.Task 实例（也是asyncio.Future 类的实例，因为 Task 是 Future 的子类，用于包装协程。（在 concurrent.futures.Future 中，类似的操作是Executor.submit(...)）。
+上一篇[python并发 1：使用 futures 处理并发](http://blog.gusibi.site/post/python-concurrency-with-futures/)我们介绍过 concurrent.futures.Future 的 future，在 concurrent.futures.Future 中，future只是调度执行某物的结果。在 asyncio 包中，BaseEventLoop.create_task(...) 方法接收一个协程，排定它的运行时间，然后返回一个asyncio.Task 实例（也是asyncio.Future 类的实例，因为 Task 是 Future 的子类，用于包装协程。（在 concurrent.futures.Future 中，类似的操作是Executor.submit(...)）。
 
 与concurrent.futures.Future 类似，asyncio.Future 类也提供了 
 
@@ -216,7 +216,7 @@ a = run_sync(some_coroutine())
 
 ## 使用asyncio 和 aiohttp 包下载
 
-现在，我们了解了asyncio 的基础知识，是时候使用asyncio 来重写我们 上一篇 [python并发 1：使用 futures 处理并发](http://blog.gusibi.com/post/python-concurrency-with-futures/) 下载国旗的脚本了。
+现在，我们了解了asyncio 的基础知识，是时候使用asyncio 来重写我们 上一篇 [python并发 1：使用 futures 处理并发](http://blog.gusibi.site/post/python-concurrency-with-futures/) 下载国旗的脚本了。
 
 先看一下代码：
 

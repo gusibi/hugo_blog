@@ -8,7 +8,7 @@ tags: ["python", "tutorial", "weixin", "公众号"]
 title: 微信公号DIY：训练聊天机器人&公号变身图片上传工具
 ---
 
-上一篇 [一小时搭建微信聊天机器人](http://blog.gusibi.com/post/wechat-chatbot-step-by-step/) 介绍了如何搭建一个可用的聊天机器人，但是和机器人聊完你会发现，聊天机器人实在是太傻了，来回就那么几句。这是因为我们给聊天机器人的数据太少，他只能在我们给的训练集中找它认为最合适的。那么，如何导入更多的训练数据呢？
+上一篇 [一小时搭建微信聊天机器人](http://blog.gusibi.site/post/wechat-chatbot-step-by-step/) 介绍了如何搭建一个可用的聊天机器人，但是和机器人聊完你会发现，聊天机器人实在是太傻了，来回就那么几句。这是因为我们给聊天机器人的数据太少，他只能在我们给的训练集中找它认为最合适的。那么，如何导入更多的训练数据呢？
 我能想到最简单的方法是找对话的数据，然后把这些数据作为训练数据训练机器人。
 
 感谢 candlewill 已经收集好了大量的训练数据，[dialog_corpus https://github.com/candlewill/Dialog_Corpus](https://github.com/candlewill/Dialog_Corpus) 。

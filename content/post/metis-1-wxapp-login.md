@@ -403,7 +403,7 @@ def create_token(request):
 
 * [《微信小程序七日谈》- 第五天：你可能要在登录功能上花费大力气：http://www.cnblogs.com/ihardcoder/p/6279602.html](http://www.cnblogs.com/ihardcoder/p/6279602.html)
 * [理解JWT（JSON Web Token）认证及实践](https://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655752020&idx=1&sn=b5e56989a57e9b8067eb6614381a04fd&chksm=80b0b87eb7c73168d7eb1d7f1a95e759b9b0934318571de4f6d2455402e654e6c09d9b022f25)
-* [网站微信登录－python 实现：http://blog.gusibi.com/post/weixin-python-login/](http://blog.gusibi.com/post/weixin-python-login/)
+* [网站微信登录－python 实现：http://blog.gusibi.site/post/weixin-python-login/](http://blog.gusibi.site/post/weixin-python-login/)
 
 
 ------

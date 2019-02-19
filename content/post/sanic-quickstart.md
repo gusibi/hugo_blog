@@ -13,7 +13,7 @@ Sanic 是一个和类Flask 的基于Python3.5+的web框架，它编写的代码�
 
 除了像Flask 以外，Sanic 还支持以异步请求的方式处理请求。这意味着你可以使用新的 async/await 语法，编写非阻塞的快速的代码。
 
-> 关于 asyncio 包的介绍，请参考之前的一篇文章 [python并发2：使用asyncio处理并发](http://blog.gusibi.com/post/python-asyncio/)
+> 关于 asyncio 包的介绍，请参考之前的一篇文章 [python并发2：使用asyncio处理并发](http://blog.gusibi.site/post/python-asyncio/)
 
 Github 地址 是 [https://github.com/channelcat/sanic](https://github.com/channelcat/sanic)，感兴趣的可以去贡献代码。
 
