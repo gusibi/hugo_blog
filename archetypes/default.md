@@ -22,4 +22,4 @@ categories: ["xxx", "xxxx"]
 
 也可以在公号输入以下关键字获取历史文章：`公号&小程序` | `设计模式` | `并发&协程`
 
-![](http://media.gusibi.mobi/ah0mqMXMtdJb9Yj03suu-NGEyVRxyEuOIT5bXSv7ip5aqtHkiRjTTl8SMRMv3Qp5)
+![扫码关注](http://media.gusibi.mobi/zHqNew3j1brVxSoTkjOerslhnB_ZpchcOXf60lFUxiZ5YtnCHs5HrJNOP14go6Ea)

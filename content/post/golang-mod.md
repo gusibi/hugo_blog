@@ -330,4 +330,4 @@ replace golang.org/x/crypto v0.0.0-20190313024323-a1f597ede03a => github.com/gol
 
 也可以在公号输入以下关键字获取历史文章：`公号&小程序` | `设计模式` | `并发&协程`
 
-![](http://media.gusibi.mobi/zHqNew3j1brVxSoTkjOerslhnB_ZpchcOXf60lFUxiZ5YtnCHs5HrJNOP14go6Ea)
+![扫码关注](http://media.gusibi.mobi/zHqNew3j1brVxSoTkjOerslhnB_ZpchcOXf60lFUxiZ5YtnCHs5HrJNOP14go6Ea)
