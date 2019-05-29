@@ -1,6 +1,6 @@
 ---
-date: "2019-05-29T20:29:39+08:00"
-draft: true
+date: "2019-05-29T21:05:57+08:00"
+draft: false
 title: "创建高质量的代码--软件构建中的设计"
 slug: "Design-in-software-construction"
 description: "代码大全 软件设计中的构建"

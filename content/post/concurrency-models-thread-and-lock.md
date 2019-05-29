@@ -1,5 +1,5 @@
 ---
-date: 2019-05-19T20:29:39+08:00
+date: "2019-05-19T20:29:39+08:00"
 draft: false
 title: "并发模型：线程与锁"
 slug: "thread-and-lock"
@@ -8,7 +8,6 @@ date: 2017-07-02T16:29:39+08:00
 categories: ["development", "python", "读书笔记"]
 tags: ["python", "读书笔记", "并发"]
 ---
-[TOC]
 
 ## 并发&并行
 
