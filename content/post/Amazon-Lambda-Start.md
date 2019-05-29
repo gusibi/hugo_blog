@@ -214,7 +214,15 @@ CloudWatch 日志流的名称，可从该日志流中查找由 Lambda 函数写�
 
 ###### client_context
 
-通过 AWS 移动软件开发工具包进行调用时的客户端应用程序和设备的相关信息。它可以为空。client_context.client.installation_idclient_context.client.app_titleclient_context.client.app_version_nameclient_context.client.app_version_codeclient_context.client.app_package_nameclient_context.custom由移动客户端应用程序设置的自定义值的 `dict`。client_context.env由 AWS 移动软件开发工具包提供的环境信息的 `dict`。
+通过 AWS 移动软件开发工具包进行调用时的客户端应用程序和设备的相关信息。它可以为空。
+
+* client.installation_id
+* client.app_title
+* client.app_version_name
+* client.app_version_code
+* client.app_package_name
+* custom – 由移动客户端应用程序设置的自定义值的 dict。
+* env – 由 AWS 开发工具包提供的环境信息的 dict。
 
 ##### 示例
 

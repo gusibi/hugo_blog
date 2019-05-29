@@ -53,7 +53,7 @@ HUGOMORE42
 
 #### 获取access_token 时序图
 
-![获取access_token 时序图](https://res.wx.qq.com/open/zh_CN/htmledition/res/img/pic/web-wxlogin/12168b9.png)
+![获取access_token 时序图](https://res.wx.qq.com/op_res/D0wkkHSbtC6VUSHX4WsjP5ssg5mdnEmXO8NGVGF34dxS9N1WCcq6wvquR4K_Hcut)
 
 
 具体流程请参考官方文档，我们这里只说一下python的实现方法。官方文档地址 [点这里](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&lang=zh_CN&token=db685a316b7e3933cae42c5ca91d4e024125d1b8&appid=wx6d8c79fb64de6c08)
@@ -72,17 +72,15 @@ HUGOMORE42
 
 #### 方法二 pip install
 
-{{< highlight shell >}}
-
+```
 pip install git+https://github.com/gusibi/python-weixin.git@master
-
-{{</highlight>}}
+```
 
 -------
 
 ### 使用方式
 
-{{< highlight python >}}
+```python
 
 from weixin.client import WeixinAPI
 
@@ -96,7 +94,7 @@ api = WeixinAPI(appid=APP_ID,
                 redirect_uri=REDIRECT_URI)
 
 authorize_url = api.get_authorize_url(scope=scope)
-{{< /highlight >}}
+```
 
 现在将 authorize_url地址(如 http://yoursite.com/login/weixin)在浏览器打开， 将跳转到微信登录页面，使用手机扫码登录后将跳转到
 
@@ -104,13 +102,13 @@ http://your_domain.com/redirect_uri?code=CODE&state=STATE 页面
 
 现在我们就可以使用code 来获取登录的 access_token
 
-{{< highlight python >}}
+```python
 access_token = api.exchange_code_for_access_token(code=code)
-{{< /highlight >}}
+```
 
 access_token 信息为
 
-{{< highlight python >}}
+```json
 {
 "access_token":"ACCESS_TOKEN",
 "expires_in":7200,
@@ -118,7 +116,7 @@ access_token 信息为
 "openid":"OPENID",
 "scope":"SCOPE"
 }
-{{< /highlight >}}
+```
 
 |参数	|说明|
 | ------------- |:-------------|
@@ -144,7 +142,7 @@ access_token 信息为
 | snsapi_userinfo|/sns/userinfo	|获取用户个人信息|
 
 
-{{< highlight python >}}
+```python
 api = WeixinAPI(appid=APP_ID,
                 app_secret=APP_SECRET,
                 redirect_uri=REDIRECT_URI)
@@ -159,7 +157,7 @@ user = api.user(openid=auth_info['openid'])
 
 # 检查access_token有效性
 v = api.validate_token(openid=auth_info['openid'])
-{{< /highlight >}}
+```
 
 
 现在就微信登录就完成了
@@ -168,7 +166,7 @@ v = api.validate_token(openid=auth_info['openid'])
 
 下面是用 flask 实现的完整的例子
 
-{{< highlight python >}}
+```python
 from flask import Flask
 from flask import Markup
 from flask import redirect
@@ -213,7 +211,7 @@ def hello():
 if __name__ == "__main__":
     app.run(debug=True)
 
-{{< /highlight >}}
+```
 
 #### 参考链接：
 
