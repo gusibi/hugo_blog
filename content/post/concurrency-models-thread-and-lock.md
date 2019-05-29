@@ -4,7 +4,6 @@ draft: false
 title: "并发模型：线程与锁"
 slug: "thread-and-lock"
 description: "并发模型：线程与锁"
-date: 2017-07-02T16:29:39+08:00
 categories: ["development", "python", "读书笔记"]
 tags: ["python", "读书笔记", "并发"]
 ---
