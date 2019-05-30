@@ -4,8 +4,8 @@ draft: false
 title: "创建高质量的代码--软件构建中的设计"
 slug: "Design-in-software-construction"
 description: "代码大全 软件设计中的构建"
-tags: ["读书笔记", "代码大全"]
-categories: ["development", "读书笔记"]
+tags: ["后端", "tutorial"]
+categories: ["development", "架构设计"]
 ---
 
 > 《代码大全》读书笔记
