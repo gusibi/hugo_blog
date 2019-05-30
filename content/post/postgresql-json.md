@@ -7,9 +7,6 @@ description: "postgresql json jsonb 使用入门"
 tags: ["tutorial", "后端"]
 categories: ["development", "读书笔记"]
 ---
-
-[TOC]
-
 ## json 类型
 
 ### 说明
