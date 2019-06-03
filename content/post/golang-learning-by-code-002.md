@@ -1,13 +1,12 @@
-+++
-date = "2016-04-26T15:49:35+08:00"
-draft = false
-title = "跟着代码学go 002 -- 控制流"
-tags = ["golang", "读书笔记"]
-categories = ["development", "读书笔记", "golang"]
-slug = "golang-learning-by-code-002"
-description = "跟着代码学golang 控制流"
-
-+++
+---
+date: "2016-04-26T15:49:35+08:00"
+draft: false
+title: "跟着代码学go 002 -- 控制流"
+tags: ["golang", "读书笔记"]
+categories: ["development", "读书笔记", "golang"]
+slug: "golang-learning-by-code-002"
+description: "跟着代码学golang 控制流"
+---
 
 ## 控制流
 
