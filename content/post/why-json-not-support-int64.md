@@ -53,7 +53,7 @@ Javascript的数字存储使用了IEEE 754中规定的双精度浮点数数据�
 
 > 这两个边界值可以通过 JavaScript 的 Number.MAX_SAFE_INTEGER 和 Number.MIN_SAFE_INTEGER 获取。
 
-![eb4e313c1945442782eb21331930aa00.png](evernotecid://49E50F6F-983A-4D9E-90FA-7763241410D1/appyinxiangcom/8460937/ENResource/p5282)
+![](http://media.gusibi.mobi/json1.png)
 
 > 安全存储的意思是指能够准确区分两个不相同的值，比如，253 - 1 是一个安全整数，它能被精确表示，在任何 IEEE-754 舍入模式（rounding mode）下，没有其他整数舍入结果为该整数。作为对比，253 就不是一个安全整数，它能够使用 IEEE-754 表示，但是 253 + 1 不能使用 IEEE-754 直接表示，在就近舍入（round-to-nearest）和向零舍入中，会被舍入为 253。
 > Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2 将得到 true的结果，而这在数学上是错误的。
@@ -61,7 +61,7 @@ Javascript的数字存储使用了IEEE 754中规定的双精度浮点数数据�
 
 int64 类型的数值范围是 -(2^63-1) 到 2^63-1。使用int64 类型json 对于超出范围的数字，会出现解析错误的情况。
 
-![ff73cf7fbe9ac71cd465a7bf10236f79.png](evernotecid://49E50F6F-983A-4D9E-90FA-7763241410D1/appyinxiangcom/8460937/ENResource/p5283)
+![](http://media.gusibi.mobi/json2.png)
 
 
 一个建议：对于大数字来说，使用str 是一个好的选择。或者用类似这样的结构：
