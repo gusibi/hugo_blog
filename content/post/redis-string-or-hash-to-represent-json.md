@@ -61,7 +61,7 @@ for i in range(100000):
 
 >  hash 占用 10.16M
 >
-> hash 占用 10.15M
+> string 占用 10.15M
 
 
 
@@ -186,9 +186,6 @@ values = {
 [1] Redis strings vs Redis hashes to represent JSON: efficiency?: https://stackoverflow.com/questions/16375188/redis-strings-vs-redis-hashes-to-represent-json-efficiency
 [2] redis memory optimization: https://redis.io/topics/memory-optimization
 [3] Redis 设计与实现： http://redisbook.com/preview/object/hash.html
-
-## 参考链接
-
 
 ------
 
