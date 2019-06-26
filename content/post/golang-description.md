@@ -108,7 +108,7 @@ Go 的源代码有以下三个分支：
 
 ### ubuntu & debian
 
-{{< highlight shell >}}
+```bash
 sudo apt-get update && apt-get install -y --no-install-recommends \
     g++ gcc libc6-dev make
 
@@ -122,15 +122,13 @@ sudo curl -fsSL "$GOLANG_DOWNLOAD_URL" -o golang.tar.gz \
     && rm golang.tar.gz
 
 ## 也可以直接 sudo apt-get install go 版本可能不是1.6
-{{< /highlight >}}
-
+```
 
 ### Mac
 
-{{< highlight shell >}}
+```sh
 brew install go
-{{< /highlight >}}
-
+```
 
 ### Windows
 
@@ -142,7 +140,7 @@ GOROOT GO语言安装的路径
 GOPATH 表示代码包所在的地址，可以设置多个
 PATH 可执行程序的路径，在命令行执行命令时，系统默认会在PATH中指定路径里寻找
 
-{{< highlight shell >}}
+```sh
 # 将以下环境变量加到 .bashrc 或者 .zshrc 文件
 # Mac 配置
 export GOROOT='/usr/local/Cellar/go/1.6/libexec'
@@ -154,7 +152,7 @@ export GOROOT='/usr/local/go'
 export GOPATH=/go
 export PATH=$PATH:$HOME/go/bin:$GOPATH/bin
 
-{{< /highlight >}}
+```
 
 ### 编辑器
 

@@ -12,7 +12,7 @@ title: 小程序开发：python sanic 实现小程序登录注册
 
 **微信小程序登录时序图如下：**
 
-![登录时序图](https://mp.weixin.qq.com/debug/wxadoc/dev/image/login.png?t=2017727)
+![登录时序图](http://media.gusibi.mobi/_5HFdz7B13G7D1rN0hnqAvRwE_tLPZCQc_7YHkBID_zHVzVxzLClBPr9DPnufdSf)
 
 这个流程分为两大部分：
 1. 小程序使用 wx.login() API 获取 code，调用 wx.getUserInfo() API 获取 encryptedData 和 iv，然后将这三个信息发送给第三方服务器。
