@@ -1,34 +1,18 @@
-{{ partial "head.html" . }}
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-<div class="container one-collumn sidebar-position-left {{ block "main_class" .}}{{end}}  ">
-    <div class="headband"></div>
+{{ define "title" }}404 page not found2345 - {{ .Site.Title }}{{ end }}
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> {{ partial "header.html" . }} </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            <p>页面不存在</p>
-          </div>
-        </div>
-        {{ partial "sidebar.html" . }}
-      </div>
-    </main>
-   
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        {{ partial "footer.html" . }}
-      </div>
-    </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
-  </div>
-
-  {{ partial "script.html" .}}
-</body>
-</html>
+{{ define "content" }}
+<div class="not-found">
+  <h1 class="error-emoji">Not Found</h1>
+  <p class="error-text">/* 404 page not found. */</p>
+  <p class="error-link"><a href="{{ "/" | relLangURL }}">↑ Back Home ↑</a></p>
+</div>
+<script>
+  var errorEmojiContainer = document.getElementsByClassName('error-emoji')[0];
+  var emojiArray = [
+    '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)',
+    '(=\'X\'=)', '(>_<)', '(;-;)', '\\(^Д^)/',
+  ];
+  var errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
+  errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
+</script>
+{{ end }}

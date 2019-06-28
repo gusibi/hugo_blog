@@ -1,0 +1,83 @@
+Title =  "这个人很懒"
+LanguageCode = "zh-CN"
+BaseUrl = "https://gusibi.github.io"
+Theme =  "next"
+MetaDataFormat =  "yaml"
+CanonifyUrls =  true
+BuildDrafts =  false
+PaginatePath =  "p"
+Paginate = 10
+DisablePathToLower = false
+HasCJKLanguage = true
+PreserveTaxonomyNames = false
+UglyUrls = false
+PygmentsStyle = "native"
+PygmentsUseClasses = true
+DefaultContentLanguage = "zh"
+GoogleAnalytics = "UA-76238744-1"
+
+[Params]
+  Introduce = "专业bug生产销毁"
+  Description = "这个人很懒 | 博客 | 软件  | Python | Golang"
+  Keywords =  "这个人很懒,python,博客,程序员,个人,思考,读书,笔记,技术,分享,Golang"
+  Subtitle = "我说的都是错的"
+  Imglogo = "/img/weixin_mp.jpeg"
+  AuthorImg = "/img/weixin_mp.jpeg"
+  DateFormat = "2006-01-02"
+  YearFormat = "2006年"
+  MonthFormat = "01-02"
+  Fancybox = true
+  HighlightTheme = "tomorrow"
+
+[Author]
+  Name = "顾斯比"
+
+# [Params.Share]
+  # DuoShuo = "lanlingzi"
+  # Baidu = true
+
+[[Menu.Main]]
+  Name = "首页"
+  Pre = "home"
+  URL = "/"
+  Weight = 1
+[[Menu.Main]]
+  Name = "python"
+  Pre = "code"
+  URL = "/categories/python/"
+  Weight = 2
+[[Menu.Main]]
+  Name = "nosql"
+  Pre = "tint"
+  URL = "/categories/nosql/"
+  Weight = 3
+[[Menu.Main]]
+  Name = "读书笔记"
+  Pre = "book"
+  URL = "/categories/读书笔记/"
+  Weight = 4
+[[Menu.Main]]
+  Name = "golang"
+  Pre = "leaf"
+  URL = "/categories/golang/"
+  Weight = 5
+[[Menu.Main]]
+  Name = "归档"
+  Pre = "archive"
+  URL = "/post/"
+  Weight = 6
+[[Menu.Main]]
+  Name = "关于"
+  Pre = "user"
+  URL = "/about/"
+  Weight = 7
+
+[[Params.Socials]]
+  Name = "GitHub"
+  Icon = "github"
+  URL = "https://github.com/gusibi/"
+
+[[Params.Socials]]
+  Name = "分答"
+  Icon = "globe"
+  URL = "http://fd.zaih.com/tutor/587467196"  
