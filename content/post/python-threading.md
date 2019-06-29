@@ -4,7 +4,7 @@ description: python asyncio 介绍
 draft: false
 slug: "python-thread-note"
 categories: ["development", "python", "读书笔记"]
-tags: ["python", "读书笔记", "并发"]
+tags: ["python", "tutorial", "读书笔记", "并发"]
 title: "python并发4：使用thread处理并发"
 ---
 

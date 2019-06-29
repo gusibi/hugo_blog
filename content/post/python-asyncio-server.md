@@ -4,7 +4,7 @@ description: python asyncio 介绍
 draft: false
 slug: "python-asyncio-server"
 categories: ["development", "python", "读书笔记"]
-tags: ["python", "读书笔记"]
+tags: ["python", "tutorial", "读书笔记", "并发"]
 title: "python并发3：使用asyncio编写服务器"
 ---
 
