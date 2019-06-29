@@ -3,7 +3,7 @@
 # And see https://gohugo.io/getting-started/configuration/ .
 
 baseURL = "https://gusibi.github.io"
-title = "Jane - A super concise theme for Hugo"
+title = "顾斯比 hiiiapril"
 enableRobotsTXT = true
 enableEmoji = true
 theme = "jane"
