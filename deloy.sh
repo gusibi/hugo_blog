@@ -14,7 +14,7 @@ echo $msg
 git push origin master
 
 # Build the project. 
-hugo -t next
+hugo -t jane
 
 cp ./CNAME ./public/
 
