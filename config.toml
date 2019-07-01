@@ -11,7 +11,7 @@ theme = "jane"
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 paginate = 10              # Number of articles displayed on the homepage  # 首页每页显示的文章数
 rssLimit = 50             # Limit Entry Count to Rss file # 限制 Rss 文章输出数量
-disqusShortname = ""      # disqus_shortname
+disqusShortname = "gusibi"      # disqus_shortname
 googleAnalytics = "UA-76238744-1"      # UA-XXXXXXXX-X
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
@@ -80,6 +80,9 @@ defaultContentLanguage = "zh-cn"           # Default language to use
   #   (relative to /static/css and /static/js respectively)
   customCSS = []            # if ['custom.css'], load '/static/css/custom.css' file
   customJS = []             # if ['custom.js'], load '/static/js/custom.js' file
+
+  [params.commentCount.disqus] # show counts of comments for Disqus
+    enable = true
 
    [params.reward]                                         # 文章打赏
     enable = true
