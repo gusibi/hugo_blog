@@ -2,7 +2,7 @@
 # If you want to see the full configuration, please check `full-config.toml` .
 # And see https://gohugo.io/getting-started/configuration/ .
 
-baseURL = "https://gusibi.github.io"
+baseURL = "http://blog.gusibi.site"
 title = "顾斯比 hiiiapril"
 enableRobotsTXT = true
 enableEmoji = true
