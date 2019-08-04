@@ -168,7 +168,7 @@ python taxi_sim.py -s 3
 
 输出结果如下图
 
-![](http://omuo4kh1k.bkt.clouddn.com/LEcgG_eLqVy8TH3DX6zFYPa9Kw1c5ykRQ9cSdEa4P00ATIbfCq2aI_49CtskhGyI)
+![](http://media.gusibi.mobi/3237874125-5942771d7ee84_articlex.jpeg)
 
 从结果我们可以看出，3辆出租车的行程是交叉进行的。不同颜色的箭头代表不同出租车从乘客上车到乘客下车的跨度。
 
