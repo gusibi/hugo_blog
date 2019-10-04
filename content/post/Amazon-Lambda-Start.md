@@ -1,5 +1,5 @@
 ---
-categories: ["development", "Server", "架构设计", "后端"]
+categories: ["development", "架构设计", "后端"]
 date: 2018-01-13T17:23:49+08:00
 draft: false
 slug: "aws-lambda-quickstart"
