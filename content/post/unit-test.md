@@ -26,13 +26,9 @@ mathjax: true    # 打开 mathjax
 
 如果代码中包含以下代码
 
-![27c5d68cae93bb8adb9b4bba0ae439e2.jpeg](evernotecid://49E50F6F-983A-4D9E-90FA-7763241410D1/appyinxiangcom/8460937/ENResource/p6725)
-
 ![](http://media.gusibi.mobi/hZPxabAhNvjs0RBsFX2UYcWceM6hASMsuiUtsNRI1zcC_cARLqu_flemSEpRdHT2)
 
 或者上线后进行这种活动
-
-![6bf4eef7e127b82cdfd9ac9e27264b59.jpeg](evernotecid://49E50F6F-983A-4D9E-90FA-7763241410D1/appyinxiangcom/8460937/ENResource/p6726)
 
 ![](http://media.gusibi.mobi/vgTOaVcTBjWjIDs7hL3XA388F7gZvklpH5UjwqpuePotN3Q5NcHJ1PecTn50Um2m)
 
@@ -40,15 +36,6 @@ mathjax: true    # 打开 mathjax
 
 
 用流程图表示基本就是这个样子。
-
-```mermaid
-graph TD
-A[需求] -->|编码| B(执行代码)
-B --> C{求大仙保佑运行成功}
-C -->|大仙在线&&不忙| D[运行成功]
-C -->|大仙在线&&忙| E[等待]
-C -->|大仙不在线| F[看运气]
-```
 
 ![](http://media.gusibi.mobi/ZEkOQqFT-JnOR9YJ9FVhLEgptWS73yo2XYO19M_Yz0X1MZOhQtCjjLXA1XFiekCG)
 
@@ -68,7 +55,6 @@ C -->|大仙不在线| F[看运气]
 
 google 把测试分成小型测试、中型测试和大型测试。单元测试基本和小型测试的作用类似，但是通常也会使用mock或者stub 的方式模拟外部服务。
 
-![201a5956de773d0f6dc24ef9a6e2033b.png](evernotecid://49E50F6F-983A-4D9E-90FA-7763241410D1/appyinxiangcom/8460937/ENResource/p6727)
 ![](http://media.gusibi.mobi/Wn7YW9mDHRpI_3DO2eVFdk1Xx-s_jw5iJogwT0G7ED2UFpXsCYaTqICzqButt02I)
 
 
@@ -220,15 +206,13 @@ func Test_multiply(t *testing.T) {
 4. 输入值并不完整，比如包含空格的数字字符串" 1" 、" 1 "、 "1 "并没有测试。
 
 
-结合上面我们对**单元测试目的**的描述，一个好的单元测试应该满足以下几个条件：
+结合上面我们对**单元测试目的**的描述，**一个好的单元测试应该满足以下几个条件**：
 
 1. 单元测试越简单越好，一个单元测试只做一件事
 2. 对错误易于追踪，如果测试失败，错误提示应该容易帮我我们定位问题
 3. 测试函数的命名符合特定的规则 `Test_{被测方法}_{输入}_{期望输出}`
 4. 有用的失败消息
-5. 输入简单且能够完整运用代码的输入
-6. 测试边界值
-7. 测试特殊情况
+5. 输入简单且能够完整运用代码的输入(包含边界值、特殊情况
 
 比如，上边的单元测试我们改成这样：
 
@@ -293,16 +277,6 @@ func Test_multiply_space_returnSpace(t *testing.T) {
 
 设计测试路径时可以使用流程图的方式来分析，拿上边`multiply`的例子进行分析，这段代码的路径如下：
 
-```mermaid
-graph TD
-A[multiply] -->|输入参数| B(x,y)
-B --> C{判断x}
-C -->|x为非数字字符串| D[x复制y倍]
-C -->|x为空字符串| E[返回空]
-C -->|x为数字字符串| F[返回数字乘积结果字符串]
-C -->|x为前后包含空格的数字字符串| G[返回去掉前后空格后数字乘积字符串]
-```
-
 ![](http://media.gusibi.mobi/D-Ve2XrZs8zq4sRpVcRv4quYrcv0X2bVJHlcCUNoxZuoL6Cy3HIV4tsiYBUOorKA)
 
 当然，每个路径的测试数据并不是只有一种，比如`x为前后包含空格的数字字符串`这个路径中就包含三种情况：
@@ -310,7 +284,6 @@ C -->|x为前后包含空格的数字字符串| G[返回去掉前后空格后数
 * 左边有空格
 * 右边有空格
 * 两边都有空格
-
 
 #### 单元测试数据
 
@@ -339,15 +312,14 @@ C -->|x为前后包含空格的数字字符串| G[返回去掉前后空格后数
 当然现实世界中的代码并不会这么简单，通常都会包含外部请求或者对于其它类的调用。
 在编写单元测试时，对于外部依赖我们通常使用Mock和Stub的方式来模拟外部依赖。
 
-![99a68e059e04dafa981d1410a427d894.png](evernotecid://49E50F6F-983A-4D9E-90FA-7763241410D1/appyinxiangcom/8460937/ENResource/p6724)
-
-![](http://media.gusibi.mobi/n8_BO2UKcDLlUQ6atxb7CaZ6ndGpuwA_ewjxj_QdCb9LuRLhDsC7UNWr4wLD2wTW)
+Mock和Stub 的区别：
 
 ![](http://media.gusibi.mobi/qS_I1IXOCN1KJSbqD0TucScwusxpXW6C2V9_dewdTniGhvvuw5e1MlaWR7mzew2k)
 
-Mock和Stub 的区别：
-
 * Mock是在测试代码中创建一个模拟对象，模拟被测方法的执行。测试使用模拟对象来验证结果是否正确
+
+![](http://media.gusibi.mobi/n8_BO2UKcDLlUQ6atxb7CaZ6ndGpuwA_ewjxj_QdCb9LuRLhDsC7UNWr4wLD2wTW)
+
 * Stub是在测试包中创建一个模拟方法，用于替换被测代码中的方法，断言针对被测类执行。
 
 下面是代码示例：
