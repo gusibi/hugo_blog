@@ -476,6 +476,12 @@ Output: 2016/04/25 10:46:11 func1("Go") = 7, EOF
 
 **最后，感谢女朋友支持和包容，比❤️**
 
-想了解以下内容可以在公号输入相应关键字获取历史文章： `公号&小程序` | `设计模式` | `并发&协程`
+也可以在公号输入以下关键字获取历史文章：`公号&小程序` | `设计模式` | `并发&协程`
 
-![](http://media.gusibi.mobi/kel2L88yf9YXZYecLIn0LPZPSXc7zJfHyGUz5biWsZrGh7xF2JONZT93dgClGdMn)
+![扫码关注](http://media.gusibi.mobi/zHqNew3j1brVxSoTkjOerslhnB_ZpchcOXf60lFUxiZ5YtnCHs5HrJNOP14go6Ea)
+
+---------------
+
+### 内推时间
+
+![](http://media.gusibi.mobi/5FzreeM6IYt55JSQMAV63INPIvuPik75FlJAbP1e7Zdlg1WPe6BrHI-q0jkXskGf)

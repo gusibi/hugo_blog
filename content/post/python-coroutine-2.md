@@ -375,8 +375,16 @@ except that, as currently, the exception cannot be caught by except clauses with
 * [PEP 380-- Syntax for Delegating to a Subgenerator](https://www.python.org/dev/peps/pep-0380/#proposal)
 * [How Python 3.3 "yield from" construct works](http://flupy.org/resources/yield-from.pdf)
 
-最后，感谢女朋友支持。
+----------------
 
-|>欢迎关注 | >请我喝芬达|
-------- | -------
-![欢迎关注](http://media.gusibi.mobi/Hy8XHexmzppNKuekLuGxWy8LjdGrQAzZA3mH_e9xltoiYgTFWdvlpZwGWxZESrbK)| ![请我喝芬达](http://media.gusibi.mobi/CO9DwU6ZHnXHD5xuG3GqTsY_IYPl-JdpQrDaOo6tl6PiAGEBDeYFHO7sGQi_VVFc)
+**最后，感谢女朋友支持和包容，比❤️**
+
+也可以在公号输入以下关键字获取历史文章：`公号&小程序` | `设计模式` | `并发&协程`
+
+![扫码关注](http://media.gusibi.mobi/zHqNew3j1brVxSoTkjOerslhnB_ZpchcOXf60lFUxiZ5YtnCHs5HrJNOP14go6Ea)
+
+---------------
+
+### 内推时间
+
+![](http://media.gusibi.mobi/5FzreeM6IYt55JSQMAV63INPIvuPik75FlJAbP1e7Zdlg1WPe6BrHI-q0jkXskGf)

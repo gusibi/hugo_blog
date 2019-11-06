@@ -389,3 +389,16 @@ db3.meta.client.describe_table(TableName='Music')
 > 下一篇我们将要结束DynamoDB 最常用的部分，**项目的基本操作（CRUD）**。
 
 [原文链接](http://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655751935&idx=3&sn=7dac29e441ebaabfbf70600fee042bd3&chksm=80b0b9d5b7c730c390dd96fc1c4853219fd8d39a634506081631b41e147faaee38f0e8d35730#rd)
+
+
+**最后，感谢女朋友支持和包容，比❤️**
+
+也可以在公号输入以下关键字获取历史文章：`公号&小程序` | `设计模式` | `并发&协程`
+
+![扫码关注](http://media.gusibi.mobi/zHqNew3j1brVxSoTkjOerslhnB_ZpchcOXf60lFUxiZ5YtnCHs5HrJNOP14go6Ea)
+
+---------------
+
+### 内推时间
+
+![](http://media.gusibi.mobi/5FzreeM6IYt55JSQMAV63INPIvuPik75FlJAbP1e7Zdlg1WPe6BrHI-q0jkXskGf)

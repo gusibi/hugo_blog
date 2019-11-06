@@ -286,8 +286,14 @@ True
 ------
 
 
-最后，感谢女朋友支持。
+**最后，感谢女朋友支持和包容，比❤️**
 
-欢迎关注(April_Louisa) | 请我喝芬达
-------- | -------
-![欢迎关注](http://media.gusibi.mobi/Hy8XHexmzppNKuekLuGxWy8LjdGrQAzZA3mH_e9xltoiYgTFWdvlpZwGWxZESrbK)| ![请我喝芬达](http://media.gusibi.mobi/gz-uPzzMK5qXMPzoEpRq_UdY-XLWBUugGefEiDrSs8e3t4H4am6WtLvRRvuj1xLB)
+也可以在公号输入以下关键字获取历史文章：`公号&小程序` | `设计模式` | `并发&协程`
+
+![扫码关注](http://media.gusibi.mobi/zHqNew3j1brVxSoTkjOerslhnB_ZpchcOXf60lFUxiZ5YtnCHs5HrJNOP14go6Ea)
+
+---------------
+
+### 内推时间
+
+![](http://media.gusibi.mobi/5FzreeM6IYt55JSQMAV63INPIvuPik75FlJAbP1e7Zdlg1WPe6BrHI-q0jkXskGf)

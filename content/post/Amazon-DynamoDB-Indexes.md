@@ -229,3 +229,16 @@ DynamoDB 支持两种secondary index：
 可以使用 DescribeTable 操作获取表上secondary index的详细列表。DescribeTable 返回表上每个secondary index的名称、存储大小和项目数。**系统并不会实时更新这些值，但会大约每隔六个小时刷新一次**。
 
 [原文地址](http://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655751953&idx=1&sn=13195866ffc6106d90bb60df86347101&chksm=80b0b83bb7c7312d00c186d2603835ff7f49a6c0fb77c1c94c3ee7cd30b45f7661c7b8c03e42#rd)
+
+
+**最后，感谢女朋友支持和包容，比❤️**
+
+也可以在公号输入以下关键字获取历史文章：`公号&小程序` | `设计模式` | `并发&协程`
+
+![扫码关注](http://media.gusibi.mobi/zHqNew3j1brVxSoTkjOerslhnB_ZpchcOXf60lFUxiZ5YtnCHs5HrJNOP14go6Ea)
+
+---------------
+
+### 内推时间
+
+![](http://media.gusibi.mobi/5FzreeM6IYt55JSQMAV63INPIvuPik75FlJAbP1e7Zdlg1WPe6BrHI-q0jkXskGf)

@@ -294,8 +294,16 @@ Event(time=10, proc=1, action='pick up passenger')
 * BinaryTree类、一个简单的XML解析器、和一个任务调度器[Proposal for a yield from statement for Python](http://www.cosc.canterbury.ac.nz/greg.ewing/python/yield-from/yield_from.html)
 * [考虑用协程操作多个函数](http://www.effectivepython.com/2015/03/10/consider-coroutines-to-run-many-functions-concurrently/)
 
-最后，感谢女朋友支持。
+--------------
 
-|>欢迎关注 | >请我喝芬达|
-------- | -------
-![欢迎关注](http://media.gusibi.mobi/Hy8XHexmzppNKuekLuGxWy8LjdGrQAzZA3mH_e9xltoiYgTFWdvlpZwGWxZESrbK)| ![请我喝芬达](http://media.gusibi.mobi/CO9DwU6ZHnXHD5xuG3GqTsY_IYPl-JdpQrDaOo6tl6PiAGEBDeYFHO7sGQi_VVFc)
+**最后，感谢女朋友支持和包容，比❤️**
+
+也可以在公号输入以下关键字获取历史文章：`公号&小程序` | `设计模式` | `并发&协程`
+
+![扫码关注](http://media.gusibi.mobi/zHqNew3j1brVxSoTkjOerslhnB_ZpchcOXf60lFUxiZ5YtnCHs5HrJNOP14go6Ea)
+
+---------------
+
+### 内推时间
+
+![](http://media.gusibi.mobi/5FzreeM6IYt55JSQMAV63INPIvuPik75FlJAbP1e7Zdlg1WPe6BrHI-q0jkXskGf)

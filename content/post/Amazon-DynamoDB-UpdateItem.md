@@ -423,3 +423,16 @@ ReturnValues 参数设置为 UPDATED_NEW，这将返回已更新的任何属性�
 > 这一节我们介绍了DynamoDB 项目的更新操作，下一节我们将介绍项目的删除操作（索引的查询又要延后了。。
 
 [原文链接](http://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655751962&idx=1&sn=9d3e387c3fa946305598bc269b40fd3e&chksm=80b0b830b7c73126364b48cb33915d9a51552327afb4cc73388984f5449f99871fd44465baa6#rd)
+
+
+**最后，感谢女朋友支持和包容，比❤️**
+
+也可以在公号输入以下关键字获取历史文章：`公号&小程序` | `设计模式` | `并发&协程`
+
+![扫码关注](http://media.gusibi.mobi/zHqNew3j1brVxSoTkjOerslhnB_ZpchcOXf60lFUxiZ5YtnCHs5HrJNOP14go6Ea)
+
+---------------
+
+### 内推时间
+
+![](http://media.gusibi.mobi/5FzreeM6IYt55JSQMAV63INPIvuPik75FlJAbP1e7Zdlg1WPe6BrHI-q0jkXskGf)

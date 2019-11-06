@@ -532,3 +532,16 @@ table.delete_item(
 > 这一节我们介绍了项目的基本操作（CRUD），下一节将介绍索引的创建和管理。
 
 [原文地址](http://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655751948&idx=1&sn=22046f0c62fa0e3a740306b5f106488a&chksm=80b0b826b7c73130e0f65057f83aebea9b41c5edcdccd3230a07fe24f5864c5ed11e89f0ae05#rd)
+
+
+**最后，感谢女朋友支持和包容，比❤️**
+
+也可以在公号输入以下关键字获取历史文章：`公号&小程序` | `设计模式` | `并发&协程`
+
+![扫码关注](http://media.gusibi.mobi/zHqNew3j1brVxSoTkjOerslhnB_ZpchcOXf60lFUxiZ5YtnCHs5HrJNOP14go6Ea)
+
+---------------
+
+### 内推时间
+
+![](http://media.gusibi.mobi/5FzreeM6IYt55JSQMAV63INPIvuPik75FlJAbP1e7Zdlg1WPe6BrHI-q0jkXskGf)

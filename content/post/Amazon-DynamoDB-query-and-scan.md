@@ -400,3 +400,16 @@ tips:
 从这几篇的介绍可以发现DynamoDB的查询语法比较繁琐，写起来非常麻烦，所以我模仿sqlalchemy 写了一个orm，欢迎使用[!https://github.com/gusibi/dynamodb-py](https://github.com/gusibi/dynamodb-py)
 
 [原文地址](http://mp.weixin.qq.com/s?__biz=MzAwNjI5MjAzNw==&mid=2655751959&idx=1&sn=ba71eac3e0113239031c326e421015ea&chksm=80b0b83db7c7312b0eaf427dee3abdf6a94a7694d9c58974912db368d88128900da77ab25aba#rd)
+
+
+**最后，感谢女朋友支持和包容，比❤️**
+
+也可以在公号输入以下关键字获取历史文章：`公号&小程序` | `设计模式` | `并发&协程`
+
+![扫码关注](http://media.gusibi.mobi/zHqNew3j1brVxSoTkjOerslhnB_ZpchcOXf60lFUxiZ5YtnCHs5HrJNOP14go6Ea)
+
+---------------
+
+### 内推时间
+
+![](http://media.gusibi.mobi/5FzreeM6IYt55JSQMAV63INPIvuPik75FlJAbP1e7Zdlg1WPe6BrHI-q0jkXskGf)

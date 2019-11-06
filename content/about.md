@@ -40,3 +40,8 @@ title = "关于我"
 * [python-weixin-sdk](https://github.com/gusibi/python-weixin)
 * [微信聊天机器人](https://github.com/gusibi/momo)
 * [Amazon DynamoDB ORM By Python](https://github.com/gusibi/dynamodb-py)
+
+
+#### 内推时间
+
+![](http://media.gusibi.mobi/5FzreeM6IYt55JSQMAV63INPIvuPik75FlJAbP1e7Zdlg1WPe6BrHI-q0jkXskGf)
