@@ -3,7 +3,7 @@ date: 2020-06-06T17:07:20+08:00
 lastmod: 2020-06-06T17:07:20+08:00
 draft: false
 title: "Flutter 安装配置"
-slug: flutter-install-and-setting
+slug: "flutter-install-and-setting"
 description: "Flutter 安装配置 flutter install and setting"
 tags: ["Flutter", "前端", "教程"]
 categories: ["Flutter", "tutorial"]
