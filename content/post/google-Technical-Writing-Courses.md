@@ -18,6 +18,8 @@ reward: false	 # 关闭打赏
 mathjax: true    # 打开 mathjax
 ---
 
+> Google 技术写作课程搬运，原文地址：[https://developers.google.com/tech-writing/overview?hl=zh-cn](https://developers.google.com/tech-writing/overview?hl=zh-cn)
+
 # Technical Writing Courses
 
 
@@ -35,8 +37,8 @@ The following table summarizes the technical writing courses:
 
 | Take this course... | Title                                                        | Focus                                    | Pre-Class | In-Class       |
 | :------------------ | :----------------------------------------------------------- | :--------------------------------------- | :-------- | :------------- |
-| first               | [Technical Writing One](https://developers.google.com/tech-writing/one?hl=zh-cn) | the critical basics of technical writing | 2 hours   | 2 to 2.5 hours |
-| second              | [Technical Writing Two](https://developers.google.com/tech-writing/two?hl=zh-cn) | intermediate topics in technical writing | 1 hour    | 2 to 2.5 hours |
+| first               | [Technical Writing One](http://blog.gusibi.site/post/google-technical-writing-courses/#technical-writing-one) | the critical basics of technical writing | 2 hours   | 2 to 2.5 hours |
+| second              | [Technical Writing Two](http://blog.gusibi.site/post/google-technical-writing-courses/#technical-writing-two) | intermediate topics in technical writing | 1 hour    | 2 to 2.5 hours |
 
 The pre-class components introduce topics; the in-class components help students integrate those topics. That said, the pre-class lessons on their own still provide a valuable educational experience.
 
