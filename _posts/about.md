@@ -1,8 +1,7 @@
 ---
-sidebar: auto
 permalink: /about
 title: "关于我-顾斯比"
-date: 2016-04-05
+date: 2016-04-05T20:29:39+08:00
 ---
 
 [[toc]]

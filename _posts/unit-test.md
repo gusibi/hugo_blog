@@ -1,7 +1,7 @@
 ---
 author: goodspeed
 title: "学习单元测试，告别祈祷式编程"
-date: "2019-10-07T09:48:04+08:00"
+date: 2019-10-07T09:48:04+08:00
 permalink: /post/unit-test
 description: "单元测试编写指南"
 tags: ["golang", "tutorial"]

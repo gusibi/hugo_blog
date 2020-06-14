@@ -1,7 +1,6 @@
 ---
 categories: ["development", "web", "读书笔记", "前端"]
 date: 2017-07-19T22:22:49+08:00
-draft: false
 author: goodspeed
 permalink: /post/css-learing-2-box-model-float-and-clear
 tags: ["css", "读书笔记", "html", "tutorial", "前端"]

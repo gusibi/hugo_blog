@@ -67,6 +67,13 @@
     inquirer "^6.3.1"
     ora "^3.4.0"
 
+"@vuepress/plugin-back-to-top@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-back-to-top/-/plugin-back-to-top-1.5.1.tgz#bafd45267419ff54b46cbb2626500e4803ab1f13"
+  integrity sha512-YP1h+oLhhjtUhoyg7418D+Nazdczqo36gevJwV1Zgtqs8PJ970aa8+UrSI5+uN/bRVRn0FUSsgRLF3jIM8wnwg==
+  dependencies:
+    lodash.debounce "^4.0.8"
+
 "@vuepress/plugin-blog@^1.9.2":
   version "1.9.2"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.9.2.tgz#d463a218bf54b51a07b87eb703dc1cc9eddeef3c"
@@ -1318,6 +1325,11 @@ lodash.chunk@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.chunk/-/lodash.chunk-4.2.0.tgz#66e5ce1f76ed27b4303d8c6512e8d1216e8106bc"
   integrity sha1-ZuXOH3btJ7QwPYxlEujRIW6BBrw=
+
+lodash.debounce@^4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
+  integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
 lodash.defaultsdeep@4.6.1:
   version "4.6.1"

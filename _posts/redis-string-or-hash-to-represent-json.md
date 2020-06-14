@@ -1,6 +1,5 @@
 ---
-date: "2019-06-22T11:29:15+08:00"
-draft: false
+date: 2019-06-22T11:29:15+08:00
 title: "Redis 选择hash还是string 存储数据？"
 permalink: /post/redis-string-or-hash-to-represent-json
 description: "Redis 选择hash还是string 存储数据？"
@@ -36,7 +35,7 @@ categories: ["development", "nosql"]
 
 
 
-```jsonjs o
+```json
 values = {
     "name": "gs",
     "age": 1

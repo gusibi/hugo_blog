@@ -1,11 +1,9 @@
 ---
 author: goodspeed
 date: 2020-06-06T17:07:20+08:00
-lastmod: 2020-06-06T17:07:20+08:00
-draft: false
 title: "Flutter 安装配置"
 permalink: /post/flutter-install-and-setting
-description: "Flutter 安装配置 flutter install and setting"
+summary: "Flutter 安装配置 flutter install and setting"
 tags:
 - Flutter
 - 前端

@@ -1,6 +1,5 @@
 ---
-date: "2019-06-10T22:36:53+08:00"
-draft: false
+date: 2019-06-10T22:36:53+08:00
 title: "DynamoDB 最佳实践"
 permalink: /post/dynamodb-best-practice
 description: "DynamoDB 最佳实践"

@@ -1,30 +1,26 @@
-#!/bin/bash
+#!/usr/bin/env sh
 echo -e '\033[0;32m'Deploying updates to GitHub...'\033[0m'
 
-msg="rebuilding site `date`"
+# 确保脚本抛出遇到的错误
+set -e
 
-if [ $# -eq 1 ]
-    then msg=$1
-fi
+# 生成静态文件
+vuepress build --dest ./dist
 
-# Push Hugo content 
+# 进入生成的文件夹
+cp -rf dist/* ../gusibi.github.io/
+cd ../gusibi.github.io/
+
+# 如果是发布到自定义域名
+# echo 'blog.gusibi.mobi' > CNAME
+
 git add -A
-git commit -m $msg
-echo $msg
-git push origin master
+git commit -m 'deploy'
 
-# Build the project. 
-hugo -t jane
+# 发布到 https://<USERNAME>.github.io
+git push -f git@github.com:gusibi/gusibi.github.io.git master
 
-cp ./CNAME ./public/
+# 如果发布到 https://<USERNAME>.github.io/<REPO>
+# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
-# Go To Public folder
-cd public
-# Add changes to git.
-git add -A
-
-# Commit changes.
-git commit -m $msg
-
-# Push source and build repos.
-git push origin master
+cd -

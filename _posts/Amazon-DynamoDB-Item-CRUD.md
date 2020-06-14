@@ -1,5 +1,5 @@
 ---
-date: "2017-01-18T21:53:38+08:00"
+date: 2017-01-18T21:53:38+08:00
 author: goodspeed
 title: Amazon DynamoDB 入门4：项目的基本操作（CRUD）
 permalink: /post/Amazon-DynamoDB-Items-CRUD

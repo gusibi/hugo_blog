@@ -1,5 +1,5 @@
 ---
-date: "2017-01-31T17:46:28+08:00"
+date: 2017-01-31T17:46:28+08:00
 author: goodspeed
 title: Amazon DynamoDB 入门6：query 和 scan
 permalink: /post/Amazon-DynamoDB-Query-And-Scan

@@ -1,7 +1,6 @@
 ---
 date: 2017-08-05T10:23:35+08:00
 description: 自定义 sanic 异常处理
-draft: false
 permalink: /post/sanic-custom-exception
 categories: ["development", "python", "framwork"]
 tags: ["python", "tutorial", "sanic"]

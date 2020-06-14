@@ -1,9 +1,7 @@
 ---
-date: 2019-06-29T18:05:15+08:00
-lastmod: 2019-06-29T18:05:15+08:00
-draft: false
-title: "每周分享第3期-史上最全的编程学习资料合集"
 author: goodspeed
+date: 2019-06-29T18:05:15+08:00
+title: "每周分享第3期-史上最全的编程学习资料合集"
 permalink: /post/weekly-03
 description: "每周分享，啥都有，内容不固定"
 tags: ["每周分享", "python", "教程", "工具"]

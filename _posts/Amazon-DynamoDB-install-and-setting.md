@@ -1,5 +1,5 @@
 ---
-date: "2017-01-07T22:57:39+08:00"
+date: 2017-01-07T22:57:39+08:00
 author: goodspeed
 title: Amazon DynamoDB 入门1：配置（本地）及python示例
 permalink: /post/Amazon-DynamoDB-Install-And-Setting

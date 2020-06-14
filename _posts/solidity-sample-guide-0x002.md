@@ -1,6 +1,5 @@
 ---
 date: ""
-draft: true
 title: "title"
 author: goodspeed
 permalink: /post/url-path

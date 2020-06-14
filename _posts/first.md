@@ -1,6 +1,6 @@
 ---
 author: goodspeed
-date: "2016-04-11T10:47:47+08:00"
+date: 2016-04-11T10:47:47+08:00
 title: "hugo 使用"
 permalink: /post/hugo-simple-use
 ---

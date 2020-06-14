@@ -4,7 +4,6 @@ categories:
 - xxxx
 date: 2017-06-25T09:41:13+08:00
 description: description
-draft: true
 permalink: /post/url-path
 tags:
 - xx

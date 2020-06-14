@@ -2,7 +2,6 @@
 categories: ["development", "python"]
 date: 2017-07-11T21:29:15+08:00
 description: 使用swagger_py_codegen 生成 Flask, Tornado, Falcon，Sanic RESTful API
-draft: false
 permalink: /post/build_restful_api_by_swagger
 tags: ["python", "swagger", "restful"]
 title: 使用swagger 生成 Flask RESTful API

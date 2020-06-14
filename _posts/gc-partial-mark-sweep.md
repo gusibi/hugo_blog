@@ -4,7 +4,6 @@ categories:
 - xxxx
 date: 2018-08-12T18:21:42+08:00
 description: description
-draft: true
 author: goodspeed
 permalink: /post/url-path
 tags:

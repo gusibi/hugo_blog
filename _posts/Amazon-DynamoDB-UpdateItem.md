@@ -1,5 +1,5 @@
 ---
-date: "2017-02-07T22:23:33+08:00"
+date: 2017-02-07T22:23:33+08:00
 author: goodspeed
 title: Amazon DynamoDB 入门7：项目更新
 permalink: /post/Amazon-DynamoDB-UpdateItem

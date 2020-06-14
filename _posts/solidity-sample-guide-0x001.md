@@ -1,6 +1,5 @@
 ---
-date: "2018-10-22T21:36:53+08:00"
-draft: false
+date: 2018-10-22T21:36:53+08:00
 title: "Solidity 简易教程0x001"
 permalink: /post/Solidity-simple-guide-001
 description: "Solidity 简易教程0x001"

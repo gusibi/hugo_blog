@@ -1,6 +1,5 @@
 ---
-date: "2018-10-04T21:36:53+08:00"
-draft: false
+date: 2018-10-04T21:36:53+08:00
 title: "SQLAlchemy in 空列表问题分析"
 author: goodspeed
 permalink: /post/sqlalchemy_in_empty_list

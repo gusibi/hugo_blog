@@ -2,7 +2,6 @@
 categories: ["development", "web",  "后端"]
 date: 2017-07-23T21:05:57+08:00
 description: description
-draft: false
 permalink: /post/how-to-use-json-web-token-and-python-practice
 tags: ["restful", "tutorial", "swagger"]
 title: 理解JWT（JSON Web Token）认证及实践

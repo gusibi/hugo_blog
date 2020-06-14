@@ -1,6 +1,5 @@
 ---
-date: "2018-09-04T21:36:53+08:00"
-draft: false
+date: 2018-09-04T21:36:53+08:00
 title: "Solidity 简易教程"
 author: goodspeed
 permalink: /post/Solidity-simple-guide
@@ -147,7 +146,7 @@ Solidity 提供了 `结构体`，用来表示更复杂的数据类型。
 
 
 
-```C++
+```c
 struct Person {
   uint age;
   string name;
@@ -197,7 +196,7 @@ fixedArray.push[234]
 Solidity 数组支持多种类型，比如结构体：
 
 
-```c++
+```c
 struct Person {
   uint age;
   string name;
@@ -210,7 +209,7 @@ Person[] people; // dynamic Array, we can keep adding to it
 
 结构体类型的数组添加值的方式为：
 
-```c++
+```c
 people.push(Person(16, "Vitalik"));
 // 也可以使用下面的方式，推荐使用上述一行简洁的方式
 
@@ -226,7 +225,7 @@ people.push(satoshi);
 
 也可以使用`public`定义公共数组，Solidity 会自动创建`getter`方法。语法如下：
 
-```c++
+```c
 struct Person {
   uint age;
   string name;

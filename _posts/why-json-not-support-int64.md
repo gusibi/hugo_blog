@@ -1,6 +1,5 @@
 ---
-date: "2019-06-03T21:14:10+08:00"
-draft: false
+date: 2019-06-03T21:14:10+08:00
 title: "为什么json 不能使用 int64类型"
 permalink: /post/why-json-unspport-int64
 description: "json javacript 不能使用int64"

@@ -1,6 +1,5 @@
 ---
 date: 2020-03-01T20:47:11+08:00
-lastmod: 2020-03-01T20:47:11+08:00
 title: "Facilitating Technical Writing Courses"
 author: goodspeed
 permalink: /post/google-Facilitating-Technical-Writing-Courses

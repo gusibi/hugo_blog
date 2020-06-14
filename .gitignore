@@ -37,3 +37,6 @@ yarn-error.log
 
 public/
 node_modules
+
+dist/
+.vuepress/dist/

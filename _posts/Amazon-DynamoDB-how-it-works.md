@@ -2,7 +2,7 @@
 permalink: /post/Amazon-DynamoDB-How-It-Works
 title: "Amazon DynamoDB 入门2： 工作原理、API和数据类型介绍"
 author: goodspeed
-date: "2017-01-09T22:37:11+08:00"
+date: 2017-01-09T22:37:11+08:00
 tags:
     - AWS
     - nosql

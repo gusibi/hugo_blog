@@ -2,7 +2,6 @@
 categories: ["development", "web", "读书笔记", "前端"]
 date: 2017-08-10T22:36:53+08:00
 description: description
-draft: true
 permalink: /post/css-learing-4-page-layout
 tags: ["css", "读书笔记", "html", "tutorial", "前端"]
 title: "CSS入门指南-4：页面布局"

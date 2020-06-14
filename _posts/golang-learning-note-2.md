@@ -1,7 +1,6 @@
 ---
 date: 2018-04-17T23:49:35+08:00
 description: golang 学习笔记 控制流
-draft:  false
 categories: ["development", "读书笔记", "golang"]
 author: goodspeed
 permalink: /post/golang-learing-note-2

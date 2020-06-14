@@ -1,6 +1,5 @@
 ---
 date: 2019-06-22T18:05:15+08:00
-lastmod: 2019-06-22T18:05:15+08:00
 title: "每周分享第2期-宇宙模拟器"
 author: goodspeed
 permalink: /post/weekly-02

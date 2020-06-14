@@ -1,7 +1,5 @@
 ---
 date: 2019-08-04T18:05:15+08:00
-lastmod: 2019-08-04T18:05:15+08:00
-draft: false
 title: "每周分享第4期"
 author: goodspeed
 permalink: /post/weekly-04

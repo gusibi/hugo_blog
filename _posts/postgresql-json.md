@@ -1,6 +1,5 @@
 ---
-date: "2019-05-30T21:05:57+08:00"
-draft: false
+date: 2019-05-30T21:05:57+08:00
 title: "PostgreSQL jsonb 使用入门"
 author: goodspeed
 permalink: /post/postgresql-json

@@ -1,6 +1,6 @@
 ---
 author: goodspeed
-date: "2016-09-05T17:59:45+08:00"
+date: 2016-09-05T17:59:45+08:00
 permalink: /post/weixin-python-login
 title: "网站微信登录－python 实现"
 description: "网站微信登录－python 实现"

@@ -5,7 +5,6 @@ categories:
 - development
 date: 2018-07-21T11:15:05+08:00
 description: 垃圾回收算法|标记-清除算法
-draft: false
 permalink: /post/gc-mark-sweep
 tags:
 - 垃圾回收

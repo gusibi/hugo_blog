@@ -1,6 +1,6 @@
 ---
 author: goodspeed
-date: "2016-04-25T14:53:47+08:00"
+date: 2016-04-25T14:53:47+08:00
 permalink: /post/golang-learning-by-code-001
 title: "跟着代码学go 001 -- 变量&函数"
 description: "跟着代码学golang 变量 函数 基本数据结构"

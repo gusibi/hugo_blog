@@ -1,7 +1,6 @@
 ---
-date: "2019-05-19T20:29:39+08:00"
-draft: false
-title: "并发模型：线程与锁"
+date: 2019-05-19T20:29:39+08:00
+title: 并发模型：线程与锁
 author: goodspeed
 permalink: /post/thread-and-lock
 description: "并发模型：线程与锁"

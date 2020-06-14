@@ -5,7 +5,7 @@ categories:
 date: 2018-07-23T23:45:46+08:00
 description: 使用github+travis将Python包部署到Pypi
 author: goodspeed
-permalink: /post/ howto-deploy-python-package-on-pypi-with-github-and-travis
+permalink: /post/howto-deploy-python-package-on-pypi-with-github-and-travis
 tags:
 - python
 - 后端

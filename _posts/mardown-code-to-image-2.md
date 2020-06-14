@@ -2,7 +2,6 @@
 categories: ["development", "python", "golang"]
 date: 2019-06-15T23:34:53+08:00
 description: markdown中code生成图片的实现
-draft: false
 author: goodspeed
 permalink: /post/markdown-code-to-image-2
 tags: ["python", "tutorial", "golang", "公众号"]

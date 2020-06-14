@@ -5,7 +5,6 @@ categories:
 - development
 date: 2018-08-12T19:15:05+08:00
 description: 垃圾回收算法|引用计数法
-draft: false
 author: goodspeed
 permalink: /post/gc-reference-counting
 tags:

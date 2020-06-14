@@ -1,10 +1,9 @@
 ---
 categories: ["development", "nosql"]
 date: 2017-05-18T14:22:49+08:00
-draft: false
 author: goodspeed
 permalink: /post/Elasticsearch-install-and-setting
-tags: ["工具","tutorial"]
+tags: ["工具", "tutorial"]
 title: "Elasticsearch 安装和使用"
 ---
 

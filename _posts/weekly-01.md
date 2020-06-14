@@ -1,21 +1,10 @@
 ---
 date: 2019-06-07T18:05:15+08:00
-lastmod: 2019-06-07T18:05:15+08:00
-draft: false
 title: "每周分享第1期-常用表情包收录"
 permalink: /post/weekly-01
 description: "每周分享，啥都有，内容不固定"
 tags: ["每周分享", "python", "教程", "工具"]
 categories: ["每周分享"]
-
-# 用户自定义
-# 你可以选择 关闭(false) 或者 打开(true) 以下选项
-comment: false   # 关闭评论
-toc: false       # 关闭文章目录
-# 你同样可以自定义文章的版权规则
-contentCopyright: '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
-reward: false	 # 关闭打赏
-mathjax: true    # 打开 mathjax
 ---
 
 **每周分享，分享看到的一些有意思的文章和项目**

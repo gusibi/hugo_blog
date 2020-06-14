@@ -2,13 +2,13 @@
 permalink: /post/Amazon-DynamoDB-Delete-Item
 title: Amazon DynamoDB 入门8：删除项目
 author: goodspeed
+date: 2017-01-03T22:37:11+08:00
 tags:
     - AWS
     - nosql
     - DynamoDB 
     - python
     - database
-date: "2017-01-03T22:37:11+08:00"
 categories: ["development", "nosql", "DynamoDB", "python"]
 ---
 

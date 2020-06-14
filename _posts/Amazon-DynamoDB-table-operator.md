@@ -1,5 +1,5 @@
 ---
-date: "2017-01-14T18:13:42+08:00"
+date: 2017-01-14T18:13:42+08:00
 author: goodspeed
 title: Amazon DynamoDB 入门3： 表的基本操作
 permalink: /post/Amazon-DynamoDB-Table-Operator

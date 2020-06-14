@@ -1,7 +1,6 @@
 ---
 date: 2017-06-30T16:29:39+08:00
 description: python asyncio 介绍
-draft: false
 permalink: /post/python-asyncio-server
 categories: ["development", "python", "读书笔记"]
 tags: ["python", "tutorial", "读书笔记", "并发"]

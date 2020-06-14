@@ -1,19 +1,17 @@
 module.exports = {
     title: '顾斯比',
-    description: 'This is a blog example built by VuePress',
-    theme: '@vuepress/blog',
+    description: '顾斯比的博客 gusibi goodspeed',
     plugins: [
         [
             "@vuepress/google-analytics",
             {
-                ga: process.env.GA
+                ga: 'UA-76238744-1'
             }
         ]
     ],
+    theme: '@vuepress/blog',
     themeConfig: {
-        sitemap: {
-            hostname: "http://blog.gusibi.mobi/"
-        },
+
         nav: [
             { text: '首页', link: '/' },
             { text: '标签', link: '/tag/'},
@@ -139,33 +137,33 @@ module.exports = {
          */
 
         globalPagination: {
-          lengthPerPage: 10,
+          lengthPerPage: 100,
         },
 
         /**
          * Ref: https://vuepress-theme-blog.ulivz.com/config/#sitemap
          */
         sitemap: {
-            hostname: 'https://example.vuepress-theme-blog.ulivz.com/'
+            hostname: 'http://blog.gusibi.site/'
         },
         /**
          * Ref: https://vuepress-theme-blog.ulivz.com/config/#comment
          */
         comment: {
             service: 'disqus',
-            shortname: 'gusibi-blog',
+            shortname: 'gu-si-bi',
         },
         /**
          * Ref: https://vuepress-theme-blog.ulivz.com/config/#newsletter
          */
-        newsletter: {
-            endpoint: 'https://billyyyyy3320.us4.list-manage.com/subscribe/post?u=4905113ee00d8210c2004e038&amp;id=bd18d40138'
-        },
+        // newsletter: {
+        //     endpoint: ''
+        // },
         /**
          * Ref: https://vuepress-theme-blog.ulivz.com/config/#feed
          */
         feed: {
-            canonical_base: 'https://example.vuepress-theme-blog.ulivz.com/',
+            canonical_base: 'http://blog.gusibi.site/',
         },
 
         /**

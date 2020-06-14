@@ -1,6 +1,5 @@
 ---
-date: "2016-04-26T15:49:35+08:00"
-draft: false
+date: 2016-04-26T15:49:35+08:00
 title: "跟着代码学go 002 -- 控制流"
 tags: ["golang", "读书笔记"]
 categories: ["development", "读书笔记", "golang"]

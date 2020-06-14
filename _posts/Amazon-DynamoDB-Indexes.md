@@ -1,5 +1,5 @@
 ---
-date:  "2017-01-18T21:55:39+08:00"
+date: 2017-01-18T21:55:39+08:00
 author: goodspeed
 title: Amazon DynamoDB 入门5：索引创建及管理
 permalink: /post/Amazon-DynamoDB-Indexes

@@ -2,7 +2,6 @@
 categories: ["微信小程序", "后端"]
 date: 2017-10-21T22:11:35+08:00
 description: 使用腾讯云配置小程序服务端开发环境
-draft:  false
 permalink: /post/wxapp-server-config
 tags: ["development", "小程序", "后端","tutorial"]
 title: 使用腾讯云配置小程序Python开发环境

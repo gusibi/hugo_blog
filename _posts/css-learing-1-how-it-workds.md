@@ -1,7 +1,6 @@
 ---
 categories: ["development", "web", "读书笔记", "前端"]
 date: 2017-05-27T17:22:49+08:00
-draft: false
 author: goodspeed
 permalink: /post/css-learing-1-css-how-it-works
 tags: ["css", "读书笔记", "前端", "html", "tutorial"]

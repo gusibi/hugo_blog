@@ -1,5 +1,5 @@
 ---
-date: "2018-01-13T17:23:49+08:00"
+date: 2018-01-13T17:23:49+08:00
 author: goodspeed
 title: AWS-Lambda 使用入门
 permalink: /post/aws-lambda-quickstart

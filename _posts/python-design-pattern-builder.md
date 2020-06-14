@@ -1,7 +1,6 @@
 ---
 date: 2017-11-12T21:16:56+08:00
 description: python 设计模式，建造者模式
-draft: false
 permalink: /post/python-design-pattern-builder
 categories: ["development", "python",  "设计模式"]
 tags: ["python", "读书笔记", "设计模式"]
