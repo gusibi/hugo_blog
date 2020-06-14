@@ -308,8 +308,6 @@ Hello!
 
 博客内容格式为 markdown，markdown 语法参考：https://www.markdownguide.org/
 
-###  
-
 ### 插件
 
 
@@ -339,15 +337,11 @@ search: false
 ---
 ```
 
-**
-**
 
 **⚠️提示**
 
 **内置搜索只会为页面的标题、****`h2`** **、** **`h3`** **以及** **`tags`** **构建搜索索引。 如果你需要全文搜索，你可以使用** [**Algolia 搜索**](https://vuepress.vuejs.org/zh/theme/default-theme-config.html#algolia-搜索)**。**
 
-**
-**
 
 #### google-analytics
 

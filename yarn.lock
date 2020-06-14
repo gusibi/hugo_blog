@@ -74,6 +74,19 @@
   dependencies:
     lodash.debounce "^4.0.8"
 
+"@vuepress/plugin-blog@1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.8.1.tgz#ab5f15621f61e3d214cc054b28a3b8ae9cd001ec"
+  integrity sha512-6LGNBesXt+FzTHLcd1FUcei54vL+q5/1OH8gvT4UnN2TArU5OO/EGqUi2xV0Buf3cUtgKlt18BDjbYSXvw41ZA==
+  dependencies:
+    "@vssue/api-github-v3" "^1.1.2"
+    "@vssue/vuepress-plugin-vssue" "^1.2.0"
+    dayjs "^1.8.19"
+    vuejs-paginate "^2.1.0"
+    vuepress-plugin-disqus-comment "^0.2.3"
+    vuepress-plugin-mailchimp "^1.4.1"
+    vuepress-plugin-sitemap "^2.3.1"
+
 "@vuepress/plugin-blog@^1.9.2":
   version "1.9.2"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.9.2.tgz#d463a218bf54b51a07b87eb703dc1cc9eddeef3c"
@@ -2196,6 +2209,13 @@ vuejs-paginate@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/vuejs-paginate/-/vuejs-paginate-2.1.0.tgz#93e1ad1539b713a688c7a2d3080bda60fcc6c77d"
   integrity sha512-gnwyXlmCiDOu9MLWxN5UJ4PGijKGNOMpHG8ujsrynCzTJljn/rp7Jq0WiDGDAMi5/u0AHuYIHhced+tUW4jblA==
+
+vuepress-plugin-disqus-comment@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-disqus-comment/-/vuepress-plugin-disqus-comment-0.2.3.tgz#606c79af48a73ab21af95013154de8c3ddddad30"
+  integrity sha512-M1oBosK3XkXnmFg2MIUI420VRSk7hF0QXXAiyTUVb7tzdzAjKnRLzRAvLcnrLrXq7XklV7wxTa7o6R7NdWlirg==
+  dependencies:
+    vue-disqus "^3.0.5"
 
 vuepress-plugin-disqus@^0.2.0:
   version "0.2.0"

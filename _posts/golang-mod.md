@@ -142,7 +142,7 @@ require (
 
 go module 安装 package 的原則是先拉最新的 release tag，若无tag则拉最新的commit，详见 [Modules官方介绍](https://github.com/golang/go/wiki/Modules)。 go 会自动生成一个 go.sum 文件来记录 dependency tree：
 
-```zsh
+```shell
 $ cat go.sum
 github.com/labstack/echo v3.3.10+incompatible h1:pGRcYk231ExFAyoAjAfD85kQzRJCRI8bbnE7CX5OEgg=
 github.com/labstack/echo v3.3.10+incompatible/go.mod h1:0INS7j/VjnFxD4E2wkz67b8cVwCLbBmJyDaka6Cmk1s=
@@ -222,7 +222,7 @@ go: creating new go.mod: module helloworld
 
 2. 运行 `go run server.go`
 
-```zsh
+```shell
 go: finding github.com/labstack/gommon/color latest
 go: finding github.com/labstack/gommon/log latest
 go: finding golang.org/x/crypto/acme/autocert latest
@@ -233,7 +233,7 @@ build command-line-arguments: cannot find module for path _/home/gs/helloworld/a
 
 首先还是会查找并下载安装依赖，然后运行脚本 `server.go`，这里会抛出一个错误：
 
-```zsh
+```shell
 build command-line-arguments: cannot find module for path _/home/gs/helloworld/api
 ```
 但是`go.mod` 已经更新：

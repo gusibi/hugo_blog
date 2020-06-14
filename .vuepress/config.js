@@ -137,7 +137,7 @@ module.exports = {
          */
 
         globalPagination: {
-          lengthPerPage: 100,
+          lengthPerPage: 10,
         },
 
         /**
