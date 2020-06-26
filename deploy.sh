@@ -15,7 +15,7 @@ cd ../gusibi.github.io/
 # echo 'blog.gusibi.mobi' > CNAME
 
 git add -A
-git commit -m 'deploy'
+git commit -m 'add-微服务设计'
 
 # 发布到 https://<USERNAME>.github.io
 git push -f git@github.com:gusibi/gusibi.github.io.git master

@@ -3,7 +3,7 @@ author: goodspeed
 date: 2020-06-06T17:07:20+08:00
 title: "Flutter 安装配置"
 permalink: /post/flutter-install-and-setting
-summary: "Flutter 安装配置 flutter install and setting"
+summary: "Flutter 安装配置 "
 tags:
 - Flutter
 - 前端
@@ -24,7 +24,7 @@ categories: ["Flutter", "tutorial"]
 
 1. 将文件解压到目标路径, 比如:
 
-```
+```shell
 cd ~/flutter
 unzip ~/Downloads/flutter_macos_1.17.3-stable.zip
 ```
@@ -33,7 +33,7 @@ unzip ~/Downloads/flutter_macos_1.17.3-stable.zip
 
 也可以从Github上获取源代码：
 
-```
+```shell
 git clone https://github.com/flutter/flutter.git
 ```
 
@@ -41,7 +41,7 @@ git clone https://github.com/flutter/flutter.git
 
 1. 配置 `flutter` 的 PATH 环境变量：
 
-```
+```shell
 export PATH="$PATH:~/flutter/flutter/bin"
 ```
 
@@ -65,7 +65,7 @@ source ~/.zsh_rc
 
 
 
-```
+```shell
 flutter precache
 ```
 
@@ -79,7 +79,7 @@ flutter precache
 
 
 
-```
+```shell
 ➜  ~ flutter doctor
 
 Doctor summary (to see all details, run flutter doctor -v):
@@ -145,7 +145,7 @@ open -a Simulator
 
 1. 安装和设置 CocoaPods
 
-```
+```shell
 sudo gem install cocoapods
 pod setup
 ```
@@ -284,7 +284,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 也可以在公号输入以下关键字获取历史文章：`公号&小程序` | `设计模式` | `并发&协程`
 
-![扫码关注](http://media.gusibi.mobi/zHqNew3j1brVxSoTkjOerslhnB_ZpchcOXf60lFUxiZ5YtnCHs5HrJNOP14go6Ea)
+![扫码关注](http://media.gusibi.mobi/WDz3v4cU4LQq1oyKX-fYK1LxIThzZ1hK931ZaPRC8CdcB0t2oTYJciMDuAws70FY)
 
 ---------------
 

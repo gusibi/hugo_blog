@@ -16,22 +16,19 @@ categories: ["tutorial", "教程"]
 ### 介绍
 
 
-
 VuePress 是一个静态网站生成器，包含由Vue驱动的主题系统和插件API，同时还包含一个为书写技术文档而优化的默认主题。此篇文章只介绍如何使用VuePress 搭建个人博客的部分。
 
 ### 安装
 
 
-
 > 前置条件：VuePress 需要 Node.js >= 8.6
 
 
+##### 安装 vuepress
 
-##### 安装vuepress
+VuePress 安装毕竟简单，可以使用以下命令直接安装：
 
-
-
-```
+```shell
 yarn add -D vuepress # npm install -D vuepress
 ```
 
@@ -41,21 +38,18 @@ yarn add -D vuepress # npm install -D vuepress
 
 
 
-创建一篇文档
+为了验证VuePress 的效果，首先创建一篇文档
 
 
-
-```
+```shell
 mkdir docs && echo '# Hello VuePress' > README.md
 ```
-
 
 
 在当前目录下创建 `package.json` 文件，添加以下内容：
 
 
-
-```
+```json
 {
   "scripts": {
     "dev": "vuepress dev docs",
@@ -68,15 +62,12 @@ mkdir docs && echo '# Hello VuePress' > README.md
 
 在本地启动服务器
 
+```shell
+vuepress dev .
 ```
-yarn docs:dev # npm run docs:dev
-```
-
 
 
 VuePress 会在 [http://localhost:8080](http://localhost:8080/) 启动一个热重载的开发服务器。
-
-
 
 如果没有报错，可在浏览器打开[http://localhost:8080](http://localhost:8080/)，默认加载内容为 README.md 中内容。
 
@@ -85,12 +76,11 @@ VuePress 会在 [http://localhost:8080](http://localhost:8080/) 启动一个热�
 ### VuePress 目录结构
 
 
-
 VuePress 遵循 **“约定优于配置”** 的原则，推荐的目录结构如下：
 
 
 
-```
+```shell
 .
 ├── blog
 │   ├── .vuepress (可选的)
@@ -141,7 +131,7 @@ VuePress 遵循 **“约定优于配置”** 的原则，推荐的目录结构�
 
 
 
-```
+```javascript
 module.exports = {
   title: '顾斯比',  // 网站的标题，它将会被用作所有页面标题的前缀。
   description: '顾斯比的博客', // 网站的描述，它将会以 <meta> 标签渲染到当前页面的 HTML 中。
@@ -154,32 +144,25 @@ module.exports = {
 
 
 
-因为是使用 `VuePress` 作为静态博客使用，需要替换掉默认的主题。这里使用官方主题： `@vuepress/theme-blog` 。
-
-
-
 ### 主题
 
-
+因为是使用 `VuePress` 作为静态博客使用，需要替换掉默认的主题。这里使用官方主题： `@vuepress/theme-blog` 。
 
 #### 安装
 
 
-
-```
+```shell
 yarn add @vuepress/theme-blog -D
 # OR npm install @vuepress/theme-blog -D
 ```
 
-####  
 
 #### 使用&配置
 
 
-
 在config.js 中添加主题相关配置：
 
-```
+```javascript
  // .vuepress/config.js
 module.exports = {
   title: '顾斯比',
@@ -217,7 +200,7 @@ module.exports = {
 
 默认情況下，所有内容都必须放在 `_posts` 目录內，文件名为`标题.md`，例如`about.md`。
 
-```
+```shell
 └── _posts
     ├── ...
     └── about.md
@@ -235,7 +218,7 @@ Front matter 是用于指定博客文件的变量，必须放在博客文件的�
 
 
 
-```
+```yaml
 ---
 title: Blogging Like a Hacker # 博客标题
 date: 2020-06-14              # 博客发布日期
@@ -258,7 +241,7 @@ summary: 这里是文章的摘要
 
 默认情况下，path 路径则为文件目录的相对路径，比如：
 
-```
+```shell
 ├── package.json
 └── source
     ├── _post
@@ -271,7 +254,7 @@ summary: 这里是文章的摘要
 
 那么你就会获得以下的可用页面：
 
-```
+```shell
 /source/
 /source/tags.html
 /source/_post/intro-vuepress.html
@@ -281,7 +264,7 @@ summary: 这里是文章的摘要
 
 推荐使用 `permalink` 指定文章的永久链接，可以使用全局配置来向所有页面应用永久链接：
 
-```
+```JavaScript
 // .vuepress/config.js
 module.exports = {
   permalink: "/:year/:month/:day/:slug"
@@ -292,7 +275,7 @@ module.exports = {
 
 📝 **hello.md**:
 
-```
+```yaml
 ---
 title: Hello World
 permalink: /hello-world
@@ -345,11 +328,11 @@ search: false
 
 #### google-analytics
 
-####  
+google-analytics是著名互联网公司Google为网站提供的数据统计服务。可以对目标网站进行访问数据统计和分析，并提供多种参数供网站拥有者使用。这里推荐安装：
 
 ##### 安装
 
-
+使用以下命令安装
 
 ```
 yarn add -D @vuepress/plugin-google-analytics
@@ -357,14 +340,11 @@ yarn add -D @vuepress/plugin-google-analytics
 ```
 
 
-
-
-
 ##### 使用
 
 将ga 配置添加到配置文件
 
-```
+```JavaScript
 module.exports = {
   plugins: [
     [
@@ -378,18 +358,15 @@ module.exports = {
 ```
 
 
-
 更多配置参考文档：https://vuepress.vuejs.org/zh/theme/default-theme-config.html
-
 
 
 #### RSS
 
 
-
 `vuepress` 包含rss 插件，可以直接在配置中添加以下内容启用：
 
-```
+```JavaScript
 module.exports = {
     ...
     themeConfig: {
@@ -406,17 +383,13 @@ module.exports = {
 ### 部署到Github
 
 
-
 1. 在 docs/.vuepress/config.js 中设置正确的 base。
-
 
 
 > 如果你打算发布到 https://.github.io/，则可以省略这一步，因为 base 默认即是 "/"。
 
 
-
 1. 在你的项目中，创建一个如下的 `deploy.sh` 文件:
-
 
 
 ```
@@ -446,14 +419,32 @@ git push -f git@github.com:gusibi/gusibi.github.io.git master
 cd -
 ```
 
+> 也以使用github ci 在每次提交代码的时候自动部署到github.io，具体步骤可以自行搜索配置
+
+
 ###  
 
 ### 参考链接
 
 
-
-1. Intro to VuePress 1.x https://ulivz.com/2019/06/09/intro-to-vuepress-1-x/
-2. https://vuepress.vuejs.org/zh/theme/default-theme-config.html
+1. Intro to VuePress 1.x： https://ulivz.com/2019/06/09/intro-to-vuepress-1-x/
+2. 默认主题配置： https://vuepress.vuejs.org/zh/theme/default-theme-config.html
 3. https://www.markdownguide.org/
-4. https://vuepress.vuejs.org/zh/guide/frontmatter.html
-5. https://vuepress.vuejs.org/zh/config/
+4. VuePress front matter 配置： https://vuepress.vuejs.org/zh/guide/frontmatter.html
+5. VuePress 配置： https://vuepress.vuejs.org/zh/config/
+
+
+------
+
+
+**最后，感谢女朋友支持和包容，比❤️**
+
+也可以在公号输入以下关键字获取历史文章：`公号&小程序` | `设计模式` | `并发&协程`
+
+![扫码关注](http://media.gusibi.mobi/WDz3v4cU4LQq1oyKX-fYK1LxIThzZ1hK931ZaPRC8CdcB0t2oTYJciMDuAws70FY)
+
+---------------
+
+### 内推时间
+
+![](http://media.gusibi.mobi/5FzreeM6IYt55JSQMAV63INPIvuPik75FlJAbP1e7Zdlg1WPe6BrHI-q0jkXskGf)

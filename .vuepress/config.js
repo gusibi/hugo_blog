@@ -3,7 +3,7 @@ module.exports = {
     description: '顾斯比的博客 gusibi goodspeed',
     plugins: [
         [
-            "@vuepress/google-analytics",
+            '@vuepress/google-analytics',
             {
                 ga: 'UA-76238744-1'
             }
