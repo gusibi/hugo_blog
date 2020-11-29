@@ -2,9 +2,10 @@
   "config": {
     "branch": "master",
     "cname": "blog.gusibi.site.cdn.dnsv1.com",
-    "domain": "https://http://blog.gusibi.site",
+    "domain": "http://blog.gusibi.site",
     "email": "hi@gusibi.mobi",
     "platform": "coding",
+    "privateKey": "",
     "repository": "blog/pages",
     "token": "b5af95032244261c7e3884bfbab49e016c321303",
     "tokenUsername": "BoOXXvERGB",

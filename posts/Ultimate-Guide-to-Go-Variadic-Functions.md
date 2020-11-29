@@ -5,7 +5,7 @@ tags: [golang]
 published: true
 hideInList: false
 feature: http://media.gusibi.mobi/fOAjbsODtw2AeVd8OagAvADNACJHu1XFE1MKQ_EBauaKHh7K05KruNKG0SHWU82A
-isTop: true
+isTop: false
 ---
 > 使用常用模式学习关于go语言可变参数函数的一切
 

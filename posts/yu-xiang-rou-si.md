@@ -4,7 +4,7 @@ date: 2020-07-05 22:45:25
 tags: [菜谱]
 published: true
 hideInList: false
-feature: http://blog.gusibi.site/post-images/yu-xiang-rou-si.jpg
+feature: http://media.gusibi.mobi/8s1pRa4Le83ziXdaK3ldcjHzcxv3fxSwuZpq8nLAGrL3p3cTrMiBGoIbk8yyajy4
 isTop: false
 ---
 

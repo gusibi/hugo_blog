@@ -16,5 +16,24 @@
     "tagUrlFormat": "SHORT_ID",
     "themeName": "notes"
   },
-  "customConfig": {}
+  "customConfig": {
+    "contentBgColor": "#ffffff",
+    "contentMaxWidth": "800px",
+    "customCss": "",
+    "facebook": "",
+    "ga": "UA-76238744-1",
+    "github": "https://github.com/gusibi",
+    "linkColor": "rgba(0,0,0,.98)",
+    "linkHoverColor": "#006CFF",
+    "metaDescription": "顾斯比 golang python 编程 学习 教程 程序员",
+    "openPostToc": true,
+    "pageBgColor": "#ffffff",
+    "siteFont": "-apple-system,BlinkMacSystemFont,'Helvetica Neue','PingFang SC','Hiragino Sans GB','Droid Sans Fallback','Microsoft YaHei',sans-serif",
+    "textColor": "rgba(0, 0, 0, 0.86)",
+    "textSize": "16px",
+    "titleAlign": "center",
+    "twitter": "",
+    "weibo": "",
+    "zhihu": ""
+  }
 }
