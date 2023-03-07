@@ -5,7 +5,7 @@ tags: [go,golang,development,后端,微服务]
 published: true
 hideInList: false
 feature: http://media.gusibi.mobi/wfCxiW0ZpOJ81qw83qINP9jrRtAiFGlJ9jw3lko7L0w5eY79ojwhOw0rGhd3BXpk
-isTop: true
+isTop: false
 ---
 
 ## 什么是 chassis?
@@ -820,3 +820,10 @@ func waitingSignal() {
 3. [Linux Signal及Golang中的信号处理](https://colobu.com/2015/10/09/Linux-Signals/)
 4. [源码分析golang http shutdown优雅退出的原理](http://xiaorui.cc/archives/5803)
 5. [Go语言微服务开发框架实践-go chassis](https://juejin.im/post/6844903682362834952)
+
+
+**最后，感谢女朋友支持和包容，比❤️**
+
+也可以在公号输入以下关键字获取历史文章：`公号&小程序` | `设计模式` | `并发&协程`
+
+![扫码关注](http://media.gusibi.mobi/WDz3v4cU4LQq1oyKX-fYK1LxIThzZ1hK931ZaPRC8CdcB0t2oTYJciMDuAws70FY)
